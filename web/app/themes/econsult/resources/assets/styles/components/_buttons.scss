@@ -1,0 +1,137 @@
+$btn-size: 32px;
+.btn-social {
+	border-radius: 50%;
+	width: $btn-size;
+	height: $btn-size;
+	line-height: $btn-size;
+	font-size: 17px;
+	text-align: center;
+	display: inline-block;
+	background-color: #000;
+	color: #fff;
+	transition: box-shadow .2s ease;
+	margin-left: 5px;
+	
+
+	&:hover {
+		color: #fff;
+		box-shadow: 0 0 0 2px #000;
+	}
+}
+
+
+
+.button {
+	display: inline-block;
+	font-weight: 600;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	border: 0;
+	font-family: $headings-font-family;
+	letter-spacing: 0.06em;
+	transition: all .2s ease;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 6px 12px;
+
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+		outline: 0;
+	}
+	&:disabled {
+		opacity: .65;
+	}
+
+}
+
+.button--fancy {
+	
+	overflow: hidden;
+	
+	position: relative;
+	border-radius: 40px;
+	span {
+		white-space: nowrap;
+		position: relative;
+		display: block;
+		transition: transform .6s cubic-bezier(.785,.135,.15,.86), color .4s cubic-bezier(.25,.25,.75,.75) .2s, -webkit-transform .6s cubic-bezier(.785,.135,.15,.86);
+		&:after {
+			content: attr(title);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			transform: translateY(150%);
+			transition: color .4s cubic-bezier(.25,.25,.75,.75) .2s;
+		}
+	}
+	&:hover {
+		span {
+			transform: translateY(-150%);
+			transition-delay: 0s, .2s;
+			&:after {
+				transition-delay: .2s;
+			}
+		}
+		
+	}
+	
+}
+
+
+.button--primary {
+	background-color: $primary;
+	color: #fff;
+	
+}
+
+.button--secondary {
+	background-color: $secondary;
+	color: #fff;	
+}
+
+.button--white {
+	background-color: #fff;
+	color: $primary;
+}
+
+
+.button--primary-border {
+	background-color: #fff;
+	outline: 2px solid $primary;
+	color: $primary;
+	&:hover {
+		outline: 2px solid $primary;
+	}
+}
+
+.button--block {
+	display: block;
+}
+.button--sm {
+	height: 35px;
+	line-height: 35px;
+	font-size: 12px;
+	padding: 0 1.2rem;
+}
+
+
+.button--md {
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+	padding: 0 2rem;
+}
+
+.button--lg {
+	height: 45px;
+	line-height: 45px;
+	font-size: 17px;
+	padding: 0 2rem;
+}
+

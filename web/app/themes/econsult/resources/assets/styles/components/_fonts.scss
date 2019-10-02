@@ -1,0 +1,51 @@
+@mixin installFont($family, $src, $style: normal, $weight: normal) {
+	@font-face {
+		font-family: "#{$family}";
+		src:
+			url("#{$src}.woff2") format("woff2"),
+			url("#{$src}.woff") format("woff");
+		font-weight: #{$weight};
+		font-style: #{$style};
+		font-stretch: normal;
+	}
+}
+
+@include installFont('econsult-icons', '../fonts/fontello', 'normal',normal);
+
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: 'econsult-icons';
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-instagramm:before { content: '\e800'; } /* '' */
+.icon-ok:before { content: '\e801'; } /* '' */
+.icon-twitter:before { content: '\e802'; } /* '' */
+.icon-facebook:before { content: '\e803'; } /* '' */
+.icon-phone:before { content: '\e804'; } /* '' */
+.icon-mail-alt:before { content: '\e807'; } /* '' */
+.icon-mail:before { content: '\e808'; } /* '' */
+.icon-ok-1:before { content: '\e80c'; } /* '' */
+.icon-comment:before { content: '\e813'; } /* '' */
+.icon-play:before { content: '\e82b'; } /* '' */
+.icon-user:before { content: '\e832'; } /* '' */
+.icon-gallery:before { content: '\e846'; } /* '' */
+.icon-arrow-right:before { content: '\e847'; } /* '' */
+.icon-arrow-left:before { content: '\e848'; } /* '' */
+.icon-search:before { content: '\e849'; } /* '' */
+.icon-text:before { content: '\e84a'; } /* '' */
+.icon-angle-left:before { content: '\e84b'; } /* '' */
+.icon-angle-right:before { content: '\e84c'; } /* '' */
+.icon-angle-down:before { content: '\e84d'; } /* '' */
+.icon-angle-up:before { content: '\e84e'; } /* '' */
+.icon-pinterest:before { content: '\f231'; } /* '' */

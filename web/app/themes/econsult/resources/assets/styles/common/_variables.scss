@@ -1,0 +1,82 @@
+$white:  #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:  #000 !default;
+
+$grays: (
+	100: $gray-100,
+	200: $gray-200,
+	300: $gray-300,
+	400: $gray-400,
+	500: $gray-500,
+	600: $gray-600,
+	700: $gray-700,
+	800: $gray-800,
+	900: $gray-900
+) !default;
+
+/** Colors */
+$brand-primary:         #525ddc;
+
+/** Box Model  */
+$spacer:                2rem;
+
+$body-bg:       $white !default;
+$body-color:    $gray-900 !default;
+
+$primary: #002e68;
+$secondary: #99b82e;
+$primary-bg:  #dee4ec;
+$sand: #f0f0f0;
+
+$border-width: 1px !default;
+
+$border-radius:          .25rem !default;
+$border-radius-lg:       .3rem !default;
+$border-radius-sm:       .2rem !default;
+
+
+$body-color: #333;
+$font-family-base: "Open Sans", sans-serif;
+
+$headings-font-family: "Montserrat", sans-serif;
+$font-size-base: 16px;
+$font-weight-base: 400;
+$line-height-base: 1.5;
+$border-color: darken(#f3f0f0, 10%);
+
+
+$link-color:            #002e68 !default;
+$link-decoration:       none !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+
+$enable-rounded:            false !default;
+
+
+$site-width: 1600px;
+
+// breakpoints
+$width-xs: 320px;
+$width-sm: 600px;
+$width-md: 768px;
+$width-lg: 1024px;
+$width-xl: 1640px;
+
+
+
+$thumbnail-padding:           .25rem !default;
+$thumbnail-bg:                $body-bg !default;
+$thumbnail-border-width:      $border-width !default;
+$thumbnail-border-color:      #ddd !default;
+$thumbnail-border-radius:     $border-radius !default;
+$thumbnail-box-shadow:        0 1px 2px rgba($black,.075) !default;
+$thumbnail-transition:        all .2s ease-in-out !default;

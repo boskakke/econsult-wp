@@ -1,0 +1,140 @@
+
+
+.page {
+	&__title {
+		font-weight: 600;
+		font-size: 30px;
+		@include md-up {
+			font-size: 40px;
+		}
+		margin-bottom: 25px; 
+	}
+
+	&__summary {
+		color: #999;
+		font-size: 20px;
+		margin-bottom: 25px; 
+	}
+}
+
+
+
+.module {
+	margin: 0 0 40px;
+
+	&__header {
+		font-weight: 600;
+		font-family: $headings-font-family;
+		margin-bottom: 20px;
+		hyphens: auto;
+		&--lg {
+			font-size: 20px;	
+		}
+		&--sm {
+			font-size: 16px;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+		}
+	}
+	&__text {
+		font-size: 14px;
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	&--dark {
+		background-color: #222;
+		color: #fff;
+		padding: 30px;
+		border-radius: 3px;
+		i {
+			color: $secondary;
+		}
+		a {
+			color: #fff;
+		}
+	}
+	
+	&--primary {
+		background-color: $primary;
+		color: #fff;
+		padding: 30px;
+		border-radius: 3px;
+		p {
+			color: $primary-bg;
+		}
+		i {
+			color: $secondary;
+		}
+
+	}
+
+	&--secondary {
+		background-color: $secondary;
+		color: #fff;
+		padding: 30px;
+		border-radius: 3px;
+		p {
+			color: darken($secondary, 30%);
+		}
+		i {
+			color: $primary;
+		}
+
+		a {
+			color: #fff;
+		}
+	}
+}
+
+.article {
+	&__content {
+		p, li {
+			margin-bottom: 20px;
+			color: #777;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family: $headings-font-family;
+			font-weight: 600;
+		}
+		h2 {
+			margin: 20px 0;
+			padding: 20px 0 0 0;
+			font-size: 25px;
+		}
+		h3 {
+			margin: 20px 0;
+			padding: 20px 0 0 0;
+			font-size: 20px;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 40px 0;
+			li {
+				padding-left: 30px;
+				overflow: hidden;
+				&:before {
+					font-family: econsult-icons;
+					content: '\e847';
+					color: $secondary;
+					float: left;
+					margin-left: -30px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.col {
+	&--main {
+		@extend .mb-5;
+		@include md-up {
+			order: 2;
+		}
+	}
+}

@@ -1,0 +1,133 @@
+.teaser {
+	&__link {
+		color: #000;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&__header {
+		color: $primary;
+		font-size: $font-5;
+		font-weight: 600;
+
+		&--h1 {
+			font-size: $font-6;
+		}
+	}
+
+	p {
+		color: #777;
+	}
+	&__figure {
+		margin-bottom: 20px;
+	}
+}
+@include md-up {
+	.teaser-overlay {
+		.teaser {
+			&__link {
+				display: flex;
+				align-items: center;
+			}
+			&__figure {
+				flex: 0 0 62.5%;
+			}
+			&__body {
+				margin-left: -40px;
+				background-color: #fff;
+				padding: 20px;
+				flex: auto;
+			}
+		}
+	}
+}
+
+.teaser + .teaser {
+	margin-top: 4rem;
+}
+
+.list-bullits {
+	margin: 0 0 25px;
+	list-style: none;
+	padding: 0;
+	&__item {
+		color: #777;
+		margin: 0;
+		&:not(:last-child) {
+			margin: 0 0 25px;	
+		}
+		
+		&:before {
+			content: '\e801';
+			color: $secondary;
+			font-family: econsult-icons;
+			font-size: $font-6;
+		}
+
+	}
+	&__header {
+		font-weight: 600;
+		font-size: $font-5;
+		color: $primary;
+		margin: 0;
+	}
+	p {
+		margin: 0;
+	}
+
+	&--right {
+
+		li {
+			text-align: right;
+			padding-right: 60px;
+			&:before {
+				float: right;
+				margin-right: -40px;	
+			}
+		}	
+	}
+	&--left {
+
+		li {
+			padding-left: 50px;
+			&:before {
+				float: left;
+				margin-left: -40px;	
+			}
+		}
+	}
+	
+
+}
+.section-bullits {
+
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 20px;
+	margin-bottom: $section-margin;
+	display: flex;
+	
+	&__illu {
+		display: none;
+		@include lg-up {
+			flex: 0 0 20%;
+			display: block;
+		}
+	}
+
+	&__col {
+		flex: 0 0 100%;
+		align-items: center;
+		display: flex;
+		@include md-up {
+			flex: 0 0 50%;
+		}
+		@include lg-up {
+			flex: 0 0 40%;
+		}
+		&--left {
+			justify-content: flex-end;
+		}
+	}
+}

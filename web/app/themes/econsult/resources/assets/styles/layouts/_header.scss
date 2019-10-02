@@ -1,0 +1,354 @@
+
+.header {
+	display: flex;
+	height: 60px;
+	justify-content: center;
+	align-items: center;
+	font-family: $headings-font-family;
+	@include lg-up {
+		display: flex;
+		height: 100px;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__col--logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 0 0 180px;
+		@include lg-up {
+			flex: 0 0 280px;
+		}	
+	}
+
+	&__col--menu {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		transform: translateX(100%);
+		transition: transform .25s ease;
+		z-index: 80;
+		@include lg-up {
+			transition: none;
+			position: relative;
+			transform: none;
+			display: flex;
+			justify-content: flex-end;
+			flex: auto;
+		}
+	}
+	&__logo {
+		background: url(../images/logo.png) left center no-repeat;
+		background-size: 100%;
+		text-indent: -9999px;
+		display: block;
+		width: 180px;
+		height: 50px;
+		@include lg-up {
+			height: 50px;
+			width: 100%;	
+		}
+	}
+}
+
+
+.menu {
+	display: flex;
+	background-color: $primary;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+	padding: 50px 40px;
+	opacity: 0;
+	&-primary-container {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		max-width: 500px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	@include md-down {
+		overflow: scroll;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	@include lg-up {
+		background-color: transparent;
+		height: initial;
+		padding: 0;
+		opacity: 1;
+		max-width: none;
+		&-primary-container {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			margin: 0;
+			max-width: none;
+		}
+	}
+}
+
+.menu-toggle {
+	position: fixed;
+	top: 20px;
+	right: 15px;
+	display: block;
+	width: 24px;
+	height: 21px;
+	transition: transform .2s ease;
+	.admin-bar & {
+		top: 66px;
+	}
+	
+	z-index: 100;
+	span {
+		width: 100%;
+		height: 3px;
+		display: block;
+		background-color: $primary;
+		transition: all .2s ease;
+		transform-origin: center center;
+		position: absolute;
+		left: 0;
+
+		&:nth-child(1) {
+			top: 0;
+		}
+		&:nth-child(2), 
+		&:nth-child(3) {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&:nth-child(4) {
+			bottom: 0;
+		}
+	}
+	@include lg-up {
+		display: none;
+	}	
+}
+
+.show-menu {
+	.menu {
+		opacity: 1;
+	}
+	.header__col--menu {
+		transform: translateX(0);
+	}
+	.site-menu > li {
+		transform: none;
+		opacity: 1;
+	}
+
+	.menu-toggle {
+		transform: rotate(180deg);
+		span {
+			background-color: #fff;
+
+		}
+		span:nth-child(1), 
+		span:nth-child(4) {
+			opacity: 0;
+		}
+		span:nth-child(2) {
+			transform: rotate(45deg); 
+		}
+		span:nth-child(3) {
+			transform: rotate(-45deg); 
+		}
+	}
+}
+.site-menu {
+	display: flex;
+	flex-direction: column;
+	@extend %list;
+	@include lg-up {
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+	
+	& > li {
+
+		padding: 10px 0;
+		font-size: $font-3;
+		font-weight: 600;
+		border-bottom: 1px solid rgba(255,255,255,.1);
+		transition: transform .25s ease, opacity .25s ease;
+		opacity: 0;
+		transform: translateX(30px);
+
+		@for $i from 1 through 12 {
+			&:nth-child(#{$i}) {
+				$delay: ($i * 60ms);
+				transition-delay: $delay;
+			}
+		}
+
+		@include lg-up {
+			padding: 0;
+			margin: 0 20px;
+			position: relative;
+			font-size: $font-3;
+			opacity: 1;
+			transform: none;
+
+			&:hover,
+			&.current-menu-item,
+			&.current-page-parent,
+			&.current-menu-ancestor {
+				& > a:before {
+					width: 100%;
+				}
+			}
+
+			&:hover {
+				& > .sub-menu {
+					opacity: 1;
+					visibility: visible;
+					transform: none;
+					max-height: 9999px;
+				}
+			}
+		}
+
+		& > a {
+			text-decoration: none;
+			color: #fff;
+			display: block;
+			position: relative;
+
+			@include lg-up {
+				color: $primary;
+				padding: 15px 0;
+				display: block;
+				position: relative;
+				&:before {
+					content: '';
+					bottom: 0;
+					left: 0;
+					position: absolute;
+					width: 0;
+					height: 6px;
+					background-image: linear-gradient(90deg, $primary, $secondary);
+					transition: width .2s ease;
+
+				}
+			}
+		}
+	}
+}
+
+
+.sub-menu {
+	@extend %list;
+	max-height: 0;
+	transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+	overflow-x: hidden;
+
+	@include lg-up {
+		position: absolute;
+		background-color: $primary;
+		min-width: 240px;
+		top: 100%;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .3s, transform .3s;
+		transform: translateY(20px);
+	}
+	
+	& > li {
+		text-transform: none;
+		font-size: $font-3;
+		padding-top: 10px;
+
+		@include lg-up {
+			padding: 0 0;
+			position: relative;
+			&:not(:last-child) {
+				border-bottom: 1px solid rgba(255,255,255,.2);
+			}
+			.sub-menu {
+				position: absolute;
+				top: 0;
+				left: 100%;
+				margin-left: 1px;
+				
+			}
+			&:hover {
+				.sub-menu {
+					opacity: 1;
+					visibility: visible;
+					transform: none;
+				}
+			}
+		}
+
+		
+		& > a {
+			color: #fff;
+			@extend %link-arrow;
+			display: block;
+			touch-action: manipulation;
+			&:hover {
+				color: #fff;
+				text-decoration: none;
+				&:before {
+					transform: translateX(4px);
+				}
+			}
+			@include lg-up {
+				display: block;
+				padding: 15px 20px 15px 40px;
+				color: #fff;
+				transition: color .2s ease;
+				
+				&:hover {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	
+	.sub-menu {
+		padding-left: 20px;
+	}
+
+	.menu-item-has-children > a:after {
+		color: #fff;
+		right: 0;
+		@include lg-up {
+			content: '\e84c'; 
+		}
+	}	
+}
+
+
+
+.menu-item-has-children {
+	@include lg-up {
+		margin-right: 14px;
+	}
+	position: relative;
+	& > a:after {
+		content: '\e84d';
+		font-family: econsult-icons;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: .5;
+		@include lg-up {
+			right: -14px;
+			font-size: 10px;
+		}
+	}
+}
+
+
+.current-menu-item > a {
+	position: relative;
+}

@@ -1,0 +1,147 @@
+// Tablet and down
+@mixin xs-down {
+	@media (max-width: $width-xs) {
+		@content;
+	}
+}
+
+@mixin sm-down {
+	@media (max-width: #{$width-md - 1px}) {
+		@content;
+	}
+}
+
+// Small desktop and down
+@mixin md-down {
+	@media (max-width: #{$width-lg - 1px}) {
+		@content;
+	}
+}
+
+
+// Tablet and up
+@mixin md-up {
+	@media (min-width: #{$width-md}) {
+		@content;
+	}
+}
+
+// Small dekstop and up
+@mixin lg-up {
+	@media (min-width: #{$width-lg}) {
+		@content;
+	}
+}
+// large dekstop and up
+@mixin xl-up {
+	@media (min-width: #{$width-xl}) {
+		@content;
+	}
+}
+
+
+// Only tablet
+@mixin md-only {
+	@media (min-width: #{$width-md}) and (max-width: #{$width-lg - 1px}) {
+		@content;
+	}
+}
+
+// Only small desktop
+@mixin lg-only {
+	@media (min-width: #{$width-lg}) and (max-width: #{$width-xl - 1px}) {
+		@content;
+	}
+}
+
+
+@function calculaterem($size) {
+	$remSize: $size / 16px;
+
+	@return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+	font-size: calculaterem($size);
+}
+
+
+
+$font-0: calculaterem(10px);
+$font-1: calculaterem(12px);
+$font-2: calculaterem(14px);
+$font-3: calculaterem(16px);
+$font-4: calculaterem(18px);
+$font-5: calculaterem(20px);
+$font-6: calculaterem(24px);
+$font-7: calculaterem(30px);
+$font-8: calculaterem(36px);
+$font-9: calculaterem(48px);
+$font-10: calculaterem(60px);
+$font-11: calculaterem(72px);
+$font-12: calculaterem(84px);
+$font-13: calculaterem(96px);
+$font-14: calculaterem(110px);
+$font-15: calculaterem(150px);
+$font-16: calculaterem(200px);
+$font-17: calculaterem(250px);
+
+
+@mixin img-fluid {
+	// Part 1: Set a maximum relative to the parent
+	max-width: 100%;
+	// Part 2: Override the height to auto, otherwise images will be stretched
+	// when setting a width and height attribute on the img element.
+	height: auto;
+}
+
+
+@mixin border-radius($radius: $border-radius) {
+	@if $enable-rounded {
+		border-radius: $radius;
+	}
+}
+
+// Only display content to screen readers
+//
+// See: http://a11yproject.com/posts/how-to-hide-content
+// See: http://hugogiraudel.com/2016/10/13/css-hide-and-seek/
+
+@mixin sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	white-space: nowrap;
+	clip-path: inset(50%);
+	border: 0;
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+//
+// Useful for "Skip to main content" links; see https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+//
+// Credit: HTML5 Boilerplate
+
+@mixin sr-only-focusable {
+	&:active,
+	&:focus {
+		position: static;
+		width: auto;
+		height: auto;
+		overflow: visible;
+		clip: auto;
+		white-space: normal;
+		clip-path: none;
+	}
+}
+
+.sr-only {
+	@include sr-only();
+}
+
+.sr-only-focusable {
+	@include sr-only-focusable();
+}
