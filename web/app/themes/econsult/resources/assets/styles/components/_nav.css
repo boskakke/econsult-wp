@@ -1,0 +1,521 @@
+.menu {
+	display: flex;
+	background-color: $primary;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+	padding: 50px 40px;
+	opacity: 0;
+	@include md-down {
+		.admin-bar & {
+			padding-top: 70px; 
+
+		}	
+	}
+
+	@include md-down {
+		overflow: scroll;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	@include lg-up {
+		background-color: transparent;
+		height: initial;
+		padding: 0;
+		opacity: 1;
+		max-width: none;
+		&-primary-container {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			margin: 0;
+			max-width: none;
+		}
+	}
+
+	&__container {
+		width: 100%;
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		@include lg-up {
+			max-width: none;
+		}
+	}
+
+	&-primary-container {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		max-width: 500px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.menu-toggle {
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	display: block;
+	width: 24px;
+	height: 21px;
+	transition: transform .2s ease;
+	.admin-bar & {
+		top: 66px;
+	}
+	
+	z-index: 100;
+	span {
+		width: 100%;
+		height: 3px;
+		display: block;
+		background-color: $primary;
+		transition: all .2s ease;
+		transform-origin: center center;
+		position: absolute;
+		left: 0;
+
+		&:nth-child(1) {
+			top: 0;
+		}
+		&:nth-child(2), 
+		&:nth-child(3) {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&:nth-child(4) {
+			bottom: 0;
+		}
+	}
+	@include lg-up {
+		display: none;
+	}	
+}
+
+.show-menu {
+	overflow: hidden;
+	.menu {
+		opacity: 1;
+	}
+	.header__col--menu {
+		transform: translateX(0);
+	}
+	.site-menu > li {
+		transform: none;
+		opacity: 1;
+	}
+
+	.menu-toggle {
+		transform: rotate(180deg);
+		span {
+			background-color: #fff;
+
+		}
+		span:nth-child(1), 
+		span:nth-child(4) {
+			opacity: 0;
+		}
+		span:nth-child(2) {
+			transform: rotate(45deg); 
+		}
+		span:nth-child(3) {
+			transform: rotate(-45deg); 
+		}
+	}
+}
+.site-menu {
+	display: flex;
+	flex-direction: column;
+	@extend %list;
+	@include lg-up {
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+	
+	& > li {
+		
+		padding: 10px 5px;
+		font-size: $font-6;
+		font-weight: 400;
+		border-bottom: 1px solid rgba(255,255,255,.1);
+		transition: transform .25s ease, opacity .25s ease;
+		opacity: 0;
+		transform: translateX(30px);
+
+		@for $i from 1 through 12 {
+			&:nth-child(#{$i}) {
+				$delay: ($i * 60ms);
+				transition-delay: $delay;
+			}
+		}
+
+		@include lg-up {
+			padding: 0;
+			margin: 0 20px;
+			position: relative;
+			font-size: $font-3;
+			font-weight: 600;
+			opacity: 1;
+			transform: none;
+
+			&:hover,
+			&.current-menu-item,
+			&.current-page-parent,
+			&.current-menu-ancestor {
+				& > a:before {
+					width: 100%;
+				}
+			}
+
+			&:hover {
+				& > .sub-menu {
+					opacity: 1;
+					visibility: visible;
+					transform: none;
+					max-height: 9999px;
+				}
+			}
+		}
+
+		& > a {
+			text-decoration: none;
+			color: #fff;
+			display: block;
+			position: relative;
+
+			@include lg-up {
+				color: $primary;
+				padding: 15px 0;
+				display: block;
+				position: relative;
+				&:before {
+					content: '';
+					bottom: 0;
+					left: 0;
+					position: absolute;
+					width: 0;
+					height: 6px;
+					background-image: linear-gradient(90deg, $primary, $secondary);
+					transition: width .2s ease;
+
+				}
+			}
+		}
+	}
+}
+@include md-down {
+	.open {
+		& > .sub-menu {
+			max-height: 9999px;
+		}
+	}	
+}
+
+
+
+.sub-menu {
+	@extend %list;
+	max-height: 0;
+	transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+	overflow-y: hidden;
+
+	@include lg-up {
+		overflow: unset;
+		position: absolute;
+		background-color: $primary;
+		min-width: 240px;
+		top: 100%;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .3s, transform .3s;
+		transform: translateY(20px);
+	}
+	
+	& > li {
+		text-transform: none;
+		font-size: $font-3;
+		padding: 10px 0;
+		&:first-child {
+			@include md-down {
+				border-top: 1px solid rgba(255,255,255,.1);
+				margin-top: 10px;	
+			}
+		}
+		@include md-down {
+			&:first-child {
+				margin-top: 10px;
+			}	
+		}
+		
+
+		@include lg-up {
+			padding: 0 0;
+			position: relative;
+			&:not(:last-child) {
+				border-bottom: 1px solid rgba(255,255,255,.2);
+			}
+			.sub-menu {
+				position: absolute;
+				top: 0;
+				left: calc(100% - 1px);
+				margin-left: 1px;
+				
+			}
+			&:hover {
+				.sub-menu {
+					opacity: 1;
+					visibility: visible;
+					transform: none;
+					max-height: 9999px;
+				}
+			}
+		}
+
+		
+		& > a {
+			color: #fff;
+			@extend %link-arrow;
+			display: block;
+			touch-action: manipulation;
+			&:hover {
+				color: #fff;
+				text-decoration: none;
+				&:before {
+					transform: translateX(4px);
+				}
+			}
+			@include lg-up {
+				display: block;
+				padding: 15px 20px 15px 40px;
+				color: #fff;
+				transition: color .2s ease;
+				
+				&:hover {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	
+	.sub-menu {
+		padding-left: 20px;
+		@include lg-up {
+			padding-left: 0;
+		}
+	}
+
+	.menu-item-has-children > a:after {
+		color: #fff;
+		right: 10px;
+		@include lg-up {
+			content: '\e84c'; 
+		}
+	}	
+}
+
+
+
+.menu-item-has-children {
+	
+	position: relative;
+	& > a:after {
+		content: '\e84d';
+		font-family: econsult-icons;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: .5;
+		@include lg-up {
+			right: -14px;
+			font-size: 10px;
+		}
+	}
+}
+
+
+.current-menu-item > a {
+	position: relative;
+}
+
+.main-tabs {
+	@extend %list;
+	display: flex;
+	height: $menuHeightSM;
+	position: relative;
+	z-index: 20;
+
+	@include md-up {
+		height: $menuHeight;
+		margin-left: 2rem;
+	}
+	
+	&__item {
+		margin: 0;
+		padding: 0 20px;
+		display: flex;
+		@extend %flex-center;
+		background: linear-gradient(to bottom, #fff 80%, darken(#fff, 15%));
+		transition: all .2s ease;
+		font-weight: 600;
+		font-size: $font-3;
+		@include md-up {
+			padding: 0 50px;
+		}
+		&.active {
+			background: $primary;
+			a {
+				color: #fff;
+				&:after {
+					width: 100%;
+					background-color: $secondary;
+				}
+			}
+		}
+
+	}
+	&__link {
+		padding: 4px 0;
+		@extend %no-textdoration;
+		@extend %menuFx;
+		&:after {
+			content: '';
+			height: 4px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			background-color: $primary;
+			transition: width .2s ease; 
+		}
+
+		&:hover {
+			&:after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.products {
+	display: flex;
+	flex-direction: column;
+	margin-top: calc(-#{$menuHeightSM} - #{$section-margin});
+	margin-bottom: 2em;
+	font-family: $headings-font-family;
+	position: relative;
+	z-index: 10;
+	@include md-up {
+		margin-top: calc(-#{$menuHeight} - #{$section-margin});
+	}
+	
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__col {
+		display: flex;
+	}
+	.sub-menu {
+		overflow: unset;
+		position: absolute;
+		background-color: $primary;
+		min-width: 240px;
+		top: 100%;
+		left: 0;
+		a {
+			padding: 15px 20px 15px 40px;
+		}
+	}
+}
+
+.products-menu {
+	@extend %list;
+	display: none;
+	width: 100%;
+	background-color: $primary;
+	flex-direction: row;
+	padding: 0 10px;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: $menuHeightSM;
+
+	@include md-up {
+		height: $menuHeight;
+		padding: 0;	
+	}
+	&.active {
+		display: flex;
+	}
+	& > .menu-item {
+		flex: 0 0 100%;
+		padding: 0;
+		position: relative;
+		border-bottom: 1px solid rgba(255,255,255,.1);
+		flex-direction: column;
+		font-weight: 600;
+		font-size: $font-3;
+
+		@include md-up {
+			flex: 0 0 auto;
+			border: none;
+			margin: 0 25px;
+		}
+		@include lg-up {
+			flex: 0 0 auto;
+			&:hover {
+				.sub-menu {
+					opacity: 1;
+					visibility: visible;
+					transform: none;
+					max-height: 9999px; 
+				}
+			}
+		}
+
+		
+		& > a {
+			position: relative;
+			color: #fff;
+			display: block;
+			padding: 10px 15px;
+			
+			&:hover {
+				color: #fff;
+				text-decoration: none;
+			}
+
+			@include md-up {
+				padding: 15px 0 15px 0;
+				&:after {
+					right: -14px !important;
+					font-size: 10px;
+				}
+			}
+		}
+	}
+
+	
+
+	.sub-menu {
+		background-color: $primary;
+		@include md-up {
+			position: absolute;
+		}
+		& > li {
+			&.current-menu-item > a {
+				color: #fff;
+			}
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				padding-bottom: 5px;
+			}
+
+		}
+
+	}
+}

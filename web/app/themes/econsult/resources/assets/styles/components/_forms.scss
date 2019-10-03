@@ -1,5 +1,258 @@
-/** Search form */
-// TODO: .search-form {}
-// TODO: .search-form label {}
-// TODO: .search-form .search-field {}
-// TODO: .search-form .search-submit {}
+
+@mixin form-control-focus() {
+	&:focus {
+		color: $body-color;
+		outline: 0;
+		border-color: rgba($primary, .2);
+
+	}
+}
+
+form {
+	position: relative;
+}
+//
+// Textual form controls
+//
+
+
+
+.form-control {
+	color: #222;
+	background-color: #fff;
+	background-clip: padding-box;
+	transition: all .2s ease;
+	appearance: none;
+	padding: .75rem .95rem;
+	width: 100%;
+	background-image: none;
+	display: block;
+	position: relative;
+	font-size: $font-3;
+	line-height: 1.25;
+	border: 1px solid transparent;
+	border-radius: 2px;
+
+	// Unstyle the caret on `<select>`s in IE10+.
+	&::-ms-expand {
+		background-color: transparent;
+		border: 0;
+	}
+
+	// Customize the `:focus` state to imitate native WebKit styles.
+	@include form-control-focus();
+
+	// Placeholder
+	&::placeholder {
+		color: fade-out($body-color, .4);
+		// Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+		opacity: 1;
+	}
+
+
+	&--no-border {
+		border-bottom: 0;
+	}
+	
+}
+
+select.form-control {
+	&:not([size]):not([multiple]) {
+		height: 20px;
+	}
+
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+
+
+.form-group {
+	margin-bottom: 10px;
+	position: relative;
+	&__error {
+		font-size: 12px;
+		font-weight: 500;
+		margin: 10px 0 20px;
+	}
+}
+
+.form-checkbox {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	&__smalltxt {
+		font-size: 13px;
+	}
+}
+.form-checkbox__input {
+	display: none;
+
+	& + label {
+		cursor: pointer;
+		display: flex;
+		align-items: flex-start;
+		a {
+			text-decoration: underline;
+
+		}
+		span {
+			border: 1px solid $body-color;
+			padding: 9px;
+			display: inline-block;
+			position: relative;
+			margin-right: 10px;
+			margin-top: 2px;
+			&:after {
+				content: '\e808';
+				font-family: bobedre-icons;
+				font-size: 35px;
+				position: absolute;
+				line-height: 1;
+				bottom: -6px;
+				left: -5px;
+				color: $body-color;
+				transform: scale(0);
+				transition: transform .1s ease;
+			}
+		}
+	}
+	&:checked + label span:after {
+		transform: scale(1);
+	}
+}
+
+.btn--absolute {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 25px;
+	padding: 0;
+	background: transparent;
+	border: 0;
+}
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
+
+.form-check {
+	position: relative;
+	display: block;
+	padding-left: 10px;
+}
+
+.form-check-label {
+	margin-bottom: 0; // Override default `<label>` bottom margin
+}
+
+
+.form-col {
+	display: flex;
+	justify-content: space-between;
+}
+
+.form {
+	&__top {
+		padding: 10px 0;
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		border-bottom: 1px solid $border-color;
+	}
+	&__label {
+		position: relative;
+		cursor: pointer;
+		flex: 0 1 auto;
+		display: flex;
+		align-items: flex-start;
+	}
+	&__tools {
+		padding: 0 0  15px 0;
+	}
+	&__header {
+		font-size: 24px;
+		margin: 0 0 15px;
+		position: relative;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title {
+		font-weight: 600;
+		margin: 0;
+		padding: 20px 0 0;
+		font-size: $font-4;
+
+		span {
+			color: #666;
+		}
+
+	}
+
+	&__options {
+		display: flex;
+		flex-direction: column;
+	}
+	&__message {
+		padding: 5px 0 0;
+		color: #999;
+		font-size: $font-2;
+		
+	}
+
+}
+
+
+
+
+.form--default {
+	.form-control {
+		border-width: 1px;
+		border-color: $border-color;
+		&:focus,
+		&:hover {
+			border-color: rgba(0,0,0,.4);
+		}
+		&:focus {
+			background: #fff;
+			box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+		}
+		&:disabled {
+			color: #999;
+			background: #eee;
+			border-color: $border-color;
+		}
+	}
+}
+
+
+.form-row {
+	display: flex;
+	margin: -1rem;
+	.form-group {
+		width: 50%;
+		padding: 0 1rem;
+	}
+	margin-bottom: $spacer / 2;
+	position: relative;
+
+}
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }

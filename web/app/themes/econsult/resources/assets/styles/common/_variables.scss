@@ -49,7 +49,7 @@ $font-family-base: "Open Sans", sans-serif;
 $headings-font-family: "Montserrat", sans-serif;
 $font-size-base: 16px;
 $font-weight-base: 400;
-$line-height-base: 1.5;
+$line-height-base: 1.6;
 $border-color: darken(#f3f0f0, 10%);
 
 
@@ -80,3 +80,6 @@ $thumbnail-border-color:      #ddd !default;
 $thumbnail-border-radius:     $border-radius !default;
 $thumbnail-box-shadow:        0 1px 2px rgba($black,.075) !default;
 $thumbnail-transition:        all .2s ease-in-out !default;
+
+
+$section-margin: 10em;

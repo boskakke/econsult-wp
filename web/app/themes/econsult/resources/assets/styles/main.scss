@@ -19,11 +19,16 @@
 
 // @import "fonts";
 @import "common/global";
-@import "components/reboot";
+@import "components/reset";
 @import "components/buttons";
 @import "components/fonts";
+@import "components/navigation";
+@import "components/tabs";
+@import "components/forms";
 @import "layouts/base";
+@import "layouts/cases";
 @import "layouts/header";
+@import "layouts/footer";
 @import "layouts/teaser";
 @import "layouts/page";
 @import "components/spinner";

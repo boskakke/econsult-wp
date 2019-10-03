@@ -11,7 +11,7 @@ export default {
       var tab_id = $(this).attr('data-tab');
 
       $('.main-tabs__item').removeClass('active');
-      $('.products-menu').removeClass('active');
+      $('.tabs-menu').removeClass('active');
 
       $(this).addClass('active');
       $('#'+tab_id).addClass('active');

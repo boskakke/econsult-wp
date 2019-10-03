@@ -77,18 +77,34 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3 class="footer__header">',
+    'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
+    'name'          => __('Footer-left', 'sage'),
+    'id'            => 'sidebar-footer-left'
     ] + $config);
-    register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
+  register_sidebar([
+    'name'          => __('Footer-middle', 'sage'),
+    'id'            => 'sidebar-footer-middle'
+    ] + $config);
+  register_sidebar([
+    'name'          => __('Footer-right', 'sage'),
+    'id'            => 'sidebar-footer-right'
+    ] + $config);
+   register_sidebar([
+    'name'          => __('Privat', 'sage'),
+    'id'            => 'sidebar-private'
+    ] + $config);
+  register_sidebar([
+    'name'          => __('Erhverv', 'sage'),
+    'id'            => 'sidebar-business'
+    ] + $config);
+  register_sidebar([
+    'name'          => __('Andet', 'sage'),
+    'id'            => 'sidebar-other'
     ] + $config);
 });
 
