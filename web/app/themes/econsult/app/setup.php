@@ -217,4 +217,5 @@ add_image_size( 'hero_lg', 1900, 800, true );
 add_image_size( 'hero_md', 1000, 700, true ); 
 add_image_size( 'hero_sm', 800, 600, true ); 
 add_image_size( 'case', 400, 400, true ); 
+add_image_size( 'case-lg', 1900, 9999, false ); 
 

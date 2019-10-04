@@ -1,0 +1,80 @@
+.single-case {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -2rem;
+	flex-direction: row;
+	&__left, 
+	&__right {
+		flex: 0 0 100%;
+		padding: 0 2rem;
+	}
+	@include md-up {
+		&__left {
+			flex: 0 0 66.66667%;
+			max-width: 66.66667%;
+		}
+		&__right {
+			flex: 0 0 33.33333%;
+			max-width: 33.333333%;
+		}	
+	}
+	
+}
+
+.cases-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -.5rem;
+	margin-right: -.5rem;
+	&__title {
+		flex: 1 0 100%;
+		padding: 0 .5rem;
+	}
+	&__item {
+		flex: 0 0 33.33333%;
+		padding: 0 .5rem;
+		max-width: 33.333333%;
+		@include md-up {
+			flex: 0 0 25%;
+			padding: 0 .5rem;
+			max-width: 25%;
+		}
+	}
+}
+
+
+
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+
+.article {
+	&__content {
+		position: relative;
+		background: #fff;
+		z-index: 10;
+		
+		@include md-up {
+			margin-top: -4rem;
+			padding: 1rem 2rem;
+		}
+		@include lg-up {
+			margin-top: -6rem;
+			border-top: 4px solid $primary;
+			&:before {
+				position: absolute;
+				top: -4px;
+				right: 0;
+				height: 4px;
+				background-color: $secondary;
+				width: 40%;
+				content: '';
+			}
+		}
+		
+
+	}
+}

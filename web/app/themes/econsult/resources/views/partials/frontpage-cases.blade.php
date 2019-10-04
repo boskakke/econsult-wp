@@ -17,9 +17,9 @@
 						{{ the_post_thumbnail( 'case', array( 'class' => ' hero__image ', 'alt' => get_the_title() ) ) }}
 					</figure>
 					<div class="case__body">
-						<h3 class="case__header">
+						<h4 class="case__header">
 							{{ the_title() }}
-						</h3>
+						</h4>
 						<div class="case__icon">
 							<i class="bbicon-arrow-right"></i>		
 						</div>

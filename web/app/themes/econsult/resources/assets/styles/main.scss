@@ -11,6 +11,9 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+@import '~@fancyapps/fancybox/dist/jquery.fancybox.min.css';
+
+
 
 /** Import theme styles */
 
@@ -31,6 +34,7 @@
 @import "layouts/footer";
 @import "layouts/teaser";
 @import "layouts/page";
+@import "layouts/posts";
 @import "components/spinner";
 @import "components/images";
 @import "layouts/tinymce";

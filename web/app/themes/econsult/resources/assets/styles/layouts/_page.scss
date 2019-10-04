@@ -1,15 +1,4 @@
-
-
 .page {
-	&__title {
-		font-weight: 600;
-		font-size: 30px;
-		@include md-up {
-			font-size: 40px;
-		}
-		margin-bottom: 25px; 
-	}
-
 	&__summary {
 		color: #999;
 		font-size: 20px;
@@ -17,26 +6,17 @@
 	}
 }
 
-
-
 .module {
 	margin: 0 0 40px;
 
 	&__header {
-		font-weight: 600;
-		font-family: $headings-font-family;
-		margin-bottom: 20px;
+		color: #fff;
 		hyphens: auto;
-		&--lg {
-			font-size: 20px;	
-		}
-		&--sm {
-			font-size: 16px;
-			text-transform: uppercase;
-			letter-spacing: 0.04em;
-		}
+		font-size: $font-3;
+		margin-top: 0;
 	}
 	&__text {
+		color: #fff;
 		font-size: 14px;
 	}
 	p:last-child {
@@ -92,21 +72,6 @@
 	&__content {
 		p, li {
 			margin-bottom: 20px;
-			color: #777;
-		}
-		h1, h2, h3, h4, h5, h6 {
-			font-family: $headings-font-family;
-			font-weight: 600;
-		}
-		h2 {
-			margin: 20px 0;
-			padding: 20px 0 0 0;
-			font-size: 25px;
-		}
-		h3 {
-			margin: 20px 0;
-			padding: 20px 0 0 0;
-			font-size: 20px;
 		}
 		ul {
 			list-style: none;

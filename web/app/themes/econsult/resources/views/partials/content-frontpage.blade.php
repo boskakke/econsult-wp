@@ -1,4 +1,4 @@
-@include('partials.frontpage-hero')
+@include('partials.hero-illu', ['sectionClass' => 'section', 'figureClass' => 'hero__figure--gradient'])
 @include('partials.frontpage-tabs')
 @include('partials.frontpage-teasers')
 @include('partials.frontpage-flex')

@@ -12,8 +12,6 @@ figure {
 	align-items: center;
 }
 
-
-
 %menuFx {
 	position: relative;
 	&:before {
@@ -69,9 +67,27 @@ h5 {
 	font-family: $headings-font-family;
 	font-weight: 600;
 	line-height: 1.1;
-	color: inherit;
-	margin-top: .5em;
-	margin-bottom: 1em;
+	color: $primary;
+	margin-top: 1em;
+	margin-bottom: .5em;
+
+}
+h1 {
+	font-size: $font-7;
+	@include md-up {
+		font-size: $font-8;
+	}
+}
+
+h2 {
+	font-size: $font-6;
+}
+
+h3 {
+	font-size: $font-5;
+	@include md-up {
+		font-size: $font-6;
+	}
 }
 
 
@@ -81,9 +97,11 @@ h5 {
 .flex-0 {
 	flex-grow: 0 1 auto;
 }
-
-.mb-10 {
-	margin-bottom: 100px;
+.mb-1 {
+	margin-bottom: 1rem;
+}
+.mb-2 {
+	margin-bottom: 2rem;
 }
 .ml-1 {
 	margin-left: 1rem;
@@ -101,8 +119,8 @@ h5 {
 	width: 100%;
 	max-width: 100%;
 	margin: 0 auto;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
 
 	@include xl-up {
 		max-width: 1260px;	
@@ -139,11 +157,11 @@ p {
 		@extend %flex-center;
 		height: 60px;
 		color: #fff;
-		margin: 0 -15px;
+		margin: 0 -2rem;
+		font-weight: 600;
 		@include md-up {
 			margin: 0;
 		}
-		
 		a {
 			color: #fff;
 		}
@@ -199,7 +217,7 @@ p {
 }
 
 .hero__figure {
-	margin: 0 -15px;
+	margin: 0 -2rem;
 	position: relative;
 	@include md-up {
 		margin: 0;
@@ -218,8 +236,6 @@ p {
 		}
 	}
 }
-
-
 
 .section {
 	margin-bottom: $section-margin;
@@ -241,9 +257,6 @@ p {
 }
 
 .section-illu {
-	
-	
-	
 	justify-content: center;
 	.container {
 		display: flex;
@@ -341,7 +354,6 @@ p {
 			}
 		}
 	}
-	
 }
 
 .module {
@@ -384,13 +396,6 @@ p {
 	}
 }
 
-
-.wpcf7-response-output {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-}
 %cf7 {
 	border: 0;
 	margin: 0;
@@ -416,6 +421,9 @@ span.wpcf7-not-valid-tip {
 	color: #cd0403;
 }
 
+.wpcf7-textarea {
+	height: 8rem;
+}
 
 .pagination {
 	justify-content: space-between;

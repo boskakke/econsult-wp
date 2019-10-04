@@ -1,3 +1,5 @@
+import '@fancyapps/fancybox/dist/jquery.fancybox.js'
+
 export default {
   init() {
     // JavaScript to be fired on all pages

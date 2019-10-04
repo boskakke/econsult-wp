@@ -79,8 +79,8 @@ img {
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
-	margin-top: 1em;
+.article-modules > * + * {
+	margin-top: 4rem;
 }
 
 /* Inherit fonts for inputs and buttons */

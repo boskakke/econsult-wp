@@ -76,6 +76,7 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "jquery": "^3.3.1"
   }
 }
