@@ -10,13 +10,13 @@ $menu-height-md: 60px;
 .tabs {
 	display: flex;
 	flex-direction: column;
-	margin-top: calc(-#{$menu-height} - #{$section-margin});
+	margin-top: calc(-#{$menu-height} - 5rem);
 	margin-bottom: 2em;
 	font-family: $headings-font-family;
 	position: relative;
 	z-index: 10;
 	@include md-up {
-		margin-top: calc(-#{$menu-height-md} - 5em);
+		margin-top: calc(-#{$menu-height-md} - 5rem);
 	}
 	@include lg-up {
 		margin-top: calc(-#{$menu-height-md} - #{$section-margin});

@@ -177,13 +177,16 @@ p {
 		font-weight: 600;
 		letter-spacing: .02em;
 		align-items: center;
-		
+		font-size: $font-2;
 		@include md-up {
 			display: flex;
 			text-shadow: 1px 1px 0 rgba(0,0,0,.9);
 			color: #fff;
 			text-align: left;
 			flex: 1 0 auto;
+		}
+		@include lg-up {
+			font-size: $font-3;
 		}
 		&--dark {
 			color: #333;
