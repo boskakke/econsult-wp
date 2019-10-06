@@ -9,10 +9,12 @@
     </div>
     {!! get_search_form(false) !!}
   @endif
-
+  
+  <div class="teaser-flow">
   @while (have_posts()) @php the_post() @endphp
     @include('partials.content-'.get_post_type())
   @endwhile
+  </div>
 
   {!! get_the_posts_navigation() !!}
 @endsection

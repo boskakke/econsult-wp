@@ -1,15 +1,11 @@
-@include('partials.hero-illu', ['sectionClass' => 'mb-2', 'figureClass' => 'hero__figure--gradient'])
+@include('partials.hero-illu')
 
 <article @php post_class('section--content article__content') @endphp>
-	<header>
-		<h1 class="page__title">{{ the_title() }}</h1>
-	</header>
-	<div class="single-case">
-		<div class="single-case__left article-modules">
+
+	<div class="single-article">
+		<div class="single-article__left article-modules">
 			<div class="entry-content">
-				<p class="page__summary">
-					{{ the_field('txt_summary') }}
-				</p>
+				<h1 class="page__title">{{ the_title() }}</h1>
 				@php the_content() @endphp
 		</div>
 		@if( have_rows('repeater_images') )
@@ -36,9 +32,10 @@
 				<?php previous_post_link('%link', '<span class="button button--fancy button--primary"><span title="Forrige">Forrige</span></span>'); ?> 
 				<?php next_post_link('%link', '<span class="button button--fancy button--primary"><span title="Næste">Næste</span></span>'); ?> 
 			</div>
+			
 		</div>
 
-		<div class="single-case__right">
+		<div class="single-article__right">
 			<?php dynamic_sidebar('sidebar-other'); ?>
 		</div>
 	</div>

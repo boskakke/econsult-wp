@@ -1,9 +1,7 @@
 @extends('layouts.app')
-
 @section('content')
-Det virker
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header')
+    @include('partials.hero-illu', ['sectionClass' => 'mb-2'])
     @include('partials.content-page')
   @endwhile
 @endsection

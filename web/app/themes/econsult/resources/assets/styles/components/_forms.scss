@@ -56,63 +56,6 @@ form {
 	
 }
 
-.form-group {
-	margin-bottom: 10px;
-	position: relative;
-	label {
-		font-size: $font-2;
-	}
-
-}
-
-.form-checkbox {
-	display: flex;
-	align-items: center;
-	margin-top: 20px;
-	&__smalltxt {
-		font-size: 13px;
-	}
-}
-
-.btn--absolute {
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	font-size: 25px;
-	padding: 0;
-	background: transparent;
-	border: 0;
-}
-
-.form-col {
-	display: flex;
-	justify-content: space-between;
-}
-
-
-.form--default {
-	.form-control {
-		border-width: 1px;
-		border-color: $border-color;
-		&:focus,
-		&:hover {
-			border-color: rgba(0,0,0,.4);
-		}
-		&:focus {
-			background: #fff;
-			box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
-		}
-		&:disabled {
-			color: #999;
-			background: #eee;
-			border-color: $border-color;
-		}
-	}
-}
-
 
 .form-row {
 	display: flex;
@@ -125,6 +68,28 @@ form {
 	position: relative;
 
 }
+
+.form-group {
+	margin-bottom: 10px;
+	position: relative;
+	flex: 1 0 50%;
+	label {
+		font-size: $font-1;
+		text-transform: uppercase;
+		font-weight: 600;
+		opacity: .5;
+	}
+
+}
+
+
+
+.form-col {
+	display: flex;
+	justify-content: space-between;
+}
+
+
 
 
 input[type="search"]::-webkit-search-decoration,

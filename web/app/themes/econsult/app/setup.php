@@ -214,8 +214,13 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 add_image_size( 'hero_lg', 1900, 800, true ); 
-add_image_size( 'hero_md', 1000, 700, true ); 
-add_image_size( 'hero_sm', 800, 600, true ); 
 add_image_size( 'case', 400, 400, true ); 
 add_image_size( 'case-lg', 1900, 9999, false ); 
+add_image_size( 'teaser', 800, 500, true ); 
 
+
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', __NAMESPACE__ . '\\wpdocs_custom_excerpt_length', 999 );

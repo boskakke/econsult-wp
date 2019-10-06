@@ -142,3 +142,63 @@
 	
 
 }
+
+.teaser-flow {
+	display: flex;
+	margin: 0 -1rem;
+	flex-wrap: wrap;
+	.grid__item {
+		flex: 0 0 100%;
+		display: flex;
+		padding: 1rem;
+		@include md-up {
+			flex: 0 0 33.33333%;
+		}
+	}
+}
+
+.teaser-card {
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 100%;
+	height: 100%;
+	box-shadow: 0 0 30px rgba(black, .1);
+	position: relative;
+	&__overlaylink {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+
+	}
+	&__figure {
+		flex: 0 0 25%;
+	}
+	&__body {
+		padding: 1rem 2rem;
+		flex: 1 0 75%;
+		display: flex;
+		flex-direction: column;
+	}
+	&__readmore {
+		font-weight: 600;
+		font-family: $headings-font-family;
+		font-size: $font-2;
+		&:after {
+			display: inline-block;
+			height: 11px;
+			margin-left: 8px;
+			transition: all .3s ease-in-out;
+			width: 17px;
+			background: url(../images/arrow.svg) no-repeat;
+			content: '';
+		}
+		&:hover {
+			text-decoration: none;
+			&:after {
+				transform: translateX(4px);
+			}
+		}
+	}
+}

@@ -85,9 +85,6 @@ h2 {
 
 h3 {
 	font-size: $font-5;
-	@include md-up {
-		font-size: $font-6;
-	}
 }
 
 
@@ -182,11 +179,13 @@ p {
 			color: #fff;
 			text-align: left;
 			flex: 1 0 auto;
-
 		}
 		&--dark {
 			color: #333;
 			text-shadow: none;
+		}
+		.font-30 {
+			font-size: $font-6;
 		}
 	}
 
@@ -239,18 +238,13 @@ p {
 
 .section {
 	margin-bottom: $section-margin;
-	&--content {
-		margin-bottom: $section-margin;
-		max-width: 1000px;
-		margin-left: auto;
-		margin-right: auto;
-	}
 	&--padding {
 		padding: 4rem 0;
 	}
 }
 .section--gray {
 	background-image: linear-gradient(-45deg, lighten(#eee, 5%), #eee);
+	margin-top: 4rem;
 }
 .section--blue {
 	background-image: linear-gradient(-45deg, lighten($primary-bg, 10%), $primary-bg);

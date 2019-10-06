@@ -1,4 +1,22 @@
-.single-case {
+.post-teaser {
+	display: flex;
+	padding: 2rem;
+	box-shadow: 0 5px 30px rgba(black, .1);
+	margin-bottom: 2rem;
+
+	&__figure {
+		display: flex;
+		flex: 0 0 33.333333%;
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 2rem;
+	}
+	
+}
+.single-article {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -2rem;
@@ -12,10 +30,12 @@
 		&__left {
 			flex: 0 0 66.66667%;
 			max-width: 66.66667%;
+			order: 2;
 		}
 		&__right {
 			flex: 0 0 33.33333%;
 			max-width: 33.333333%;
+			padding-top: 2rem;
 		}	
 	}
 	
@@ -34,6 +54,7 @@
 		flex: 0 0 33.33333%;
 		padding: 0 .5rem;
 		max-width: 33.333333%;
+		margin-bottom: 1rem;
 		@include md-up {
 			flex: 0 0 25%;
 			padding: 0 .5rem;
@@ -42,39 +63,25 @@
 	}
 }
 
+.posts-navigation {
+	margin-bottom: 2rem;
+}
 
+.nav-links a {
+	@extend .button;
+	@extend .button--primary;
 
+}
 .pagination {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	margin-bottom: 4rem;
 }
 
 
-.article {
-	&__content {
-		position: relative;
-		background: #fff;
-		z-index: 10;
-		
-		@include md-up {
-			margin-top: -4rem;
-			padding: 1rem 2rem;
-		}
-		@include lg-up {
-			margin-top: -6rem;
-			border-top: 4px solid $primary;
-			&:before {
-				position: absolute;
-				top: -4px;
-				right: 0;
-				height: 4px;
-				background-color: $secondary;
-				width: 40%;
-				content: '';
-			}
-		}
-		
-
-	}
+.entry-content p:first-child > strong {
+	font-size: $font-5;
+	font-weight: 400;
 }
+

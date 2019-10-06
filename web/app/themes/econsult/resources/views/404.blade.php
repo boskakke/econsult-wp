@@ -5,7 +5,7 @@
 
   @if (!have_posts())
     <div class="alert alert-warning">
-      {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
+      {{ __('Undskyld. Vi kunne ikke finde den side, du leder efter...', 'sage') }}
     </div>
     {!! get_search_form(false) !!}
   @endif

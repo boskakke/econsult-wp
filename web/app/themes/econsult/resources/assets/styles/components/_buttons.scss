@@ -34,6 +34,9 @@ $btn-size: 32px;
 	transition: all .2s ease;
 	cursor: pointer;
 	font-size: $font-2;
+	border-radius: 40px;
+	height: 45px;
+	padding: 0 25px;
 
 	&:hover {
 		text-decoration: none;
@@ -44,15 +47,19 @@ $btn-size: 32px;
 	&:disabled {
 		opacity: .65;
 	}
+	&:not(.button--fancy) {
+		display: inline-flex;
+		align-items: center;
+		&:hover {
+			background-color: darken($primary, 10%);
+		}
+	}
 
 }
 
 .button--fancy {
 	overflow: hidden;
 	position: relative;
-	border-radius: 40px;
-	height: 45px;
-	padding: 0 25px;
 
 	span {
 		white-space: nowrap;
