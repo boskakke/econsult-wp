@@ -60,6 +60,7 @@ form {
 .form-row {
 	display: flex;
 	margin: 0 -1rem;
+	flex-wrap: wrap;
 	.form-group {
 		padding: 0 1rem;
 		flex: 0 0 100%;
