@@ -213,10 +213,15 @@ if( function_exists('acf_add_options_page') ) {
     
 }
 
-add_image_size( 'hero_lg', 1900, 800, true ); 
+
+add_image_size( 'hero_lg', 1900, 1900 * .5625, true ); 
+add_image_size( 'hero_md', 1200, 1200 * .5625, true ); 
+add_image_size( 'hero_sm', 800, 800 * .5625, true ); 
 add_image_size( 'case', 400, 400, true ); 
+add_image_size( 'case-sm', 300, 300, true ); 
 add_image_size( 'case-lg', 1900, 9999, false ); 
 add_image_size( 'teaser', 800, 500, true ); 
+add_image_size( 'teaser-sm', 600, 600 * .625, true ); 
 
 
 
