@@ -151,8 +151,10 @@
 		flex: 0 0 100%;
 		display: flex;
 		padding: 1rem;
-		@include md-up {
+		
+		@include lg-up {
 			flex: 0 0 33.33333%;
+			max-width: 33.333333%;
 		}
 	}
 }

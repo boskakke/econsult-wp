@@ -16,6 +16,9 @@ $menu-height-md: 60px;
 	position: relative;
 	z-index: 10;
 	@include md-up {
+		margin-top: calc(-#{$menu-height-md} - 5em);
+	}
+	@include lg-up {
 		margin-top: calc(-#{$menu-height-md} - #{$section-margin});
 	}
 	&__top {
