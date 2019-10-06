@@ -59,14 +59,17 @@ form {
 
 .form-row {
 	display: flex;
-	margin: -1rem;
+	margin: 0 -1rem;
 	.form-group {
-		width: 50%;
 		padding: 0 1rem;
+		flex: 0 0 100%;
+		margin-bottom: $spacer / 2;
+		position: relative;
+		@include md-up {
+			width: 50%;
+			flex: 0 0 50%;
+		}
 	}
-	margin-bottom: $spacer / 2;
-	position: relative;
-
 }
 
 .form-group {

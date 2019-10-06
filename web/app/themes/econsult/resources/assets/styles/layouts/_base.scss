@@ -1,4 +1,9 @@
-
+%section-margin {
+	margin-bottom: 5rem;
+	@include lg-up {
+		margin-bottom: 10rem;
+	}
+}
 img {
 	max-width: 100%;
 	height: auto;	
@@ -237,7 +242,7 @@ p {
 }
 
 .section {
-	margin-bottom: $section-margin;
+	@extend %section-margin;
 	&--padding {
 		padding: 4rem 0;
 	}
@@ -252,6 +257,7 @@ p {
 
 .section-illu {
 	justify-content: center;
+	@extend %section-margin;
 	.container {
 		display: flex;
 		flex-direction: column;

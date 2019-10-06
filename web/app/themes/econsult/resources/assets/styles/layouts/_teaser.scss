@@ -50,7 +50,7 @@
 .section-bullits {
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: $section-margin;
+	@extend %section-margin;
 	display: flex;
 	flex-wrap: wrap;
 	@include md-up {

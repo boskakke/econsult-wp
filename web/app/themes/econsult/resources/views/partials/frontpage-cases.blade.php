@@ -1,4 +1,4 @@
-<div class="section mt-5 mb-10">		
+<div class="section">		
 	<div class="section-header">
 		Cases
 	</div>
