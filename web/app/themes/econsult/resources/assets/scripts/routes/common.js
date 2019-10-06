@@ -39,3 +39,26 @@ export default {
     // JavaScript to be fired on all pages, after page specific JS is fired
   },
 };
+
+
+
+const options = {
+  root: null, // Page as root
+  rootMargin: '0% 0% 15% 0%', // set threshold for when image should start being fetched.
+  threshold: 0.5,
+};
+
+const handleIntersection = (entries) => {
+  entries.forEach(entry => {
+    if(entry.intersectionRatio > 0) {
+      entry.target.classList.add('show');
+    }
+  })
+}
+
+const observer = new IntersectionObserver(handleIntersection, options);
+const elements = document.querySelectorAll('.fadeUp');
+
+elements.forEach(elm => {
+  observer.observe(elm);
+})

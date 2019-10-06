@@ -4,7 +4,7 @@
 		the_row()
 	@endphp
 		@if( get_row_layout() == 'section_bullets' )
-		<div class="section-bullits">
+		<div class="section-bullits fadeUp">
 			<div class="section-bullits__col section-bullits__col--left">
 				@if( have_rows('repeater_bullets_left'))
 				<ul class="list list-bullits list-bullits--right">
@@ -68,7 +68,7 @@
 			$size = 'full;'
 		@endphp
 
-		<div class="section-illu mb-10 ">
+		<div class="section-illu fadeUp mb-10 ">
 			<div class="container flex">
 				<div class="section-illu__col section-illu__col--left">
 					<h3 class="section-illu__header">{{ the_sub_field('txt_quote') }}</h3>

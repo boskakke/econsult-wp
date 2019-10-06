@@ -1,4 +1,4 @@
-@include('partials.hero-illu')
+@include('partials.hero-illu', ['sectionClass' => 'fadeUp'])
 
 <article @php post_class('section--content article__content') @endphp>
 
@@ -9,7 +9,7 @@
 				@php the_content() @endphp
 		</div>
 		@if( have_rows('repeater_images') )
-			<div class="cases-gallery">
+			<div class="cases-gallery fadeUp">
 				<h4 class="cases-gallery__title">
 					Galleri
 				</h4>
