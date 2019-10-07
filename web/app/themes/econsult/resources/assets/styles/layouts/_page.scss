@@ -76,6 +76,12 @@
 		p, li {
 			margin-bottom: 20px;
 		}
+		.page__title + p:first-of-type {
+			strong {
+				font-size: $font-6;
+				font-weight: 400;
+			}
+		}
 		ul {
 			list-style: none;
 			padding: 0;
