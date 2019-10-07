@@ -166,6 +166,11 @@
 	height: 100%;
 	box-shadow: 0 0 30px rgba(black, .1);
 	position: relative;
+	&:hover {
+		.teaser-card__readmore:after {
+			transform: translateX(5px);
+		}
+	}
 	&__overlaylink {
 		position: absolute;
 		left: 0;
@@ -191,7 +196,7 @@
 			display: inline-block;
 			height: 11px;
 			margin-left: 8px;
-			transition: all .3s ease-in-out;
+			transition: transform .3s ease-in-out;
 			width: 17px;
 			background: url(../images/arrow.svg) no-repeat;
 			content: '';
