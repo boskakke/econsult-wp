@@ -8,23 +8,13 @@
 				<h1 class="page__title">{{ the_title() }}</h1>
 				@php the_content() @endphp
 			</div>
+
 		</div>
 
 		<div class="single-article__right">
-			@if($template == 'none')
-				@php
-					dynamic_sidebar('sidebar-other')
-				@endphp
-			@elseif($template == 'private')
-				@php
-					dynamic_sidebar('sidebar-private');
-				@endphp
-
-			@elseif($template == 'business')
-				@php
-					dynamic_sidebar('sidebar-business');
-				@endphp
-			@endif
+			@php
+				dynamic_sidebar('sidebar-other')
+			@endphp
 		</div>
 	</div>
 

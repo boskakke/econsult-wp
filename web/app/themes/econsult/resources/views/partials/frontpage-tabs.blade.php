@@ -1,11 +1,4 @@
-@php
-	$template = get_field('radio_page_category');
-@endphp
-
-@if($template)
-
 <div class="tabs">
-	
 	<div class="tabs__bottom">
 		@if(get_field('txt_phone','options'))
 		<div class="contact__desktop ">
@@ -19,5 +12,3 @@
 		@endif	
 	</div>
 </div>
-
-@endif

@@ -1,13 +1,13 @@
 {
-    "key": "group_5d9a553bea34a",
-    "title": "Section teasers",
+    "key": "group_5d9bb4add6392",
+    "title": "Teasers",
     "fields": [
         {
-            "key": "field_5d9b204da0512",
-            "label": "Teasers",
-            "name": "teasers",
+            "key": "field_5d9bb4b14e197",
+            "label": "Relaterede sider",
+            "name": "related",
             "type": "relationship",
-            "instructions": "",
+            "instructions": "Vælg sider, der skal vises som teasers",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,7 +16,8 @@
                 "id": ""
             },
             "post_type": [
-                "page"
+                "page",
+                "cases"
             ],
             "taxonomy": "",
             "filters": [
@@ -35,9 +36,16 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "default"
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cases"
             }
         ]
     ],
@@ -49,5 +57,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1570451305
+    "modified": 1572554548
 }

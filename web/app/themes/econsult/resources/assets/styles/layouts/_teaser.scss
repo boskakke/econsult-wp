@@ -17,7 +17,7 @@
 	}
 
 	p {
-		color: #777;
+		color: $body-color;
 	}
 	&__figure {
 		margin-bottom: 20px;
@@ -56,7 +56,6 @@
 	@include md-up {
 		flex-wrap: nowrap;
 	}
-	
 	&__illu {
 		display: none;
 		@include lg-up {
@@ -86,10 +85,13 @@
 	list-style: none;
 	padding: 0;
 	&__item {
-		color: #777;
+		color: $gray-700;
 		margin: 0;
-		&:not(:last-child) {
-			margin: 0 0 25px;	
+		margin: 0 0 25px;
+		@include md-up {
+			&:not(:last-child) {
+				margin: 0 0 25px;	
+			}
 		}
 		
 		&:before {
@@ -207,5 +209,9 @@
 				transform: translateX(4px);
 			}
 		}
+	}
+	&__arrow {
+		height: 15px;
+		width: 23.5px;
 	}
 }

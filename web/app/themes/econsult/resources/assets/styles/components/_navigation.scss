@@ -42,7 +42,6 @@
 	@include md-up {
 		all: unset;
 	}
-
 }
 
 
@@ -117,7 +116,10 @@
 		top: 100%;
 		left: 0;
 		background: $primary;
-		min-width: 240px;
+		min-width: 200px;
+	}
+	.menu-wrapper & {
+		font-size: $font-2;
 	}
 	a {
 		color: #fff;

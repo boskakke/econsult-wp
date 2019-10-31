@@ -119,19 +119,10 @@ h3 {
 
 .container {
 	width: 100%;
-	max-width: 100%;
 	margin: 0 auto;
 	padding-left: 2rem;
 	padding-right: 2rem;
-
-	@include xl-up {
-		max-width: 1260px;	
-	}
-	
-}
-
-p {
-	color: #777;
+	max-width: 1260px;
 }
 
 .black {
@@ -330,7 +321,7 @@ p {
 		margin-bottom: 10px;
 		&.current-menu-item {
 			& > a {
-				color: #777;
+				color: $body-color;
 				&:before {
 					color: $secondary;
 					width: 26px;
@@ -348,7 +339,7 @@ p {
 				transition: width .3s ease, color .3s ease;
 			}
 			&:hover {
-				color: #777;
+				color: $body-color;
 				text-decoration: none;
 				&:before {
 					color: $secondary;
@@ -369,7 +360,7 @@ p {
 			display: block;
 			&.current-menu-item {
 				& > a {
-					color: #777;
+					color: $body-color;
 					&:before {
 						color: $secondary;
 						width: 26px;
@@ -387,7 +378,7 @@ p {
 					transition: width .3s ease, color .3s ease;
 				}
 				&:hover {
-					color: #777;
+					color: $body-color;
 					text-decoration: none;
 					&:before {
 						color: $secondary;

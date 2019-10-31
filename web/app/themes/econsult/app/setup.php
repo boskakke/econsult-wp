@@ -94,14 +94,6 @@ add_action('widgets_init', function () {
     'name'          => __('Footer-right', 'sage'),
     'id'            => 'sidebar-footer-right'
     ] + $config);
-   register_sidebar([
-    'name'          => __('Privat', 'sage'),
-    'id'            => 'sidebar-private'
-    ] + $config);
-  register_sidebar([
-    'name'          => __('Erhverv', 'sage'),
-    'id'            => 'sidebar-business'
-    ] + $config);
   register_sidebar([
     'name'          => __('Andet', 'sage'),
     'id'            => 'sidebar-other'
@@ -208,13 +200,10 @@ function custom_post_type() {
 add_action( 'init', __NAMESPACE__ . '\\custom_post_type', 0 );
 
 if( function_exists('acf_add_options_page') ) {
-
-    acf_add_options_page();
-    
+    acf_add_options_page();    
 }
 
-
-add_image_size( 'hero_lg', 1900, 1900 * .42, true ); 
+add_image_size( 'hero_lg', 1420, 1420 * .42, true ); 
 add_image_size( 'hero_md', 1200, 1200 * .42, true ); 
 add_image_size( 'hero_sm', 800, 800 * .42, true ); 
 add_image_size( 'case', 400, 400, true ); 
@@ -222,8 +211,6 @@ add_image_size( 'case-sm', 300, 300, true );
 add_image_size( 'case-lg', 1900, 9999, false ); 
 add_image_size( 'teaser', 800, 500, true ); 
 add_image_size( 'teaser-sm', 600, 600 * .625, true ); 
-
-
 
 function wpdocs_custom_excerpt_length( $length ) {
     return 20;
