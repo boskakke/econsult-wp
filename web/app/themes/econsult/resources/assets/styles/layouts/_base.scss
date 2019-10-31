@@ -432,3 +432,7 @@ span.wpcf7-not-valid-tip {
 	justify-content: space-between;
 	@extend .mt-5;
 }
+
+.grecaptcha-badge {
+	display: none !important;
+}
