@@ -3,7 +3,7 @@
 @endphp
 <div class="section--content article__content">
 	<div class="single-article">
-		<div class="single-article__left article-modules">
+		<div class="single-article__left article-modules fadeUp">
 			<div class="entry-content">
 				<h1 class="page__title">{{ the_title() }}</h1>
 				@php the_content() @endphp
@@ -11,7 +11,7 @@
 
 		</div>
 
-		<div class="single-article__right">
+		<div class="single-article__right fadeUp">
 			@php
 				dynamic_sidebar('sidebar-other')
 			@endphp
