@@ -95,9 +95,12 @@ add_action('widgets_init', function () {
     'id'            => 'sidebar-footer-right'
     ] + $config);
   register_sidebar([
-    'name'          => __('Andet', 'sage'),
-    'id'            => 'sidebar-other'
-    ] + $config);
+    'name'          => __('Sidebar', 'sage'),
+    'id'            => 'sidebar-other',
+    'before_widget' => '<section class="sidebar__widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3 class="sidebar__header">',
+    'after_title'   => '</h3>']);
 });
 
 /**

@@ -24,17 +24,20 @@
 	&__right {
 		flex: 0 0 100%;
 		padding: 0 2rem;
+		a {
+			color: $primary;
+		}
 	}
-	@include md-up {
+	@include lg-up {
 		&__left {
-			flex: 0 0 75%;
-			max-width: 75%;
+			flex: 0 0 auto;
+			max-width: calc(100% - 340px);
 			order: 2;
 		}
 		&__right {
 			flex: 0 0 25%;
-			max-width: 25%;
-			min-width: 300px;
+			max-width: 340px;
+			min-width: 340px;
 			padding-top: 2rem;
 		}	
 	}

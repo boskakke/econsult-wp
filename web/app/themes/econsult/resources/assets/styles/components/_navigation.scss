@@ -120,6 +120,7 @@
 	}
 	.menu-wrapper & {
 		font-size: $font-2;
+
 	}
 	a {
 		color: #fff;
@@ -169,6 +170,10 @@
 	max-height: 999px;
 }
 
+.widget_nav_menu {
+	font-family: $headings-font-family;
+	font-weight: 600;
+}
 
 .menu-toggle {
 	position: absolute;

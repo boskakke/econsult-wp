@@ -1,0 +1,50 @@
+.sidebar {
+	&__widget {
+		background: #f5f5f5;
+		padding: 1.5rem 1.5rem 1rem;
+		margin-bottom: 2rem;
+		border-radius: 3px;
+		.textwidget {
+			font-size: $font-2;
+		}
+		.menu-item {
+			margin-bottom: .5rem;
+		}
+	}
+	&__header {
+		margin: 0 0 1rem;
+		font-size: $font-4;
+	}
+}
+
+
+.menu {
+	.single-article__right & {
+		font-size: $font-2;
+		margin: 0;
+		.active {
+			a {
+				color: $secondary;
+			}
+		}
+		.sub-menu {
+			position: relative;
+			visibility: visible;
+			opacity: 1;
+			background: transparent;
+			margin: .5rem 0 0 0;
+			padding: 0;
+			font-size: $font-2;
+			transform: none;
+		}
+		li,
+		a {
+			background: transparent;
+			
+		}
+		a {
+			color: $primary;
+			padding: 0;
+		}
+	}
+}

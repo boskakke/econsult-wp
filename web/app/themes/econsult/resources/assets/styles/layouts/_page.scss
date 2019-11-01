@@ -4,68 +4,6 @@
 	}
 }
 
-.module {
-	margin: 0 0 40px;
-
-	&__header {
-		color: #fff;
-		hyphens: auto;
-		font-size: $font-3;
-		margin-top: 0;
-	}
-	&__text {
-		color: #fff;
-		font-size: 14px;
-	}
-	p:last-child {
-		margin-bottom: 0;
-	}
-
-	&--dark {
-		background-color: #222;
-		color: #fff;
-		padding: 30px;
-		border-radius: 3px;
-		i {
-			color: $secondary;
-		}
-		a {
-			color: #fff;
-		}
-	}
-	
-	&--primary {
-		background-color: $primary;
-		color: #fff;
-		padding: 30px;
-		border-radius: 3px;
-		p {
-			color: $primary-bg;
-		}
-		i {
-			color: $secondary;
-		}
-
-	}
-
-	&--secondary {
-		background-color: $secondary;
-		color: #fff;
-		padding: 30px;
-		border-radius: 3px;
-		p {
-			color: darken($secondary, 30%);
-		}
-		i {
-			color: $primary;
-		}
-
-		a {
-			color: #fff;
-		}
-	}
-}
-
 .article {
 	&__content {
 		p, li {
@@ -83,7 +21,6 @@
 			margin: 40px 0;
 			li {
 				padding-left: 30px;
-				overflow: hidden;
 				&:before {
 					font-family: econsult-icons;
 					content: '\e847';
@@ -96,7 +33,11 @@
 	}
 }
 
-
+.module {
+	&__header {
+		margin: 0 0 1rem;
+	}
+}
 
 
 .col {
