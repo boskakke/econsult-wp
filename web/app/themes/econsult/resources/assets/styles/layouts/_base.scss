@@ -78,7 +78,11 @@ h5 {
 
 }
 h1 {
-	font-size: $font-5;
+	
+	font-size: $font-6;
+	@include xs-down {
+		font-size: $font-5;
+	}
 	@include md-up {
 		font-size: $font-7;
 	}
@@ -89,6 +93,9 @@ h1 {
 
 h2 {
 	font-size: $font-6;
+	@include md-up {
+		font-size: $font-6;	
+	}
 }
 
 h3 {
