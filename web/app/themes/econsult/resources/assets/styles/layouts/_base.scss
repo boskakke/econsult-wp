@@ -78,7 +78,10 @@ h5 {
 
 }
 h1 {
-	font-size: $font-7;
+	font-size: $font-5;
+	@include md-up {
+		font-size: $font-7;
+	}
 	@include md-up {
 		font-size: $font-8;
 	}
