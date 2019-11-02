@@ -81,9 +81,13 @@
 	margin-bottom: 4rem;
 }
 
-
-.entry-content p:first-child > strong {
-	font-size: $font-5;
-	font-weight: 400;
+.entry-content {
+	a {
+		text-decoration: underline;
+	}
+	p:first-child > strong {
+		font-size: $font-5;
+		font-weight: 400;
+	}
 }
 
