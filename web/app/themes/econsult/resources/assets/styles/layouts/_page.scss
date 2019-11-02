@@ -11,7 +11,10 @@
 		}
 		.page__title + p:first-of-type {
 			strong {
-				font-size: $font-5;
+				font-size: $font-4;
+				@include md-up {
+					font-size: $font-5;
+				}
 				font-weight: 400;
 			}
 		}
