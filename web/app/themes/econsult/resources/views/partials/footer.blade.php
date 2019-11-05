@@ -19,7 +19,7 @@
 			</div>
 			<div class="footer__col">
 				<div class="footer__content">
-					@php dynamic_sidebar('sidebar-footer-3') @endphp
+					@php dynamic_sidebar('sidebar-footer-4') @endphp
 				</div>
 			</div>
 		</div>
