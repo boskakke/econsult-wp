@@ -11,7 +11,7 @@
 		@endphp
 		@isset ($title)
 			<div class="jumbotron fadeUp">
-				<p class="mb-0">
+				<p class="mb-1">
 					{{ $title }}
 				</p>
 				

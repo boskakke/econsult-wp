@@ -32,12 +32,16 @@ $menu-height-md: 60px;
 		width: 50%;
 	}
 	&__rotator {
-		font-size: $font-5;
+		font-size: $font-6;
 		font-weight: 600;
 		position: relative;
 		height: $spacer;
+		margin-bottom: $spacer / 3;
+		@include xs-down {
+			font-size: $font-5;
+		}
 		@include md-up {
-			font-size: $font-6;
+			font-size: $font-7;
 			height: $spacer * 1.2;
 		}
 		@include lg-up {
