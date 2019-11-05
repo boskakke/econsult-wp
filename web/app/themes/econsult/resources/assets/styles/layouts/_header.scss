@@ -16,6 +16,9 @@
 		justify-content: center;
 		align-items: center;
 		flex: 1 0 auto;
+		@include md-up {
+			justify-content: flex-start;
+		}
 		@include lg-up {
 			flex: 0 0 280px;
 		}	
