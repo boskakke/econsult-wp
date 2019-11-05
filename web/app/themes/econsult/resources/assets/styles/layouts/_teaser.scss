@@ -47,7 +47,7 @@
 	margin-top: 4rem;
 }
 
-.section-bullits {
+.section-bullets {
 	margin-left: auto;
 	margin-right: auto;
 	@extend %section-margin;
@@ -66,13 +66,14 @@
 
 	&__col {
 		flex: 0 0 100%;
-		align-items: center;
 		display: flex;
+		align-items: flex-start;
 		@include md-up {
 			flex: 0 0 50%;
 		}
 		@include lg-up {
 			flex: 0 0 40%;
+			align-items: center;
 		}
 		&--left {
 			justify-content: flex-end;
@@ -80,7 +81,7 @@
 	}
 }
 
-.list-bullits {
+.list-bullets {
 	margin: 0 0 25px;
 	list-style: none;
 	padding: 0;
@@ -95,6 +96,18 @@
 				margin: 0 0 25px;	
 			}
 		}
+		@include lg-up {
+			.list-bullets--left & {
+				padding-left: 0;
+				padding-right: 40px;
+				text-align: right;
+				&:before {
+					float: right;
+					margin-left: auto;
+					margin-right: -40px;
+				}
+			}	
+		}
 		
 		&:before {
 			content: '\e801';
@@ -106,6 +119,7 @@
 		}
 
 	}
+	
 	&__header {
 		font-weight: 600;
 		font-size: $font-5;
@@ -125,9 +139,12 @@
 		flex: 0 0 100%;
 		display: flex;
 		padding: 1rem;
-		
+		@include md-up {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
 		@include lg-up {
-			flex: 0 0 33.33333%;
+			flex: 0 0 33.333333%;
 			max-width: 33.333333%;
 		}
 	}

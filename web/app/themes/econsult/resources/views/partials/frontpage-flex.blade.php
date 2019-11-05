@@ -4,16 +4,16 @@
 		the_row()
 	@endphp
 		@if( get_row_layout() == 'section_bullets' )
-		<div class="section-bullits fadeUp">
-			<div class="section-bullits__col section-bullits__col--left">
+		<div class="section-bullets fadeUp">
+			<div class="section-bullets__col section-bullets__col--left">
 				@if( have_rows('repeater_bullets_left'))
-				<ul class="list list-bullits list-bullits--right">
+				<ul class="list list-bullets list-bullets--left">
 					@while ( have_rows('repeater_bullets_left') )
 					@php
 					the_row()
 					@endphp
-					<li class="list-bullits__item">
-						<h3 class="list-bullits__header">
+					<li class="list-bullets__item">
+						<h3 class="list-bullets__header">
 							{{ the_sub_field('txt_header') }}
 						</h3>
 						<p>{{ the_sub_field('txt_summary') }}</p>
@@ -29,24 +29,24 @@
 				$size = 'full;'
 			@endphp
 
-			<div class="section-bullits__illu">
+			<div class="section-bullets__illu">
 				{!! wp_get_attachment_image( $image, $size, "") !!}
 			</div>
 
 
-			<div class="section-bullits__col">
+			<div class="section-bullets__col">
 
 				@if( have_rows('repeater_bullets_right') )
 
-					<ul class="list list-bullits list-bullits--left">
+					<ul class="list list-bullets list-bullets--right">
 
 						@while ( have_rows('repeater_bullets_right') )
 						@php
 						the_row()
 						@endphp
 
-						<li class="list-bullits__item">
-							<h3 class="list-bullits__header">
+						<li class="list-bullets__item">
+							<h3 class="list-bullets__header">
 								{{ the_sub_field('txt_header') }}
 							</h3>
 							<p>{{ the_sub_field('txt_summary') }}</p>
