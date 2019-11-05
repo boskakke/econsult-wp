@@ -51,6 +51,14 @@ $menu-height-md: 60px;
 		opacity: 0;
 	}
 
+	a {
+		color: $secondary;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	ul {
 		margin: 0;
 		padding: 0;
