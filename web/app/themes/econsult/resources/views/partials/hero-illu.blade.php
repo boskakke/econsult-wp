@@ -10,7 +10,7 @@
 			$content = get_field( 'rotator_content' );
 		@endphp
 		@isset ($title)
-			<div class="jumbotron fadeUp">
+			<div class="jumbotron">
 				<p class="mb-1">
 					{{ $title }}
 				</p>
