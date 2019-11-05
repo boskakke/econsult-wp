@@ -24,6 +24,6 @@
 
 <div class="container hidden-md-up">
 	<div class="contact__mobile">
-		<i class="bbicon-phone green mr-1"></i> {{ the_field('txt_phone', 'options') }}
+		<i class="icon-phone green mr-1"></i>{{ the_field('txt_phone', 'options') }}
 	</div>
 </div>

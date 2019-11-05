@@ -5,6 +5,10 @@
 	margin-bottom: $spacer;
 }
 
+.mr-1 {
+	margin-right: $spacer / 4;
+}
+
 %no-textdoration {
 	&:hover {
 		text-decoration: none;
