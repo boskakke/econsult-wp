@@ -1,6 +1,6 @@
 .section--footer {
 	background-color: #333;
-	padding: 4rem 0;
+	padding: 4rem 0 2rem;
 	margin-top: 4rem;
 	color: rgba(white, .8);
 }
@@ -10,6 +10,11 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	margin: 0 -2rem;
+
+	a {
+		color: #fff;
+	}
+
 	@include md-up {
 		flex-direction: row;
 	}
@@ -22,6 +27,20 @@
 		}
 		@include lg-up {
 			flex: 0 0 25%;
+		}
+	}
+
+	&__wide {
+		flex: 0 0 100%;
+		padding: $spacer / 2 0 0;
+		text-align: center;
+		color: #666;
+		a {
+			color: #777;
+			font-size: $font-1;
+			&:hover {
+				color: #999;
+			}
 		}
 	}
 	&__content {
@@ -53,9 +72,7 @@
 		margin-top: 0;
 
 	}
-	a {
-		color: #fff;
-	}
+	
 	&__logo {
 		height: 22px !important;
 		width: auto !important;

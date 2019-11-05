@@ -22,6 +22,11 @@
 					@php dynamic_sidebar('sidebar-footer-4') @endphp
 				</div>
 			</div>
+			
+
+			<div class="footer__wide">
+				<p>{!! the_field( 'footer_content', 'options' ) !!}</p>
+			</div>
 		</div>
 	</div>
 </footer>
