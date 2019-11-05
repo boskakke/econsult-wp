@@ -1,0 +1,117 @@
+$menu-height: 45px;
+$menu-height-md: 60px;
+
+
+.section__hero {
+	position: relative;
+}
+
+
+.jumbotron {
+	background: $primary;
+	padding: $spacer / 2;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	z-index: 12;
+	line-height: 1.2;
+	display: flex;
+	flex-direction: column;
+	font-size: $font-2;
+	margin-top: -3rem;
+	@include md-up {
+		position: absolute;
+		width: 66.666667%;
+		margin-top: 0;
+		font-size: $font-3;
+	}
+
+	@include lg-up {
+		padding: $spacer;
+		width: 50%;
+	}
+	&__rotator {
+		font-size: $font-5;
+		font-weight: 600;
+		position: relative;
+		height: $spacer;
+		@include md-up {
+			font-size: $font-6;
+			height: $spacer * 1.2;
+		}
+		@include lg-up {
+			font-size: $font-8;
+			height: $spacer * 1.7;
+			font-family: $headings-font-family;
+		}
+	}
+	&__word {
+		position: absolute;
+		opacity: 0;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			padding-left: 20px;
+			margin-bottom: $spacer / 4;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:before {
+				font-family: econsult-icons;
+				content: '\e80c';
+				color: $secondary;
+				float: left;
+				margin-left: -20px;
+			}
+		}
+	}
+
+}
+
+
+.letter {
+	display: inline-block;
+	position: relative;
+	float: left;
+	transform: translateZ(25px);
+	transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+	transform: rotateX(90deg);
+	transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind { transform: rotateX(-90deg); }
+
+.letter.in {
+	transform: rotateX(0deg);
+	transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+// .text {
+//   position: absolute;
+//   width: 450px;
+//   left: 50%;
+//   margin-left: -225px;
+//   height: 40px;
+//   top: 50%;
+//   margin-top: -20px;
+// }
+
+// p {
+//   display: inline-block;
+//   vertical-align: top;
+//   margin: 0;
+// }
+
+// .word {
+//   position: absolute;
+//   width: 220px;
+//   opacity: 0;
+// }
