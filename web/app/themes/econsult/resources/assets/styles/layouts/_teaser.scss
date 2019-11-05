@@ -88,6 +88,8 @@
 		color: $gray-700;
 		margin: 0;
 		margin: 0 0 25px;
+		padding-left: 40px;
+		
 		@include md-up {
 			&:not(:last-child) {
 				margin: 0 0 25px;	
@@ -99,6 +101,8 @@
 			color: $secondary;
 			font-family: econsult-icons;
 			font-size: $font-6;
+			float: left;
+			margin-left: -40px;
 		}
 
 	}
@@ -112,35 +116,35 @@
 		margin: 0;
 	}
 
-	&--right {
-		flex: 1 0 auto;
-		li {
-			padding-left: 50px;
-			&:before {
-				float: left;
-				margin-left: -40px;	
-			}
-			@include lg-up {
-				text-align: right;
-				padding-right: 60px;
-				&:before {
-					float: right;
-					margin-right: -40px;	
-				}	
-			}
+	// &--right {
+	// 	flex: 1 0 auto;
+	// 	li {
+	// 		padding-left: 50px;
+	// 		&:before {
+	// 			float: left;
+	// 			margin-left: -40px;	
+	// 		}
+	// 		@include lg-up {
+	// 			text-align: right;
+	// 			padding-right: 60px;
+	// 			&:before {
+	// 				float: right;
+	// 				margin-right: -40px;	
+	// 			}	
+	// 		}
 			
-		}	
-	}
-	&--left {
+	// 	}	
+	// }
+	// &--left {
 
-		li {
-			padding-left: 50px;
-			&:before {
-				float: left;
-				margin-left: -40px;	
-			}
-		}
-	}
+	// 	li {
+	// 		padding-left: 50px;
+	// 		&:before {
+	// 			float: left;
+	// 			margin-left: -40px;	
+	// 		}
+	// 	}
+	// }
 	
 
 }
