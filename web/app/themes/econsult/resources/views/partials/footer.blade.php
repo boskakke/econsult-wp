@@ -4,17 +4,22 @@
 		<div class="footer">
 			<div class="footer__col">
 				<div class="footer__content">
-					@php dynamic_sidebar('sidebar-footer-left') @endphp
+					@php dynamic_sidebar('sidebar-footer-1') @endphp
 				</div>
 			</div>
 			<div class="footer__col">
 				<div class="footer__content">
-					@php dynamic_sidebar('sidebar-footer-middle') @endphp
+					@php dynamic_sidebar('sidebar-footer-2') @endphp
 				</div>
 			</div>
 			<div class="footer__col">
 				<div class="footer__content">
-					@php dynamic_sidebar('sidebar-footer-right') @endphp
+					@php dynamic_sidebar('sidebar-footer-3') @endphp
+				</div>
+			</div>
+			<div class="footer__col">
+				<div class="footer__content">
+					@php dynamic_sidebar('sidebar-footer-3') @endphp
 				</div>
 			</div>
 		</div>
