@@ -398,7 +398,7 @@ span.wpcf7-not-valid-tip {
 	display: flex;
 	margin: 0 -.5rem;
 	flex-wrap: wrap;
-	@include sm-up {
+	@include sm-down {
 		margin: 0 1rem;
 	}
 	@include md-up {
@@ -411,7 +411,7 @@ span.wpcf7-not-valid-tip {
 	margin-bottom: 2rem;
 	display: flex;
 	flex-direction: column;
-	@include sm-up {
+	@include sm-down {
 		padding: 0 1rem;
 	}
 	@include md-up {
