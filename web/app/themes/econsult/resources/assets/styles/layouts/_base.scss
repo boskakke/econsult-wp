@@ -396,10 +396,10 @@ span.wpcf7-not-valid-tip {
 
 .person-grid {
 	display: flex;
-	margin: 0 -.5rem;
+	margin: 0 -1rem;
 	flex-wrap: wrap;
-	@include sm-down {
-		margin: 0 -1rem;
+	@include xs-down {
+		margin: 0 -.5rem;
 	}
 	@include md-up {
 		margin: 0 -2rem;
@@ -407,12 +407,12 @@ span.wpcf7-not-valid-tip {
 }
 .person {
 	flex: 0 0 50%;
-	padding: 0 .5rem;
+	padding: 0 1rem;
 	margin-bottom: 2rem;
 	display: flex;
 	flex-direction: column;
-	@include sm-down {
-		padding: 0 1rem;
+	@include xs-down {
+		padding: 0 .5rem;
 	}
 	@include md-up {
 		flex: 0 0 33.333333%;
