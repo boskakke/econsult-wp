@@ -4,6 +4,9 @@ $menu-height-md: 60px;
 
 .section__hero {
 	position: relative;
+	@include lg-up {
+		margin: 0 -4rem;
+	}
 }
 
 
@@ -25,7 +28,11 @@ $menu-height-md: 60px;
 		position: absolute;
 		width: 66.666667%;
 		margin-top: 0;
-		font-size: $font-3;
+		font-size: $font-3;		
+	}
+	@include lg-up {
+		left: 4rem;
+		bottom: 2rem;
 	}
 
 	@include lg-up {

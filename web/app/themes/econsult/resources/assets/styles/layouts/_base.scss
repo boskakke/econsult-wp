@@ -108,7 +108,13 @@ h3 {
 	margin: 0 auto;
 	padding-left: 2rem;
 	padding-right: 2rem;
-	max-width: 1260px;
+	@include lg-up {
+		max-width: 1000px;
+	}
+	@include xl-up {
+		max-width: 1260px;	
+	}
+	
 }
 
 .black {
