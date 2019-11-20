@@ -399,10 +399,10 @@ span.wpcf7-not-valid-tip {
 	margin: 0 -.5rem;
 	flex-wrap: wrap;
 	@include sm-down {
-		margin: 0 1rem;
+		margin: 0 -1rem;
 	}
 	@include md-up {
-		margin: 0 2rem;
+		margin: 0 -2rem;
 	}
 }
 .person {
