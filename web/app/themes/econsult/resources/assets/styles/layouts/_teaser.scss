@@ -59,7 +59,7 @@
 	&__illu {
 		display: none;
 		@include lg-up {
-			flex: 0 0 20%;
+			flex: 0 0 30%;
 			display: block;
 		}
 	}
@@ -72,7 +72,7 @@
 			flex: 0 0 50%;
 		}
 		@include lg-up {
-			flex: 0 0 40%;
+			flex: 0 0 35%;
 			align-items: center;
 		}
 		&--left {
