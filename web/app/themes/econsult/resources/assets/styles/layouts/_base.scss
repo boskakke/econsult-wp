@@ -432,6 +432,9 @@ span.wpcf7-not-valid-tip {
 	&__jobtitle {
 		font-size: $font-2;
 		margin: 0;
+		@include xs-down {
+			hyphens: auto;
+		}
 	}
 }
 
