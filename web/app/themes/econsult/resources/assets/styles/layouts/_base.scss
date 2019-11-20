@@ -387,3 +387,37 @@ span.wpcf7-not-valid-tip {
 .grecaptcha-badge {
 	display: none !important;
 }
+
+.person-grid {
+	display: flex;
+	margin: 0 -2rem;
+	flex-wrap: wrap;
+}
+.person {
+	flex: 0 0 50%;
+	padding: 0 2rem;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	@include md-up {
+		flex: 0 0 33.333333%;
+	}
+	@include lg-up {
+		flex: 0 0 25%;
+	}
+	&__figure {
+		margin: 0 0 1rem;
+	}
+	&__name {
+		font-size: $font-3;
+		margin: 0 0 .25rem;
+	}
+	&__jobtitle {
+		font-size: $font-2;
+		margin: 0;
+	}
+}
+
+.page-header {
+	margin-top: 3rem;
+}

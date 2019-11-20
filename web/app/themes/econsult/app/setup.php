@@ -218,6 +218,7 @@ add_image_size( 'case-sm', 300, 300, true );
 add_image_size( 'case-lg', 1900, 9999, false ); 
 add_image_size( 'teaser', 800, 500, true ); 
 add_image_size( 'teaser-sm', 600, 600 * .625, true ); 
+add_image_size( 'staff', 400, 600, true , array( 'center', 'top' )); 
 
 function wpdocs_custom_excerpt_length( $length ) {
     return 20;

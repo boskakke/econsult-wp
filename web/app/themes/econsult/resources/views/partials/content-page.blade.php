@@ -7,6 +7,9 @@
 			<div class="entry-content">
 				<h1 class="page__title">{{ the_title() }}</h1>
 				@php the_content() @endphp
+
+				@include('partials.staff')
+				
 			</div>
 
 		</div>
