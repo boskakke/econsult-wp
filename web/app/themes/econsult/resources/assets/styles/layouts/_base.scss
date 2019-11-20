@@ -396,20 +396,31 @@ span.wpcf7-not-valid-tip {
 
 .person-grid {
 	display: flex;
-	margin: 0 -2rem;
+	margin: 0 -.5rem;
 	flex-wrap: wrap;
+	@include sm-up {
+		margin: 0 1rem;
+	}
+	@include md-up {
+		margin: 0 2rem;
+	}
 }
 .person {
 	flex: 0 0 50%;
-	padding: 0 2rem;
+	padding: 0 .5rem;
 	margin-bottom: 2rem;
 	display: flex;
 	flex-direction: column;
+	@include sm-up {
+		padding: 0 1rem;
+	}
 	@include md-up {
 		flex: 0 0 33.333333%;
+		padding: 0 1rem;
 	}
 	@include lg-up {
 		flex: 0 0 25%;
+		padding: 0 2rem;
 	}
 	&__figure {
 		margin: 0 0 1rem;
