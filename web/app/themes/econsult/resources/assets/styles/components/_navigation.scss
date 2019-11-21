@@ -92,6 +92,11 @@
 			@include md-up {
 				background: $primary;
 			}
+			@include lg-up {
+				li:hover {
+					background: darken($primary, 5%);
+				}
+			}
 		}
 	}
 }
