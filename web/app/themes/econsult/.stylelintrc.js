@@ -24,6 +24,7 @@ module.exports = {
     'block-closing-brace-newline-before': null,
     'string-quotes': null,
     'function-comma-space-after': null,
+    'color-hex-case': null,
     'at-rule-no-unknown': [
       true,
       {
