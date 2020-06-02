@@ -11,7 +11,7 @@ $btn-size: 32px;
 	color: #fff;
 	transition: box-shadow .2s ease;
 	margin-left: 5px;
-	
+
 
 	&:hover {
 		color: #fff;
@@ -33,10 +33,9 @@ $btn-size: 32px;
 	font-family: $headings-font-family;
 	transition: all .2s ease;
 	cursor: pointer;
-	font-size: $font-2;
-	border-radius: 40px;
-	height: 2rem;
-	padding: 0 25px;
+	font-size: $font-3;
+	height: 3rem;
+	padding: 0 2.5rem;
 
 	&:hover {
 		text-decoration: none;
@@ -87,7 +86,7 @@ $btn-size: 32px;
 			&:after {
 				transition-delay: .2s;
 			}
-		}	
+		}
 	}
 }
 
@@ -97,6 +96,7 @@ $btn-size: 32px;
 	color: #fff;
 	&:hover {
 		background-color: darken($primary, 10%);
+		color: #fff;
 	}
 }
 

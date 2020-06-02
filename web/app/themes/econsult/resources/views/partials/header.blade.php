@@ -1,8 +1,23 @@
-<div class="container">
-	<div class="header ">
+@php
+	if(is_front_page()) {
+		$headerClass = 'header--frontpage';
+		$logo = 'logo--front';
+	} else {
+		$headerClass = '';
+		$logo = 'logo';
+	}
+
+
+
+@endphp
+<div class="header {{$headerClass}}">
+
 		<div class="header__col--logo">
-			<a href="{{ home_url('/') }}" class="header__logo" title="{{ get_bloginfo('name', 'display') }}">
-				<?php bloginfo('name'); ?>
+			<a href="{{ home_url('/') }}"  title="{{ get_bloginfo('name', 'display') }}">
+				<svg class="header__col--svg"
+				viewBox="0 0 201 36"
+				xmlns="http://www.w3.org/2000/svg">
+				<use xlink:href="@asset('images/sprite.svg')#{{$logo}}"></use></svg>
 			</a>
 		</div>
 
@@ -19,7 +34,6 @@
 			<span></span>
 			<span></span>
 		</div>
-	</div>
 </div>
 
 <div class="container hidden-md-up">

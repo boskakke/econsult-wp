@@ -1,11 +1,11 @@
 {
-    "key": "group_5dc150fb8fe71",
-    "title": "Forside Hero",
+    "key": "group_5ed64c6f295d1",
+    "title": "Forside - About teaser",
     "fields": [
         {
-            "key": "field_5dc15120776fd",
-            "label": "Overskrift",
-            "name": "rotator_title",
+            "key": "field_5ed64c75dcd81",
+            "label": "Title",
+            "name": "title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,10 +22,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_5dc15128776fe",
-            "label": "Roterende ord",
-            "name": "rotator_words",
-            "type": "repeater",
+            "key": "field_5ed64c7adcd82",
+            "label": "Content",
+            "name": "content",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,36 +34,15 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "Tilføj ord",
-            "sub_fields": [
-                {
-                    "key": "field_5dc1513a776ff",
-                    "label": "Ord",
-                    "name": "word",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "key": "field_5ed6255700adc",
-            "label": "Billede",
+            "key": "field_5ed64c84dcd83",
+            "label": "Image",
             "name": "image",
             "type": "image",
             "instructions": "",
@@ -84,6 +63,21 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5ed64c8ddcd84",
+            "label": "Link",
+            "name": "link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -103,5 +97,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591092646
+    "modified": 1591102769
 }

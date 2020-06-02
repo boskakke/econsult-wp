@@ -1,3 +1,14 @@
+%font-header {
+	font-size: calc(30px + 30 * ((100vw - 375px) / 1180));
+	font-weight: 900;
+	@include xs-down {
+		font-size: 24px;
+	}
+	@include xl-up {
+		font-size: $font-11;
+	}
+}
+
 %section-margin {
 	margin-bottom: 5rem;
 	@include lg-up {
@@ -6,7 +17,7 @@
 }
 img {
 	max-width: 100%;
-	height: auto;	
+	height: auto;
 }
 figure {
 	margin: 0;
@@ -78,7 +89,7 @@ h5 {
 
 }
 h1 {
-	
+
 	font-size: $font-6;
 	@include xs-down {
 		font-size: $font-5;
@@ -94,7 +105,7 @@ h1 {
 h2 {
 	font-size: $font-5;
 	@include md-up {
-		font-size: $font-6;	
+		font-size: $font-6;
 	}
 }
 
@@ -102,19 +113,19 @@ h3 {
 	font-size: $font-5;
 }
 
+p {
+	font-size: $font-4;
+}
 
 .container {
 	width: 100%;
+	max-width: 90%;
 	margin: 0 auto;
-	padding-left: 2rem;
-	padding-right: 2rem;
-	@include lg-up {
-		max-width: 1000px;
-	}
+
 	@include xl-up {
-		max-width: 1260px;	
+		max-width: 1260px;
 	}
-	
+
 }
 
 .black {
@@ -232,7 +243,7 @@ h3 {
 		align-items: center;
 		&--left {
 			padding: 50px;
-		}	
+		}
 	}
 	&__header {
 		font-size: 25px;
@@ -269,9 +280,9 @@ h3 {
 	}
 	.list__link {
 		@extend %link-arrow;
-		
+
 		&:hover {
-			
+
 			&:before {
 				transform: translateX(4px);
 			}
@@ -441,3 +452,29 @@ span.wpcf7-not-valid-tip {
 .page-header {
 	margin-top: 3rem;
 }
+
+.teaser-main {
+	padding: 12rem 0;
+	margin-bottom: 4rem;
+	display: grid;
+	grid-gap: 2rem;
+	grid-template: auto / 1fr;
+	min-height: 50vh;
+	@include lg-up {
+		grid-template: auto / 60% 1fr;
+	}
+	&__figure {
+		@include lg-up {
+			padding-top: 10rem;
+		}
+	}
+	&__title {
+		@extend %font-header;
+	}
+}
+.header__col--svg {
+	path {
+		fill: red;
+	}
+}
+

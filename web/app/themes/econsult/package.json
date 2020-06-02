@@ -77,6 +77,8 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
-    "jquery": "^3.3.1"
+    "gsap": "^3.3.0",
+    "jquery": "^3.3.1",
+    "vh-check": "^2.0.5"
   }
 }

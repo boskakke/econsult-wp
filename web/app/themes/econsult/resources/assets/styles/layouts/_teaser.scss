@@ -18,6 +18,7 @@
 
 	p {
 		color: $body-color;
+		font-size: $font-4;
 	}
 	&__figure {
 		margin-bottom: 20px;
@@ -90,10 +91,10 @@
 		margin: 0;
 		margin: 0 0 25px;
 		padding-left: 40px;
-		
+
 		@include md-up {
 			&:not(:last-child) {
-				margin: 0 0 25px;	
+				margin: 0 0 25px;
 			}
 		}
 		@include lg-up {
@@ -106,9 +107,9 @@
 					margin-left: auto;
 					margin-right: -40px;
 				}
-			}	
+			}
 		}
-		
+
 		&:before {
 			content: '\e801';
 			color: $secondary;
@@ -119,7 +120,7 @@
 		}
 
 	}
-	
+
 	&__header {
 		font-weight: 600;
 		font-size: $font-5;

@@ -4,6 +4,9 @@
 @if( $posts )
 {{ $class ?? '' }}
 	<div class="section">
+		<h3 class="section-header">
+				Vores ydelser
+			</h3>
 		<div class="teaser-flow">
 			@foreach( $posts as $p )
 			<div class="grid__item">
