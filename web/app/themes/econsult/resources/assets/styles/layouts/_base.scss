@@ -148,12 +148,9 @@ p {
 	flex-wrap: wrap;
 
 	&__mobile {
-		background-color: $primary;
 		display: flex;
-		@extend %flex-center;
-		height: 60px;
+		font-size: $font-2;
 		color: #fff;
-		margin: 0 -2rem;
 		font-weight: 600;
 		@include md-up {
 			margin: 0;
@@ -454,7 +451,8 @@ span.wpcf7-not-valid-tip {
 }
 
 .teaser-main {
-	padding: 12rem 0;
+	padding: 6rem 0;
+
 	margin-bottom: 4rem;
 	display: grid;
 	grid-gap: 2rem;
@@ -462,6 +460,7 @@ span.wpcf7-not-valid-tip {
 	min-height: 50vh;
 	@include lg-up {
 		grid-template: auto / 60% 1fr;
+		padding: 12rem 0;
 	}
 	&__figure {
 		@include lg-up {

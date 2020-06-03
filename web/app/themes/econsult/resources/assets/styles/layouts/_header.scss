@@ -1,25 +1,19 @@
 
 .header {
-	max-width: 1280px;
-	width: 100%;
-	padding: 0 5%;
+
 	margin: 0 auto;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+	padding: 2rem 0;
 	font-family: $headings-font-family;
-
-	&--frontpage {
-		position: absolute;
-		top: 0;
-		z-index: 3;
-		padding: 20px 2rem;
-		left: 50%;
-		transform: translateX(-50%);
-	}
+	flex-wrap: wrap;
+	z-index: 1;
+	max-width: 90%;
+	width: 100%;
+	@extend %container;
 
 	@include lg-up {
-		height: 100px;
 		align-items: center;
 		justify-content: space-between;
 	}
@@ -32,8 +26,7 @@
 	&__col--logo {
 		display: flex;
 		align-items: center;
-		flex: 1 0 auto;
-
+		flex: 1 0 75;
 		@include lg-up {
 			flex: 0 0 220px;
 		}
@@ -43,5 +36,21 @@
 		flex: 0 0 auto;
 		justify-content: flex-end;
 		align-content: center;
+
+	}
+	&__col--hamburger {
+		flex: 0 1 25%;
+		@include md-up {
+			display: none;
+		}
+	}
+	&__col--contact {
+		flex: 1 0 100%;
+	}
+}
+
+.contact__mobile {
+	@include md-up {
+		display: none;
 	}
 }

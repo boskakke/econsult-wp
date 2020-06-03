@@ -6,7 +6,7 @@
 @endphp
 <article class="teaser-main">
 	<div class="teaser-main__text">
-		<h2 class="teaser-main__title">
+		<h2 class="teaser-main__title block">
 			{{ $title }}
 		</h2>
 		<div>{!! $content !!}</div>
