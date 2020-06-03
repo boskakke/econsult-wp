@@ -30,7 +30,14 @@ $title = get_field( 'rotator_title' );
     	  the_row();
     	  $word = get_sub_field('word');
     	  @endphp
-    	  <span class="word">{{$word}}</span>
+    	  <span class="word">
+    	  	<svg class="hero-fp__check"
+				viewBox="0 0 46 35"
+				xmlns="http://www.w3.org/2000/svg">
+				<use xlink:href="@asset('images/sprite.svg')#check"></use>
+			</svg>
+
+    	  {{$word}}</span>
     	  @endwhile
     	  @endif
     	</h1>

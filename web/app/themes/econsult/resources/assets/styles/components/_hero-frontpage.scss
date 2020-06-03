@@ -64,7 +64,7 @@
 		position: absolute;
 		right: 0;
 		top: -1rem;
-		width: 5rem;
+		width: 20vw;
 		@include md-up {
 			top: 0;
 			width: 7rem;
@@ -78,18 +78,25 @@
 		color: #fff;
 		font-family: $headings-font-family;
 		font-size: $font-2;
-		margin-bottom: .5rem;
+		margin-bottom: 1rem;
 		text-transform: uppercase;
 	}
 	&__words {
 		@extend %font-header;
 		color: #fff;
 		margin: 0;
-		text-shadow: 0 0 10px rgba(black, .15), 0 0 15px rgba(black, .2);
 		span {
+			white-space: nowrap;
 			transform-origin: center 100%;
 			display: block;
+			&:not(:last-child) {
+				margin-bottom: .5rem;
+			}
 		}
+	}
+	&__check {
+		width: .75em;
+		margin-right: .5rem;
 	}
 }
 
