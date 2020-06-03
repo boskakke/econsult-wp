@@ -23,6 +23,7 @@
 		transform-origin: center 0%;
 		background: $primary;
 		z-index: 0;
+		transform: scaleY(1.1);
 	}
 	&__inner {
 		margin: 0 auto;
@@ -79,7 +80,6 @@
 		font-family: $headings-font-family;
 		font-size: $font-2;
 		margin-bottom: 1rem;
-		text-transform: uppercase;
 	}
 	&__words {
 		@extend %font-header;
@@ -90,7 +90,7 @@
 			transform-origin: center 100%;
 			display: block;
 			&:not(:last-child) {
-				margin-bottom: .5rem;
+				margin-bottom: .5em;
 			}
 		}
 	}

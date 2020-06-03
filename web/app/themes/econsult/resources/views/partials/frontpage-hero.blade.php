@@ -35,9 +35,7 @@ $title = get_field( 'rotator_title' );
 				viewBox="0 0 46 35"
 				xmlns="http://www.w3.org/2000/svg">
 				<use xlink:href="@asset('images/sprite.svg')#check"></use>
-			</svg>
-
-    	  {{$word}}</span>
+			</svg>{{$word}}</span>
     	  @endwhile
     	  @endif
     	</h1>
