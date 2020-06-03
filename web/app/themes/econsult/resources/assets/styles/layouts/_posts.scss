@@ -20,7 +20,7 @@
 	flex-wrap: wrap;
 	margin: 0 -2rem;
 	flex-direction: row;
-	&__left, 
+	&__left,
 	&__right {
 		flex: 0 0 100%;
 		padding: 0 2rem;
@@ -31,15 +31,13 @@
 	@include lg-up {
 		&__left {
 			flex: 0 0 auto;
-			max-width: calc(100% - 340px);
+			max-width: calc(100% - 33%);
 			order: 2;
 		}
 		&__right {
-			flex: 0 0 25%;
-			max-width: 340px;
-			min-width: 340px;
+			flex: 0 0 33%;
 			padding-top: 2rem;
-		}	
+		}
 	}
 }
 
