@@ -22,7 +22,8 @@ export default {
 		tl.fromTo(tl_headerElements, {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: .5, stagger: .05}, '<.6' )
 		tl.fromTo(tl_title, {y: 50, opacity: 0}, {opacity: 1, y: 0, duration: 1,  ease: 'power4.out'}, '<.2')
 		tl.fromTo(words, { opacity: 0, scaleY: 0 }, {opacity: 1, scaleY: 1, duration: .7, stagger: .1, ease: 'power4.out'}, '<.2')
-		tl.fromTo('.hero-fp__figure', {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 3, ease: 'power4.out'}, '<.2' )
+		tl.fromTo('.hero-fp__figure', {y: -50, opacity: 0}, {y: 0, opacity: 1, duration: 2, ease: 'expo.out'}, '<.2' )
+		tl.fromTo('.hero-fp__logo', {y: -50, opacity: 0}, {y: 0, opacity: 1, duration: 2, ease: 'expo.out'}, '<.5' )
 
 
 	},

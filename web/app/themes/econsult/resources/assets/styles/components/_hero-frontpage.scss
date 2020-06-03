@@ -26,7 +26,7 @@
 	}
 	&__inner {
 		margin: 0 auto;
-		padding: 5rem 0;
+		padding: 1rem 0 5rem;
 		display: grid;
 		grid-gap: 2rem;
 		grid-template: auto auto / repeat(5, 1fr);
@@ -34,29 +34,44 @@
 		@include md-up {
 			padding: 10rem 0;
 			grid-template: auto / repeat(5, 1fr);
+			min-height: 800px;
 		}
 
 	}
 	&__content {
 		grid-column: 1 / -1;
-		grid-row: 1;
+		grid-row: 2;
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		@include md-up {
 			grid-column: 1 / span 3;
+			grid-row: 1;
 		}
 
 	}
-	&__figure {
-		grid-column: 3 / -1;
-		grid-row: 2;
-		align-items: center;
+	&__illu {
+		grid-column: 2 / -1;
+		grid-row: 1;
 		position: relative;
 		@include md-up {
 			grid-row: 1;
+			grid-column: 4 / -1;
 		}
+	}
+	&__logo {
+		position: absolute;
+		right: 0;
+		top: -1rem;
+		width: 5rem;
+		@include md-up {
+			top: 0;
+			width: 7rem;
+		}
+	}
+	&__image {
+		border-radius: 50%;
 	}
 	&__trumpet {
 		font-weight: 600;

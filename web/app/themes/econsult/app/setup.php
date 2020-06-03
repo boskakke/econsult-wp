@@ -148,7 +148,7 @@ add_action('after_setup_theme', function () {
 
 
 function custom_post_type() {
- 
+
 // Set UI labels for Custom Post Type
     $labels = array(
         'name'                => _x( 'Cases', 'Post Type General Name', 'sage' ),
@@ -165,21 +165,21 @@ function custom_post_type() {
         'not_found'           => __( 'Ikke fundet', 'sage' ),
         'not_found_in_trash'  => __( 'Ikke fundet i skraldespanden', 'sage' ),
     );
-     
+
 // Set other options for Custom Post Type
-     
+
     $args = array(
         'label'               => __( 'cases', 'sage' ),
         'description'         => __( 'Cases for e-consult', 'sage' ),
         'labels'              => $labels,
         // Features this CPT supports in Post Editor
         'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields' ),
-        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        // You can associate this CPT with a taxonomy or custom taxonomy.
         'taxonomies'          => array( 'cases' ),
         /* A hierarchical CPT is like Pages and can have
         * Parent and child items. A non-hierarchical CPT
         * is like Posts.
-        */ 
+        */
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
@@ -193,32 +193,34 @@ function custom_post_type() {
         'publicly_queryable'  => true,
         'capability_type'     => 'page',
     );
-     
+
     // Registering your Custom Post Type
     register_post_type( 'cases', $args );
- 
+
 }
- 
+
 /* Hook into the 'init' action so that the function
-* Containing our post type registration is not 
-* unnecessarily executed. 
+* Containing our post type registration is not
+* unnecessarily executed.
 */
- 
+
 add_action( 'init', __NAMESPACE__ . '\\custom_post_type', 0 );
 
 if( function_exists('acf_add_options_page') ) {
-    acf_add_options_page();    
+    acf_add_options_page();
 }
 
-add_image_size( 'hero_lg', 1420, 1420 * .42, true ); 
-add_image_size( 'hero_md', 1200, 1200 * .42, true ); 
-add_image_size( 'hero_sm', 800, 800 * .42, true ); 
-add_image_size( 'case', 400, 400, true ); 
-add_image_size( 'case-sm', 300, 300, true ); 
-add_image_size( 'case-lg', 1900, 9999, false ); 
-add_image_size( 'teaser', 800, 500, true ); 
-add_image_size( 'teaser-sm', 600, 600 * .625, true ); 
-add_image_size( 'staff', 400, 600, true , array( 'center', 'top' )); 
+add_image_size( 'hero_lg', 1420, 1420 * .42, true );
+add_image_size( 'hero_md', 1200, 1200 * .42, true );
+add_image_size( 'hero_sm', 800, 800 * .42, true );
+add_image_size( 'hero', 1000, 1000, true );
+add_image_size( 'case', 400, 400, true );
+add_image_size( 'case-sm', 300, 300, true );
+add_image_size( 'case-lg', 1900, 9999, false );
+add_image_size( 'teaser', 800, 500, true );
+add_image_size( 'teaser-sm', 600, 600 * .625, true );
+add_image_size( 'staff', 400, 600, true , array( 'center', 'top' ));
+
 
 function wpdocs_custom_excerpt_length( $length ) {
     return 20;

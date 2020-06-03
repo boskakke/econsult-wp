@@ -66,13 +66,22 @@
 	}
 	& > li {
 		position: relative;
+		&:hover {
+			& > .sub-menu {
+				@include md-up {
+					transform: none;
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
 		& > a {
 			overflow: hidden;
 			&:before {
-				@include lg-up {
+				@include md-up {
 					position: absolute;
-					left: 20px;
-					width: calc(100% - 40px);
+					left: 15px;
+					width: calc(100% - 30px);
 					bottom: 0;
 					height: 4px;
 					background-color: $secondary;
@@ -87,14 +96,8 @@
 				&:before {
 					transform: scaleX(1);
 				}
-				& > .sub-menu {
-					@include md-up {
-						transform: none;
-						opacity: 1;
-						visibility: visible;
-					}
-				}
 			}
+
 			&.menu-item-has-children {
 				& > a:after {
 					@extend %has-children;
@@ -106,12 +109,10 @@
 		}
 		& > .sub-menu {
 			background: darken($primary, 5%);
-			@include md-up {
-				background: $primary;
-			}
+
 			@include lg-up {
 				li:hover {
-					background: darken($primary, 5%);
+					background: darken($primary, 1%);
 				}
 			}
 		}

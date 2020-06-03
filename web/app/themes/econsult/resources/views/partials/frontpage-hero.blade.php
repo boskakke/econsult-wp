@@ -9,6 +9,17 @@ $title = get_field( 'rotator_title' );
 	@include('partials.header')
 	<div class="hero-fp__curtain"></div>
 	<div class="hero-fp__inner">
+		<div class="hero-fp__illu">
+			<figure class="hero-fp__figure">
+				{!! wp_get_attachment_image( $image, 'hero', false,  array('class' => 'hero-fp__image' )) !!}
+	 		</figure>
+	 		<svg class="hero-fp__logo"
+				viewBox="0 0 103 103"
+				xmlns="http://www.w3.org/2000/svg">
+				<use xlink:href="@asset('images/sprite.svg')#logo_house"></use>
+			</svg>
+		</div>
+
 		<div class="hero-fp__content">
 			<div class="hero-fp__trumpet block">
       	{{$title}}
@@ -24,9 +35,7 @@ $title = get_field( 'rotator_title' );
     	  @endif
     	</h1>
 		</div>
-		<figure class="hero-fp__figure">
-			{!! wp_get_attachment_image( $image, 'full', false,  array('class' => 'hero-fp__image' )) !!}
- 		</figure>
+
 	</div>
 </div>
 

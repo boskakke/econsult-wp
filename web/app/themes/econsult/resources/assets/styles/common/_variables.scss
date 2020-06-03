@@ -43,9 +43,10 @@ $border-radius-lg:       .3rem !default;
 $border-radius-sm:       .2rem !default;
 
 
-$font-family-base: "Open Sans", sans-serif;
+
 
 $headings-font-family: "Montserrat", sans-serif;
+$font-family-base: $headings-font-family;
 $font-size-base: 20px;
 $font-weight-base: 400;
 $line-height-base: 1.6;

@@ -150,7 +150,8 @@ p {
 	&__mobile {
 		display: flex;
 		font-size: $font-2;
-		color: #fff;
+
+		color: $primary;
 		font-weight: 600;
 		@include md-up {
 			margin: 0;
@@ -158,7 +159,9 @@ p {
 		a {
 			color: #fff;
 		}
-
+		.home & {
+			color: #fff;
+		}
 	}
 
 
