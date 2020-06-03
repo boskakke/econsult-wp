@@ -1,5 +1,5 @@
 %font-header {
-	font-size: calc(30px + 30 * ((100vw - 375px) / 1180));
+	font-size: calc(24px + 30 * ((100vw - 375px) / 1180));
 	font-weight: 900;
 	@include xs-down {
 		font-size: 24px;
