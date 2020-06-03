@@ -19,7 +19,7 @@
 	</div>
 
 	<figure class="teaser-main__figure">
-		{!! wp_get_attachment_image( $image, 'full', "", array( 'class' => 'teaser-main__image' )) !!}
+		{!! wp_get_attachment_image( $image, 'hero', "", array( 'class' => 'teaser-main__image' )) !!}
 	</figure>
 </article>
 

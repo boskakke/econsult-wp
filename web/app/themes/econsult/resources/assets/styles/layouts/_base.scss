@@ -461,13 +461,13 @@ span.wpcf7-not-valid-tip {
 	grid-gap: 2rem;
 	grid-template: auto / 1fr;
 	min-height: 50vh;
-	@include lg-up {
+	@include md-up {
 		grid-template: auto / 60% 1fr;
 		padding: 12rem 0;
 	}
 	&__figure {
-		@include lg-up {
-			padding-top: 10rem;
+		@include md-up {
+			padding-top: 5rem;
 		}
 	}
 	&__title {
