@@ -19,32 +19,39 @@
 
 
 .menu {
-	.single-article__right & {
-		font-size: $font-2;
-		margin: 0;
-		.active {
-			a {
-				color: $secondary;
-			}
-		}
-		.sub-menu {
-			position: relative;
-			visibility: visible;
-			opacity: 1;
-			background: transparent;
-			margin: .5rem 0 0 0;
-			padding: 0;
-			font-size: $font-2;
-			transform: none;
-		}
-		li,
-		a {
-			background: transparent;
-			
-		}
-		a {
-			color: $primary;
-			padding: 0;
-		}
+	li {
+		font-size: $font-4;
+		font-weight: normal;
 	}
+}
+
+
+.widget_nav_menu {
+	font-family: $headings-font-family;
+	font-weight: 600;
+}
+
+
+
+.contact-form {
+	display: grid;
+	grid-gap: 1rem 2rem;
+	grid-template: auto / 1fr;
+	@include lg-up {
+		grid-template: auto / 1fr 1fr;
+	}
+}
+.form-group {
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.wpcf7-textarea {
+	max-height: 150px;
+	height: 100%;
+}
+
+.fw {
+	grid-column: 1 / -1;
+	display: flex;
 }

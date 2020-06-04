@@ -106,6 +106,13 @@ add_action('widgets_init', function () {
     'after_widget'  => '</section>',
     'before_title'  => '<h3 class="sidebar__header">',
     'after_title'   => '</h3>']);
+  register_sidebar([
+    'name'          => __('Kontakt', 'sage'),
+    'id'            => 'contact',
+    'before_widget' => '<section class="sidebar__contact %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3 class="section__header">',
+    'after_title'   => '</h3>']);
 });
 
 /**
