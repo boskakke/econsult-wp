@@ -43,7 +43,7 @@
         {
             "key": "field_5ed64c84dcd83",
             "label": "Image",
-            "name": "image",
+            "name": "teaser_main_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -97,5 +97,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591102769
+    "modified": 1591268474
 }
