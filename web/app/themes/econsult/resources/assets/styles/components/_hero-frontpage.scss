@@ -54,7 +54,7 @@
 		grid-column: 1 / -1;
 		grid-row: 1;
 		position: relative;
-		padding: 0 2rem;
+		padding: 0 2.5rem;
 		@include md-up {
 			grid-row: 1;
 			padding: 2;
@@ -65,11 +65,10 @@
 		transform: scale(0);
 		position: absolute;
 		right: 0;
-		top: -1rem;
+		top: 0rem;
 		width: 20vw;
 		display: inline-block;
 		@include md-up {
-			top: 0;
 			width: 7rem;
 		}
 	}
