@@ -43,14 +43,4 @@
 }
 
 
-.block {
-	position: relative;
-	&:before {
-		position: absolute;
-		top: -2rem;
-		height: 10px;
-		width: 70px;
-		background: $secondary;
-		content: '';
-	}
-}
+

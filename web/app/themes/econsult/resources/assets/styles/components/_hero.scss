@@ -1,14 +1,15 @@
 $menu-height: 45px;
 $menu-height-md: 60px;
-
-
 .section__hero {
 	position: relative;
 }
 .hero {
 	&__figure {
-		min-height: 400px;
+		min-height: 250px;
 		position: relative;
+		@include md-up {
+			min-height: 400px;
+		}
 	}
 
 	&__image {
@@ -19,7 +20,4 @@ $menu-height-md: 60px;
 		top: 0;
 		left: 0;
 	}
-
 }
-
-

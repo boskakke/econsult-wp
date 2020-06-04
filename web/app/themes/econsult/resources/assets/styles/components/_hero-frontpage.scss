@@ -28,13 +28,11 @@
 	&__inner {
 		margin: 0 auto;
 		padding: 1rem 0 5rem;
-		display: grid;
 		grid-gap: 2rem;
-		grid-template: auto auto / repeat(10, 1fr);
+		@extend %grid;
 		@extend %container;
 		@include md-up {
 			padding: 10rem 0;
-			grid-template: auto / repeat(10, 1fr);
 			min-height: 800px;
 		}
 
@@ -53,7 +51,7 @@
 
 	}
 	&__illu {
-		grid-column: 2 / -1;
+		grid-column: 1 / -1;
 		grid-row: 1;
 		position: relative;
 		@include md-up {
