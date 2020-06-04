@@ -60,16 +60,19 @@
 		}
 	}
 	&__logo {
+		transform: scale(0);
 		position: absolute;
 		right: 0;
 		top: -1rem;
 		width: 20vw;
-		animation: heroFloat 5s ease-in-out infinite forwards;
 		display: inline-block;
 		@include md-up {
 			top: 0;
 			width: 7rem;
 		}
+	}
+	&__svg {
+		animation: heroFloat 5s ease-in-out infinite forwards;
 	}
 	&__image {
 		border-radius: 50%;

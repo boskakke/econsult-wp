@@ -66,7 +66,7 @@ the_row()
 
 @elseif( get_row_layout() == 'section_quote' )
 @php
-$image = get_sub_field('img_quote');
+
 $size = 'full;'
 @endphp
 
@@ -74,9 +74,6 @@ $size = 'full;'
 	<div class="container flex">
 		<div class="section-illu__col section-illu__col--left">
 			<h3 class="section-illu__header">{{ the_sub_field('txt_quote') }}</h3>
-		</div>
-		<div class="section-illu__col section-illu__col--right">
-			{!! wp_get_attachment_image( $image, $size, "") !!}
 		</div>
 	</div>
 </div>

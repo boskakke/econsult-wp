@@ -13,11 +13,13 @@ $title = get_field( 'rotator_title' );
 			<figure class="hero-fp__figure">
 				{!! wp_get_attachment_image( $image, 'hero', false,  array('class' => 'hero-fp__image' )) !!}
 	 		</figure>
-	 		<svg class="hero-fp__logo"
-				viewBox="0 0 103 103"
-				xmlns="http://www.w3.org/2000/svg">
-				<use xlink:href="@asset('images/sprite.svg')#logo_house"></use>
-			</svg>
+	 		<figure class="hero-fp__logo">
+		 		<svg class="hero-fp__svg"
+					viewBox="0 0 103 103"
+					xmlns="http://www.w3.org/2000/svg">
+					<use xlink:href="@asset('images/sprite.svg')#logo_house"></use>
+				</svg>
+			</figure>
 		</div>
 
 		<div class="hero-fp__content">
