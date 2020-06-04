@@ -1,5 +1,5 @@
 @php
-$image = get_field('image');
+$image = get_field('teaser_main_image');
 $title = get_field( 'title' );
 $content = get_field( 'content' );
 $link = get_field( 'link' );
