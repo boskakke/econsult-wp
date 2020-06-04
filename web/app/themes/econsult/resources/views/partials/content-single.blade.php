@@ -29,10 +29,10 @@
     @endif
 
       <div class="pagination">
-        <?php previous_post_link('%link', '<span class="button button--fancy button--primary"><span title="Forrige">Forrige</span></span>'); ?> 
-        <?php next_post_link('%link', '<span class="button button--fancy button--primary"><span title="Næste">Næste</span></span>'); ?> 
+        <?php previous_post_link('%link', '<span class="button button--fancy button--primary"><span title="Forrige">Forrige</span></span>'); ?>
+        <?php next_post_link('%link', '<span class="button button--fancy button--primary"><span title="Næste">Næste</span></span>'); ?>
       </div>
-      
+
     </div>
 
     <div class="single-article__right">

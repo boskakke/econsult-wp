@@ -1,53 +1,22 @@
 .page {
 	&__header {
+		background-color: $primary;
+		padding: 2rem 0;
 		margin-bottom: 2rem;
 	}
-}
+	&__title {
+		font-size: $font-8;
+		color: #fff;
+		font-weight: 500;
+		margin: 0;
+	}
 
-.article {
 	&__content {
-		p, li {
-			margin-bottom: 1rem;
-		}
-		.page__title + p:first-of-type {
-			strong {
-				font-size: $font-4;
-				@include md-up {
-					font-size: $font-5;
-				}
-				font-weight: 400;
-			}
-		}
-		ul {
-			list-style: none;
-			padding: 0;
-			margin: 40px 0;
-			li {
-				padding-left: 30px;
-				&:before {
-					font-family: econsult-icons;
-					content: '\e847';
-					color: $secondary;
-					float: left;
-					margin-left: -30px;
-				}
-			}
-		}
-	}
-}
-
-.module {
-	&__header {
-		margin: 0 0 1rem;
-	}
-}
-
-
-.col {
-	&--main {
-		@extend .mb-5;
+		display: grid;
+		grid-gap: 2rem;
+		grid-template: auto / 1fr;
 		@include md-up {
-			order: 2;
+			grid-template: auto / 6fr 4fr;
 		}
 	}
 }
