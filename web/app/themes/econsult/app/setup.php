@@ -10,12 +10,13 @@ use Roots\Sage\Template\BladeProvider;
 
 
 
+
 /**
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_style('sage/googlefonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:400,400i,700&display=swap', false, null);
+    wp_enqueue_style('sage/googlefonts', 'https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap', false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }, 100);
 

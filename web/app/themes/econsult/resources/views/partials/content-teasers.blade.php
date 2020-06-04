@@ -1,12 +1,17 @@
 @php
-	$posts = get_field('related');
+$posts = get_field('related');
+$title = get_field( 'deck_header' );
+$description = get_field( 'deck_description' );
+
 @endphp
 @if( $posts )
 {{ $class ?? '' }}
-	<div class="section">
-		<h3 class="section-header">
-				Vores ydelser
-			</h3>
+<div class="section section--teasers">
+	<div class="container" role="document">
+		<h3 class="section__header">
+			{{ $title }}
+		</h3>
+		<p class="section__description">{!! $description !!}</p>
 		<div class="teaser-flow">
 			@foreach( $posts as $p )
 			<div class="grid__item">
@@ -23,7 +28,7 @@
 						</h3>
 						<p>{{ get_the_excerpt($p->ID) }}</p>
 						<a href="{{ get_permalink($p->ID) }}" class="teaser-card__readmore">
-						<span>Læs mere</span>
+							<span>Læs mere</span>
 						</a>
 					</div>
 				</article>
@@ -31,4 +36,5 @@
 			@endforeach
 		</div>
 	</div>
+</div>
 @endif

@@ -156,8 +156,8 @@
 	flex-direction: column;
 	flex: 0 0 100%;
 	height: 100%;
-	box-shadow: 0 0 30px rgba(black, .1);
 	position: relative;
+	background: #fff;
 	&:hover {
 		.teaser-card__readmore:after {
 			transform: translateX(5px);

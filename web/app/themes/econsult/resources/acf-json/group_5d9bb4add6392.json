@@ -31,6 +31,44 @@
             "min": "",
             "max": "",
             "return_format": "object"
+        },
+        {
+            "key": "field_5ed8cf1d1c173",
+            "label": "Ydelser overskrift",
+            "name": "deck_header",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ed8cf351c174",
+            "label": "Ydelser beskrivlese",
+            "name": "deck_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -50,5 +88,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572945616
+    "modified": 1591267660
 }

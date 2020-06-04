@@ -5,7 +5,7 @@ $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #868e96 !default;
-$gray-700: #495057 !default;
+$gray-700: #5E645E !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:  #000 !default;
@@ -34,7 +34,7 @@ $body-color:    $gray-700 !default;
 $primary: #002e68;
 $secondary: #99b82e;
 $primary-bg:  #dee4ec;
-$sand: #f0f0f0;
+$sand: #EFF0EA;
 
 $border-width: 1px !default;
 
@@ -45,7 +45,7 @@ $border-radius-sm:       .2rem !default;
 
 
 
-$headings-font-family: "Montserrat", sans-serif;
+$headings-font-family: "Rubik", sans-serif;
 $font-family-base: $headings-font-family;
 $font-size-base: 20px;
 $font-weight-base: 400;
@@ -64,12 +64,15 @@ $enable-rounded:            false !default;
 
 $site-width: 1600px;
 
+
+
 // breakpoints
-$width-xs: 320px;
+$width-xs: 340px;
 $width-sm: 600px;
 $width-md: 768px;
-$width-lg: 1350px;
-$width-xl: 1640px;
+$width-lg: 1024px;
+$width-xl: 1440px;
+
 
 
 
