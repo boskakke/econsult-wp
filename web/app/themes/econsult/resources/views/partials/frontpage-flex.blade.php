@@ -70,9 +70,12 @@ the_row()
 $size = 'full;'
 @endphp
 
-<div class="section-illu fadeUp mb-10 ">
+<div class="section-illu fadeUp mb-0 ">
 	<div class="container flex">
 		<div class="section-illu__col section-illu__col--left">
+			<p class="section-illu__title">
+				{{ the_sub_field('header_quote') }}
+			</p>
 			<h3 class="section-illu__header">{{ the_sub_field('txt_quote') }}</h3>
 		</div>
 	</div>

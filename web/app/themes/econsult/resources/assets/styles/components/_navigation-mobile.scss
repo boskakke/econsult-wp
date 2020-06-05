@@ -1,0 +1,97 @@
+$padding-mobile: 5%;
+.mobile-nav {
+	pointer-events: none;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $primary;
+	display: flex;
+	flex-direction: column;
+	z-index: 100;
+	transform: translateX(100%);
+	@include md-up {
+		display: none !important;
+	}
+	&__curtain {
+		background: $secondary;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 99;
+		transform: translateX(100%);
+	}
+	&__logo {
+		flex: 0 0 15%;
+		display: flex;
+		align-items: center;
+		padding: 0 $padding-mobile;
+	}
+	&__svg {
+		width: 50vw;
+	}
+	&__top {
+		padding: 1rem $padding-mobile;
+		flex: 1 0 50%;
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			li {
+				font-weight: 500;
+				font-size: 5vw;
+				margin: 0 0 1rem;
+			}
+			a {
+				color: #fff;
+				display: block;
+				position: relative;
+				&:before {
+					content: '\e847';
+					display: block;
+					float: left;
+					margin-right: .5em;
+					color: $secondary;
+					font-size: 5vw;
+					font-family: econsult-icons;
+				}
+			}
+		}
+
+	}
+	&__bottom {
+		flex: 0 0 15%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		& > div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 $padding-mobile;
+			width: 100%;
+		}
+
+		ul {
+			list-style: none;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: space-around;
+		}
+		li {
+			margin: 0;
+			font-size: $font-3 !important;
+
+		}
+		a {
+			color: #fff;
+			opacity: .8;
+		}
+	}
+}

@@ -20,33 +20,16 @@
 	}
 }
 
-.menu-wrapper {
-	padding: 2rem;
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transform: translateX(100%);
-	background-color: $gray-900;
-	z-index: 20;
-	@include md-up {
-		all: unset;
-	}
-}
 
 
 .top-menu {
-	display: flex;
 	font-size: $font-5;
-	font-weight: 600;
+	font-weight: 500;
 	flex-direction: column;
+	display: none;
 
 	@include md-up {
+		display: flex;
 		font-size: $font-2;
 		flex-direction: row;
 		justify-content: flex-end;

@@ -15,7 +15,6 @@ $template = get_field('radio_page_category')
 		<div class="page__content">
 			<div class="grid__item">
 				@php the_content() @endphp
-				@include('partials.staff')
 			</div>
 			<div class="page__sidebar">
 				@php

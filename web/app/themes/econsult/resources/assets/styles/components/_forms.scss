@@ -23,7 +23,7 @@ form {
 	background-clip: padding-box;
 	transition: all .2s ease;
 	appearance: none;
-	padding: .75rem 1rem;
+	padding: .9rem 1rem;
 	width: 100%;
 	background-image: none;
 	display: block;
@@ -74,7 +74,7 @@ form {
 }
 
 .form-group {
-	margin-bottom: 10px;
+	margin-bottom: 1rem;
 	position: relative;
 	flex: 1 0 50%;
 	label {
@@ -92,7 +92,6 @@ form {
 	display: flex;
 	justify-content: space-between;
 }
-
 
 
 

@@ -16,7 +16,7 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_style('sage/googlefonts', 'https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap', false, null);
+    wp_enqueue_style('sage/googlefonts', 'https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap', false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }, 100);
 
@@ -83,6 +83,12 @@ add_action('widgets_init', function () {
     'before_title'  => '<h3 class="footer__header">',
     'after_title'   => '</h3>'
     ];
+    $configMobileNav = [
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => ''
+    ];
     register_sidebar([
     'name'          => __('Footer-1', 'sage'),
     'id'            => 'sidebar-footer-1'
@@ -113,6 +119,15 @@ add_action('widgets_init', function () {
     'after_widget'  => '</section>',
     'before_title'  => '<h3 class="section__header">',
     'after_title'   => '</h3>']);
+
+   register_sidebar([
+    'name'          => __('MobileNavTop', 'sage'),
+    'id'            => 'sidebar-mobile-nav-top'
+    ] + $configMobileNav);
+   register_sidebar([
+    'name'          => __('MobileNavBottom', 'sage'),
+    'id'            => 'sidebar-mobile-nav-bottom'
+    ] + $configMobileNav);
 });
 
 /**
@@ -227,7 +242,7 @@ add_image_size( 'case-sm', 300, 300, true );
 add_image_size( 'case-lg', 1900, 9999, false );
 add_image_size( 'teaser', 800, 500, true );
 add_image_size( 'teaser-sm', 600, 600 * .625, true );
-add_image_size( 'staff', 400, 600, true , array( 'center', 'top' ));
+add_image_size( 'staff', 400, 400, array( 'center', 'top' ));
 
 
 function wpdocs_custom_excerpt_length( $length ) {

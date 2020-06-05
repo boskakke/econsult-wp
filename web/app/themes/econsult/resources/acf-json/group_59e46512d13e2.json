@@ -20,7 +20,7 @@
         },
         {
             "key": "field_59e46e389324a",
-            "label": "Frontpage",
+            "label": "Forside elementer",
             "name": "flex_elements",
             "type": "flexible_content",
             "instructions": "",
@@ -191,6 +191,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5ed92eec41064",
+                            "label": "Overskrift",
+                            "name": "header_quote",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_59e485566f241",
                             "label": "Tekst",
                             "name": "txt_quote",
@@ -236,5 +255,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591287036
+    "modified": 1591291767
 }

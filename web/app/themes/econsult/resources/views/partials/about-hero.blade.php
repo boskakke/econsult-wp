@@ -4,9 +4,10 @@ $title = get_field( 'hero_summary' );
 
 @endphp
 
+
 <div class="hero-about">
 	@include('partials.header')
-	<div class="hero-about__curtain"></div>
+
 	<div class="container">
 		<div class="hero-about__grid">
 			<div class="grid__item">

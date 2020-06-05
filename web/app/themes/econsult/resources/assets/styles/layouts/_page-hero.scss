@@ -1,0 +1,21 @@
+.page-hero {
+	height: 300px;
+	@include md-up {
+		height: 450px;
+	}
+	@include lg-up {
+		height: 500px;
+	}
+	@include xl-up {
+		height: 650px;
+	}
+
+	&__figure {
+		position: relative;
+		height: 100%;
+	}
+	&__image {
+		object-fit: cover;
+		@extend %pos-a;
+	}
+}

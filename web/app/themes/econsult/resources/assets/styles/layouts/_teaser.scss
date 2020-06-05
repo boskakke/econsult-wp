@@ -134,12 +134,12 @@
 
 .teaser-flow {
 	display: flex;
-	margin: 0 -1rem;
+	margin: 0 -.5rem;
 	flex-wrap: wrap;
 	.grid__item {
 		flex: 0 0 100%;
 		display: flex;
-		padding: 1rem;
+		padding: .5rem;
 		@include md-up {
 			flex: 0 0 50%;
 			max-width: 50%;

@@ -32,8 +32,10 @@ if(is_front_page()) {
 			</svg>
 		</button>
 	</div>
+
 	<div class="header__col--contact contact__mobile">
 		<i class="icon-phone green mr-1"></i>{{ the_field('txt_phone', 'options') }}
 	</div>
+	@include('partials.mobile-nav')
 </div>
 

@@ -4,11 +4,19 @@ import gsap from 'gsap'
 export default {
 	init() {
 
-
-		const tl_nav = gsap.timeline({paused: true})
+		const tl_nav = gsap.timeline({paused: true, ease: 'power4.out'})
+		const mobileNav =  document.querySelector('.mobile-nav')
+		const mobileNavCurtain =  document.querySelector('.mobile-nav__curtain')
+		const mobileNavLogo =  document.querySelector('.mobile-nav__logo')
+		const mobileNavLi = document.querySelectorAll('.mobile-nav li')
 
 		tl_nav
-			.to('.menu-wrapper',{x:0, duration: .2})
+		.set(mobileNav, {opacity: 1, pointerEvents: 'auto'})
+		.fromTo(mobileNavCurtain, {x: '100%'}, {x: 0})
+		.fromTo(mobileNav, {x: '100%'}, {x: 0}, '<.2')
+		.fromTo(mobileNavLogo, {opacity: 0}, {opacity: 1}, '<.2')
+		.fromTo(mobileNavLi, {opacity: 0,  x: 20}, {opacity: 1, stagger: .05, x: 0}, '<.2')
+
 
 		const body = document.querySelector('body')
 
