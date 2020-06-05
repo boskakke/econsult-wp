@@ -457,21 +457,25 @@ span.wpcf7-not-valid-tip {
 
 	}
 	&__text {
-		grid-column: 1fr;
+		grid-column: span 1;
 		@include md-up {
 			grid-column: span 6;
 		}
 	}
-	&__figure {
-		grid-column: 1fr;
-		border-radius: 50%;
-		overflow: hidden;
-		@include sm-down {
-			transform: translateX(25%);
-		}
+	&__item {
+		grid-column: span 1;
 		@include md-up {
 			grid-column: span 4;
 		}
+	}
+	&__figure {
+
+		background: $secondary;
+		border-radius: 50%;
+
+	}
+	&__image {
+		clip-path: circle(40.4% at 50% 50%);
 	}
 
 	&__title {
@@ -481,20 +485,17 @@ span.wpcf7-not-valid-tip {
 		font-size: $font-6;
 		line-height: 1.2;
 		margin: 0 0 1.5rem;
-		@include md-up {
-			font-size: $font-7;
-		}
+
 	}
 	h2 {
 		font-size: $font-8;
 		margin: 0 0 1rem;
-		font-weight: 500;
+		font-weight: 700;
+		color: currentColor;
 		@include md-up {
 			font-size: $font-9;
 		}
-		@include lg-up {
-			font-size: $font-10;
-		}
+
 	}
 }
 .header__col--svg {

@@ -17,8 +17,10 @@ $link = get_field( 'link' );
 			</a>
 		</div>
 
-		<figure class="teaser-main__figure">
-			{!! wp_get_attachment_image( $image, 'hero', "", array( 'class' => 'teaser-main__image' )) !!}
-		</figure>
+		<div class="teaser-main__item">
+			<figure class="teaser-main__figure">
+				{!! wp_get_attachment_image( $image, 'hero', "", array( 'class' => 'teaser-main__image' )) !!}
+			</figure>
+		</div>
 	</article>
 </div>
