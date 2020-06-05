@@ -146,9 +146,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "24"
+                "value": "views\/template-contact.blade.php"
             }
         ]
     ],
@@ -160,5 +160,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591358995
+    "modified": 1591373205
 }

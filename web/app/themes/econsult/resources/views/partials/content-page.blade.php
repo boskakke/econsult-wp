@@ -3,13 +3,13 @@ $template = get_field('radio_page_category')
 @endphp
 
 <div class="page">
-
-	<div class="page__header">
-		<div class="container">
-			<h1 class="page__title">{{ the_title() }}</h1>
-		</div>
-	</div>
-
+<div class="container">
+	<h1 class="page-title">
+		@php
+		the_title();
+		@endphp
+	</h1>
+</div>
 
 	<div class="container">
 		<div class="page__content">

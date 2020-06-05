@@ -6,7 +6,7 @@ $link = get_field( 'link' );
 @endphp
 <div class="container" role="document">
 
-	<article class="teaser-main fadeUp">
+	<article class="teaser-main">
 		<div class="teaser-main__text">
 			<div>{!! $content !!}</div>
 			@php
