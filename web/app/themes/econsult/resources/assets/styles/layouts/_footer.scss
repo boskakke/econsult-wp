@@ -32,8 +32,11 @@
 		flex: 0 0 100%;
 		padding: $spacer / 2 0 0;
 		text-align: center;
-		color: #666;
-		font-size: $font-1;
+
+		p {
+			color: #666;
+			font-size: $font-1;
+		}
 		a {
 			color: #777;
 			&:hover {

@@ -13,11 +13,20 @@
 	}
 	&__header {
 		margin: 0 0 1rem;
-		font-size: $font-4;
+		font-weight: 500;
+		font-size: $font-6;
 	}
 }
 
-
+.page__sidebar {
+	ul {
+		display: flex;
+		flex-direction: column;
+	}
+	li {
+		@extend %link-arrow;
+	}
+}
 .menu {
 	li {
 		font-size: $font-4;

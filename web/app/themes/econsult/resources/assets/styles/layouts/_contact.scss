@@ -57,10 +57,13 @@
 
 	}
 	&__jobtitle {
-		font-size: $font-3;
+		font-size: $font-1;
 		margin: 0;
 		@include xs-down {
 			hyphens: auto;
+		}
+		@include md-up {
+			font-size: $font-2;
 		}
 	}
 }
