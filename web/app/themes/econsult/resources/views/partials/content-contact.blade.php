@@ -48,7 +48,7 @@
 						<svg class="section-contact__svg" viewBox="0 0 43 32"	xmlns="http://www.w3.org/2000/svg"><use xlink:href="@asset('images/sprite.svg')#mail"></use></svg>
 					</div>
 					<div class="section-contact__body">
-						<a href="mailto{!! $email !!}">{!! $email !!}</a>
+						<a href="mailto:{!! $email !!}">{!! $email !!}</a>
 					</div>
 				</div>
 					@endif
