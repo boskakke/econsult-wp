@@ -28,10 +28,10 @@
 	}
 }
 %page-title {
-	font-size: calc(30px + 18 * ((100vw - 375px) / 1180));
+	font-size: calc(24px + 24 * ((100vw - 375px) / 1180));
 	font-weight: 600;
 	@include xs-down {
-		font-size: $font-7;
+		font-size: $font-6;
 	}
 	@include xl-up {
 		font-size: $font-10;
