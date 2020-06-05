@@ -9,7 +9,7 @@
 	&__header {
 		color: $primary;
 		font-size: $font-5;
-		font-weight: 600;
+		font-weight: 700;
 
 		&--h1 {
 			font-size: $font-6;
@@ -121,7 +121,7 @@
 	}
 
 	&__header {
-		font-weight: 600;
+		font-weight: 700;
 		font-size: $font-5;
 		color: $primary;
 		margin: 0 0 .5em;
@@ -185,7 +185,7 @@
 		}
 	}
 	&__readmore {
-		font-weight: 600;
+		font-weight: 700;
 		font-family: $headings-font-family;
 		font-size: $font-2;
 		&:after {

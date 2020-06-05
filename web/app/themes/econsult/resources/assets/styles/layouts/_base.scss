@@ -8,7 +8,7 @@
 
 %font-header {
 	font-size: calc(24px + 30 * ((100vw - 375px) / 1180));
-	font-weight: 900;
+	font-weight: 700;
 	@include xs-down {
 		font-size: 24px;
 	}
@@ -19,7 +19,7 @@
 
 %section-header {
 	font-size: calc(30px + 18 * ((100vw - 375px) / 1180));
-	font-weight: 600;
+	font-weight: 700;
 	@include xs-down {
 		font-size: $font-7;
 	}
@@ -29,7 +29,7 @@
 }
 %page-title {
 	font-size: calc(24px + 24 * ((100vw - 375px) / 1180));
-	font-weight: 600;
+	font-weight: 700;
 	@include xs-down {
 		font-size: $font-6;
 	}
@@ -110,7 +110,7 @@ h3,
 h4,
 h5 {
 	font-family: $headings-font-family;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1.1;
 	color: $primary;
 	margin-top: 1em;
@@ -186,7 +186,7 @@ p {
 		font-size: $font-2;
 
 		color: $primary;
-		font-weight: 600;
+		font-weight: 700;
 		@include md-up {
 			margin: 0;
 		}
@@ -464,6 +464,11 @@ span.wpcf7-not-valid-tip {
 	}
 	&__figure {
 		grid-column: 1fr;
+		border-radius: 50%;
+		overflow: hidden;
+		@include sm-down {
+			transform: translateX(25%);
+		}
 		@include md-up {
 			grid-column: span 4;
 		}
