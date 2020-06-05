@@ -24,6 +24,9 @@ $padding-mobile: 5%;
 		height: 100%;
 		z-index: 99;
 		transform: translateX(100%);
+		@include md-up {
+			display: none;
+		}
 	}
 	&__logo {
 		flex: 0 0 15%;
@@ -50,8 +53,11 @@ $padding-mobile: 5%;
 				color: #fff;
 				display: block;
 				position: relative;
+				padding-left: 30px;
+				overflow: hidden;
 				&:before {
 					content: '\e847';
+					margin-left: -30px;
 					display: block;
 					float: left;
 					margin-right: .5em;
