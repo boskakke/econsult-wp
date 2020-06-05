@@ -19,7 +19,7 @@
 
 %section-header {
 	font-size: calc(30px + 18 * ((100vw - 375px) / 1180));
-	font-weight: 500;
+	font-weight: 600;
 	@include xs-down {
 		font-size: $font-7;
 	}
