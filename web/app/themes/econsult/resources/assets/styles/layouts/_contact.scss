@@ -8,7 +8,10 @@
 		grid-template: auto / repeat(10, 1fr);
 	}
 	.grid__item:first-child {
-		grid-column: span 6;
+		grid-column: 1 / -1;
+		@include md-up {
+			grid-column: span 6;
+		}
 	}
 	.grid__item--fw {
 		grid-column: 1 / -1;
