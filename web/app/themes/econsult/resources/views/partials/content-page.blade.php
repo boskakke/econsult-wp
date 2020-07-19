@@ -2,14 +2,14 @@
 $template = get_field('radio_page_category')
 @endphp
 
-<div class="page">
-<div class="container">
-	<h1 class="page-title">
-		@php
-		the_title();
-		@endphp
-	</h1>
-</div>
+<article class="page">
+	<div class="container">
+		<h1 class="page-title">
+			@php
+			the_title();
+			@endphp
+		</h1>
+	</div>
 
 	<div class="container">
 		<div class="page__content">
@@ -24,6 +24,6 @@ $template = get_field('radio_page_category')
 		</div>
 
 	</div>
-</div>
+</article>
 
 {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
