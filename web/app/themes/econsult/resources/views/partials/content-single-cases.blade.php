@@ -2,6 +2,9 @@
 
 <article @php post_class('section--content article__content page') @endphp>
 	<div class="container">
+		@if ( function_exists('yoast_breadcrumb') )
+			@php  yoast_breadcrumb( '<div class="breadcrumbs">','</div>' ); @endphp
+		@endif
 		<h1 class="page-title">
 			@php
 			the_title();

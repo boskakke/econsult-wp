@@ -81,6 +81,72 @@ $size = 'full;'
 	</div>
 </div>
 
+@elseif( get_row_layout() == 'avout_e-consult' )
+
+@php
+		$about_image = get_sub_field('image');
+@endphp
+
+<div class="deck-about">
+	<div class="deck-about__left">
+		<div class="deck-about__content">
+		<h2 class="deck-about__title">
+			{!! the_sub_field('title') !!}
+		</h2>
+		<div class="deck-about__text mb-2">
+			{!! the_sub_field('content') !!}
+		</div>
+		<a href="{!! the_sub_field('link') !!}" class="button button--primary-border">
+			<span title="{!! the_sub_field('cta') !!}">{!! the_sub_field('cta') !!}</span>
+		</a>
+		</div>
+	</div>
+	<div class="deck-about__right">
+		<figure class="deck-about__figure">
+			{!! wp_get_attachment_image( $about_image, 'hero', "", array( 'class' => 'deck-about__image' )) !!}
+		</figure>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+@elseif( get_row_layout() == 'cases_slider' )
+
+
+	<div class="container">
+	<div class="section">
+		@php
+		$the_query = new WP_Query( array(
+			'post_type' => 'cases', 'posts_per_page' => 10
+		));
+		@endphp
+		@if ( $the_query->have_posts() )
+
+		<div class="section-header">
+			Cases
+		</div>
+
+		<div class="teaser-flow">
+			@while ( $the_query->have_posts() )
+			@php
+			$the_query->the_post()
+			@endphp
+			@include('partials.content')
+			@endwhile
+			@php
+			wp_reset_postdata();
+			@endphp
+		</div>
+		@endif
+	</div>
+</div>
+
+
 @endif
 
 @endwhile

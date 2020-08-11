@@ -1,7 +1,7 @@
 @php
 if(is_front_page()) {
 	$headerClass = 'header--frontpage';
-	$logo = 'logo--front';
+	$logo = 'logo';
 } else {
 	$headerClass = '';
 	$logo = 'logo';

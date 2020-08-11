@@ -1,3 +1,18 @@
+.breadcrumbs {
+	margin: 0 0 1rem;
+	font-size: $font-3;
+	a {
+		margin: 0 .5rem;
+		&:first-child {
+			margin-left: 0;
+		}
+
+	}
+	.breadcrumb_last {
+		margin-left: .5rem;
+	}
+}
+
 %grid {
 	display: grid;
 	grid-template: auto / 1fr;
@@ -7,13 +22,13 @@
 }
 
 %font-header {
-	font-size: calc(24px + 30 * ((100vw - 375px) / 1180));
+	font-size: calc(24px + 24 * ((100vw - 375px) / 1180));
 	font-weight: 500;
 	@include xs-down {
 		font-size: 24px;
 	}
 	@include xl-up {
-		font-size: $font-11;
+		font-size: $font-10;
 	}
 }
 

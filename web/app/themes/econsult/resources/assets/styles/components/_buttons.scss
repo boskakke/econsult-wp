@@ -35,7 +35,7 @@ $btn-size: 32px;
 	cursor: pointer;
 	font-size: $font-3;
 	height: 3.2rem;
-	padding: 0 2.5rem;
+	padding: 0 1.5rem;
 	align-items: center;
 	-webkit-appearance: none;
 
@@ -118,11 +118,12 @@ $btn-size: 32px;
 
 
 .button--primary-border {
-	background-color: #fff;
-	outline: 2px solid $primary;
+	background-color: transparent;
+	border: 1px solid $primary;
+	border-radius: 2px;
 	color: $primary;
 	&:hover {
-		outline: 2px solid $primary;
+		border: 1px solid $primary;
 	}
 }
 
