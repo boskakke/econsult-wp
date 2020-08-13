@@ -12,11 +12,9 @@
  */
 // @import "~some-node-module";
 @import '~@fancyapps/fancybox/dist/jquery.fancybox.min.css';
-
-
+@import '~slick-carousel/slick/slick.scss';
 
 /** Import theme styles */
-
 @import "components/wp-classes";
 
 
@@ -31,6 +29,7 @@
 @import "components/hero-frontpage";
 @import "components/hero-about";
 @import "components/deck-about";
+@import "components/deck-cases";
 @import "components/hero";
 @import "components/forms";
 @import "layouts/base";
