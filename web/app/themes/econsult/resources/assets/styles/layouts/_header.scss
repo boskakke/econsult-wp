@@ -5,13 +5,12 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 2rem 0;
+	padding: 2rem 8%;
 	font-family: $headings-font-family;
 	flex-wrap: wrap;
 	z-index: 1;
-	max-width: 1260px;
-	width: 90%;
-	@extend %container;
+	max-width: 1920px;
+	width: 100%;
 
 	@include lg-up {
 		align-items: center;

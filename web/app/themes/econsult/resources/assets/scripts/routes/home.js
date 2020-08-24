@@ -13,12 +13,10 @@ export default {
 		var sliderCounter = $('.slide-counter');
 
 
-		var updateSliderCounter = function(slick, currentIndex) {
+		var updateSliderCounter = function(slick) {
 			currentSlide = slick.slickCurrentSlide() + 1;
 			slidesCount = slick.slideCount;
-			$(sliderCounter).html(currentSlide + '/' + slidesCount)
-
-			console.log(currentIndex)
+			$(sliderCounter).html('0' + currentSlide + '/0' + slidesCount)
 		};
 
 		$cases.on('init', function(event, slick) {

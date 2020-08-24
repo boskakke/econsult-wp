@@ -1,0 +1,8 @@
+.deck-teasers {
+	margin: 0 auto;
+	max-width: 1920px;
+	display: grid;
+	grid-template: auto auto / 1fr;
+	@extend %section-margin;
+	padding: 0 8%;
+}

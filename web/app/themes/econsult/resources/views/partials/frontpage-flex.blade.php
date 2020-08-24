@@ -64,22 +64,7 @@ the_row()
 
 
 
-@elseif( get_row_layout() == 'section_quote' )
-@php
 
-$size = 'full;'
-@endphp
-
-<div class="section-illu fadeUp mb-0 ">
-	<div class="container flex">
-		<div class="section-illu__col section-illu__col--left">
-			<p class="section-illu__title">
-				{{ the_sub_field('header_quote') }}
-			</p>
-			<h3 class="section-illu__header">{{ the_sub_field('txt_quote') }}</h3>
-		</div>
-	</div>
-</div>
 
 @elseif( get_row_layout() == 'avout_e-consult' )
 
@@ -97,7 +82,14 @@ $about_image = get_sub_field('image');
 				{!! the_sub_field('content') !!}
 			</div>
 			<a href="{!! the_sub_field('link') !!}" class="button button--primary-border">
-				{!! the_sub_field('cta') !!}
+				<svg class="button__arrow"
+				viewBox="0 0 24 24"
+				xmlns="http://www.w3.org/2000/svg">
+				<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
+				</svg>
+				<span>
+					{!! the_sub_field('cta') !!}
+				</span>
 			</a>
 		</div>
 	</div>
@@ -113,7 +105,9 @@ $about_image = get_sub_field('image');
 
 
 
+@elseif( get_row_layout() == 'services')
 
+@include('partials.content-teasers')
 
 @elseif( get_row_layout() == 'cases_slider' )
 
@@ -144,7 +138,7 @@ $the_query = new WP_Query( array(
 				<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
 			</svg>
 		</div>
-		<div class="slide-counter">SKAKKE
+		<div class="slide-counter">
     </div>
 	</div>
 	<div class="deck-cases__slider">
@@ -158,14 +152,19 @@ $the_query = new WP_Query( array(
 					<h2 class="deck-cases__title">
 						{{ the_title() }}
 					</h2>
-					<a href="{{ the_permalink() }}" class="button button--primary-border">
-						Læs case
+					<a href="{{ the_permalink() }}" class="button button--white-border">
+						<svg class="button__arrow"
+				viewBox="0 0 24 24"
+				xmlns="http://www.w3.org/2000/svg">
+				<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
+				</svg>
+						<span>Læs case</span>
 					</a>
 				</div>
 			</div>
 			<div class="deck-cases__right">
 				<figure class="deck-cases__figure">
-					{{the_post_thumbnail( 'hero_md', array( 'class' => 'deck-cases__image' ) )}}
+					{{the_post_thumbnail( 'hero', array( 'class' => 'deck-cases__image' ) )}}
 				</figure>
 			</div>
 		</div>

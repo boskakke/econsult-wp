@@ -54,6 +54,17 @@
 	}
 }
 
+%deck-title {
+	margin-top: 0;
+	font-size: calc(30px + 36 * ((100vw - 375px) / 1180));
+	@include xs-down {
+		font-size: $font-7;
+	}
+	@include xl-up {
+		font-size: $font-11;
+	}
+}
+
 %section-margin {
 	margin-bottom: 5rem;
 	@include lg-up {
@@ -238,10 +249,7 @@ p {
 	&--padding {
 		padding: 4rem 0;
 	}
-	&--teasers {
-		background: $sand;
-		padding: 5rem 0;
-	}
+
 	&--contact {
 		background-color: $primary;
 		padding: 5rem 0;

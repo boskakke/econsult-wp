@@ -184,54 +184,6 @@
                     "min": "",
                     "max": ""
                 },
-                "59e485436f240": {
-                    "key": "59e485436f240",
-                    "name": "section_quote",
-                    "label": "Quote",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5ed92eec41064",
-                            "label": "Overskrift",
-                            "name": "header_quote",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_59e485566f241",
-                            "label": "Tekst",
-                            "name": "txt_quote",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5f329cbff8afa": {
                     "key": "layout_5f329cbff8afa",
                     "name": "cases_slider",
@@ -364,6 +316,33 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5f44123de1c08": {
+                    "key": "layout_5f44123de1c08",
+                    "name": "services",
+                    "label": "Ydelser",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f44124fe1c0e",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Der findes inden konfigurationsmuligheder til dette dæk",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Tilføj element",
@@ -388,5 +367,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597152708
+    "modified": 1598296677
 }

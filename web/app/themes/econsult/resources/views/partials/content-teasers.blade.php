@@ -6,8 +6,8 @@ $description = get_field( 'deck_description' );
 @endphp
 @if( $posts )
 {{ $class ?? '' }}
-<div class="section section--teasers">
-	<div class="container" role="document">
+<div class="deck-teasers">
+
 		<h3 class="section__header">
 			{{ $title }}
 		</h3>
@@ -35,6 +35,5 @@ $description = get_field( 'deck_description' );
 			</div>
 			@endforeach
 		</div>
-	</div>
 </div>
 @endif

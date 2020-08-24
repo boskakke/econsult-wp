@@ -26,12 +26,12 @@
 	}
 	&__inner {
 		margin: 0 auto;
-		padding: 1rem 0 5rem;
+		padding: 1rem 8% 5rem;
 		grid-gap: 2rem;
 		@extend %grid;
-		@extend %container;
+
 		@include md-up {
-			padding: 10rem 0;
+			padding: 10rem 8%;
 			min-height: 700px;
 		}
 
@@ -79,9 +79,9 @@
 	}
 	&__trumpet {
 		font-weight: normal;
-		color: #fff;
+		color: $primary;
 		font-family: $headings-font-family;
-		font-size: $font-3;
+		font-size: $font-5;
 		margin-bottom: 1rem;
 	}
 	&__words {

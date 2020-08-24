@@ -52,7 +52,10 @@ $btn-size: 32px;
 		display: inline-flex;
 		align-items: center;
 	}
-
+	&__arrow {
+		width: 1.4rem;
+		margin-right: .5rem;
+	}
 }
 
 .button--fancy {
@@ -126,6 +129,17 @@ $btn-size: 32px;
 		border: 1px solid $primary;
 	}
 }
+.button--white-border {
+	background-color: transparent;
+	border: 1px solid #fff;
+	border-radius: 2px;
+	color: #fff;
+	&:hover {
+		background-color: #fff;
+		color: $primary;
+	}
+}
+
 
 .button--block {
 	display: block;

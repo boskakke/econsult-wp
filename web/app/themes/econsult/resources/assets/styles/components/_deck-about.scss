@@ -1,16 +1,21 @@
 .deck-about {
-	margin: 0 auto;
+
+	@extend %section-margin;
 	display: grid;
 	grid-gap: 0;
 	max-width: 1920px;
-	grid-template: auto / [col1] 1fr [col2] 100px [col3] 1fr [col4];
+	grid-template: auto / 1fr;
+	@include md-up {
+		grid-template: auto / [col1] 1fr [col2] 100px [col3] 1fr [col4];
+	}
 	&__left {
-		grid-column: col1 / col3;
 		grid-row: 1;
-
 		border-top: 100px solid transparent;
 		z-index: 2;
 		position: relative;
+		@include md-up {
+			grid-column: col1 / col3;
+		}
 
 		&:before {
 			position: absolute;
@@ -24,14 +29,18 @@
 		}
 	}
 	&__right {
-		grid-column: col2 / col4;
 		grid-row: 1;
 		position: relative;
-
+		@include md-up {
+			grid-column: col2 / col4;
+		}
 	}
 	&__content {
-		padding: 16%;
+		padding: 16% 2rem;
 		position: relative;
+		@include md-up {
+			padding: 16%;
+		}
 	}
 	&__image {
 		position: absolute;
@@ -40,10 +49,13 @@
 		object-fit: cover;
 	}
 	&__title {
-		font-size: $font-11;
+		@extend %deck-title;
 		mark {
 			color: $secondary;
 			background-color: transparent;
 		}
+	}
+	&__text {
+		font-size: $font-5;
 	}
 }
