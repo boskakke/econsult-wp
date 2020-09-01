@@ -73,19 +73,20 @@ $about_image = get_sub_field('image');
 @endphp
 
 <div class="deck-about">
-	<div class="deck-about__left">
-		<div class="deck-about__content">
-			<h2 class="deck-about__title">
-				{!! the_sub_field('title') !!}
-			</h2>
-			<div class="deck-about__text mb-2">
-				{!! the_sub_field('content') !!}
-			</div>
-			<a href="{!! the_sub_field('link') !!}" class="button button--primary-border">
-				<svg class="button__arrow"
-				viewBox="0 0 24 24"
-				xmlns="http://www.w3.org/2000/svg">
-				<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
+
+		<div class="deck-about__left">
+			<div class="deck-about__content">
+				<h2 class="deck-about__title">
+					{!! the_sub_field('title') !!}
+				</h2>
+				<div class="deck-about__text mb-2">
+					{!! the_sub_field('content') !!}
+				</div>
+				<a href="{!! the_sub_field('link') !!}" class="button button--primary-border">
+					<svg class="button__arrow"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg">
+					<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
 				</svg>
 				<span>
 					{!! the_sub_field('cta') !!}
@@ -124,8 +125,9 @@ $the_query = new WP_Query( array(
 
 <div class="deck-cases">
 	<div class="deck-cases__nav">
-		<div class="cases-nav cases-nav--left">
-			<svg class="cases-arrow"
+		<div class="deck-cases__nav--content">
+			<div class="cases-nav cases-nav--left">
+				<svg class="cases-arrow"
 				viewBox="0 0 24 24"
 				xmlns="http://www.w3.org/2000/svg">
 				<use xlink:href="@asset('images/sprite.svg')#arrow-left"></use>
@@ -133,44 +135,45 @@ $the_query = new WP_Query( array(
 		</div>
 		<div class="cases-nav cases-nav--right">
 			<svg class="cases-arrow"
-				viewBox="0 0 24 24"
-				xmlns="http://www.w3.org/2000/svg">
-				<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
-			</svg>
-		</div>
-		<div class="slide-counter">
-    </div>
+			viewBox="0 0 24 24"
+			xmlns="http://www.w3.org/2000/svg">
+			<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
+		</svg>
 	</div>
-	<div class="deck-cases__slider">
-		@while ( $the_query->have_posts() )
-		@php
-			$the_query->the_post()
-		@endphp
-		<div class="deck-cases__item">
-			<div class="deck-cases__left">
-				<div class="deck-cases__content">
-					<h2 class="deck-cases__title">
-						{{ the_title() }}
-					</h2>
-					<a href="{{ the_permalink() }}" class="button button--white-border">
-						<svg class="button__arrow"
-				viewBox="0 0 24 24"
-				xmlns="http://www.w3.org/2000/svg">
-				<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
+	<div class="slide-counter">
+	</div>
+</div>
+</div>
+<div class="deck-cases__slider">
+	@while ( $the_query->have_posts() )
+	@php
+	$the_query->the_post()
+	@endphp
+	<div class="deck-cases__item">
+		<div class="deck-cases__left">
+			<div class="deck-cases__content">
+				<h2 class="deck-cases__title">
+					{{ the_title() }}
+				</h2>
+				<a href="{{ the_permalink() }}" class="button button--white-border">
+					<svg class="button__arrow"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg">
+					<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
 				</svg>
-						<span>Læs case</span>
-					</a>
-				</div>
-			</div>
-			<div class="deck-cases__right">
-				<figure class="deck-cases__figure">
-					{{the_post_thumbnail( 'hero', array( 'class' => 'deck-cases__image' ) )}}
-				</figure>
-			</div>
+				<span>Læs case</span>
+			</a>
 		</div>
-
-		@endwhile
 	</div>
+	<div class="deck-cases__right">
+		<figure class="deck-cases__figure">
+			{{the_post_thumbnail( 'hero', array( 'class' => 'deck-cases__image' ) )}}
+		</figure>
+	</div>
+</div>
+
+@endwhile
+</div>
 </div>
 
 @php

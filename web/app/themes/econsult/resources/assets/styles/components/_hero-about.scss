@@ -14,16 +14,21 @@
 		justify-content: center;
 		flex-direction: column;
 	}
-	&__grid {
-		display: grid;
-		grid-template: auto / 1fr;
-		grid-gap: 2rem;
+	&__left {
 		margin-top: 3rem;
+		display: flex;
+		align-items: center;
+
+		grid-column: main-start / span 1;
 		@include md-up {
-			grid-template: auto / 7fr 3fr;
+			grid-column: col-start 5 / span 7;
+			grid-row: 1;
 		}
 	}
 
+	&__grid {
+		@extend %grid;
+	}
 	&__title {
 		font-size: $font-6;
 		font-weight: normal;
@@ -39,5 +44,12 @@
 	&__figure {
 		display: flex;
 		align-items: flex-end;
+		grid-column: main-start / span 1;
+
+		@include md-up {
+			grid-row: 1;
+			padding-right: 2rem;
+			grid-column: col-start 1 / span 4;
+		}
 	}
 }

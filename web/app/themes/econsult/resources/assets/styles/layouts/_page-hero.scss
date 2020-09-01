@@ -1,21 +1,24 @@
 .page-hero {
-	height: 300px;
-	@include md-up {
-		height: 450px;
-	}
-	@include lg-up {
-		height: 500px;
-	}
-	@include xl-up {
-		height: 650px;
-	}
-
+	grid-column: col-start 1 / span 12;
+	margin-bottom: 2rem;
 	&__figure {
 		position: relative;
-		height: 100%;
+		height: 0;
+		padding-top: 56.25%;
 	}
 	&__image {
-		object-fit: cover;
 		@extend %pos-a;
+		object-fit: cover;
 	}
 }
+
+
+.article__content {
+	@extend %grid;
+}
+
+.cases__header {
+	grid-column: col-start 5 / span 7;
+}
+
+

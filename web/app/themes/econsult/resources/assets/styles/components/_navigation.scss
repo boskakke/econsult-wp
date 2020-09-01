@@ -4,8 +4,8 @@
 	@include md-up {
 		padding: 10px 15px;
 	}
-	@include lg-up {
-		padding: 10px 20px;
+	@include md-up {
+		padding: 0;
 	}
 }
 
@@ -23,24 +23,24 @@
 
 
 .top-menu {
-	font-size: $font-5;
-	font-weight: 500;
+	font-size: $font-6;
+	font-weight: 400;
 	flex-direction: column;
 	display: none;
 
 	@include md-up {
 		display: flex;
-		font-size: $font-2;
+		font-size: $font-3;
 		flex-direction: row;
 		justify-content: flex-end;
 	}
 	@include lg-up {
-		font-size: $font-3;
+		font-size: $font-4;
 	}
 	a {
 		color: #fff;
 		@extend %menu-item-padding;
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		justify-content: space-between;
 		text-decoration: none;
@@ -50,6 +50,11 @@
 	}
 	& > li {
 		position: relative;
+		margin-right: 1rem;
+		padding-right: 1rem;
+		&:last-child {
+			margin-right: 0;
+		}
 		&:hover {
 			& > .sub-menu {
 				@include md-up {
@@ -61,42 +66,12 @@
 		}
 		& > a {
 			overflow: hidden;
-			&:before {
-				@include md-up {
-					position: absolute;
-					left: 15px;
-					width: calc(100% - 30px);
-					bottom: 0;
-					height: 4px;
-					background-color: $secondary;
-					content: '';
-					transform: scaleX(0);
-					transform-origin: left 50%;
-					transition: transform .2s ease;
-				}
-			}
-
-			&:hover {
-				&:before {
-					transform: scaleX(1);
-				}
-			}
 
 			&.menu-item-has-children {
 				& > a:after {
 					@extend %has-children;
 					content: '\e84d'; // down
 					right: 0;
-				}
-			}
-
-		}
-		& > .sub-menu {
-			background: darken($primary, 5%);
-
-			@include lg-up {
-				li:hover {
-					background: darken($primary, 1%);
 				}
 			}
 		}
@@ -114,24 +89,25 @@
 	@include md-up {
 		overflow-y: unset;
 		max-height: unset;
-		font-size: $font-3;
+		font-size: $font-4;
 		opacity: 0;
 		visibility: hidden;
-		transform: translateY(20px);
+		transform: translateY(-20px);
 		transition: all .2s ease;
 		position: absolute;
 		top: 100%;
-		left: 0;
-		background: $primary;
+		left: -.5rem;
+		background: #fff;
+		padding-top: 1rem;
 		min-width: 200px;
 	}
-	.menu-wrapper & {
-		font-size: $font-2;
 
-	}
 	a {
-		color: #fff;
-		@extend %menu-item-padding;
+		color: #333;
+		padding: .5rem .5rem;
+		&:hover {
+			color: $primary;
+		}
 	}
 	& > .menu-item-has-children {
 		position: relative;
@@ -145,6 +121,7 @@
 		}
 		.sub-menu {
 			@include md-up {
+				padding-top: .5rem;
 				position: absolute;
 				left: 100%;
 				top: 0;
@@ -194,7 +171,7 @@
 	z-index: 40;
 	position: relative;
 	transition: transform .2s ease;
-	@include md-up {
+	@include lg-up {
 		display: none;
 	}
 }

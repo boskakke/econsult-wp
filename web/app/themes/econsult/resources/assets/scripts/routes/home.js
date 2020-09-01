@@ -27,6 +27,15 @@ export default {
 			updateSliderCounter(slick, currentSlide);
 		});
 
+		// $cases.on('afterChange', function(event, slick, currentSlide){
+		// 	// var caption = $('.slick-current .slide--caption').html();
+		// 	// $('#gallery-caption').html(caption);
+		// 	const myContent = slick
+		// 	console.log(slick)
+		// 	console.log(myContent.$slides[currentSlide])
+		// });
+
+
 		$cases.slick({
 			draggable:false,
 			infinite: false,

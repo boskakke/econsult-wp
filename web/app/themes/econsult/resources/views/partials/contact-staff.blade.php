@@ -1,6 +1,6 @@
 @if(have_rows('person'))
 <section class="section section--staff section--padding mb-0">
-<div class="container">
+
 	<h2 class="section__header">Medarbejdere</h2>
 
 	<div class="person-grid">
@@ -24,6 +24,6 @@
 		</div>
 		@endwhile
 	</div>
-</div>
+
 </section>
 @endif

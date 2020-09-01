@@ -1,57 +1,60 @@
 
 .header {
-
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 2rem 8%;
+	margin: 0 auto 3rem;
+	padding: 2rem 0 0;
 	font-family: $headings-font-family;
 	flex-wrap: wrap;
-	z-index: 1;
-	max-width: 1920px;
-	width: 100%;
+	z-index: 10;
+	position: relative;
+	align-items: flex-end;
+	@extend %grid;
 
-	@include lg-up {
-		align-items: center;
-		justify-content: space-between;
-	}
 	&__col--svg {
-		width: 50vw;
-		@include md-up {
-			width: 200px;
+		width: 200px;
+		@include lg-up {
+			width: 280px;
 		}
 	}
 	&__col--logo {
 		display: flex;
-		align-items: center;
-		flex: 1 0 75;
+		grid-column: main-start 1 / span 1;
+		position: relative;
+		width: 100%;
+		@include md-up {
+			grid-column: col-start 1 / span 12;
+		}
+
 		@include lg-up {
-			flex: 0 0 220px;
+			grid-column: col-start 1 / span 4;
 		}
 	}
 
 	&__col--menu {
-		flex: 0 0 auto;
-		justify-content: flex-end;
-		align-content: center;
+		display: none;
 
+		@include lg-up {
+			display: flex;
+			grid-column: col-start 5 / span 7;
+		}
 	}
 	&__col--hamburger {
 		z-index: 999;
-		position: relative;
-		flex: 0 1 25%;
-		@include md-up {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		@include lg-up {
 			display: none;
 		}
 	}
 	&__col--contact {
 		flex: 1 0 100%;
+		display: none;
 	}
 }
 
 .contact__mobile {
-	@include md-up {
+	@include lg-up {
 		display: none;
 	}
 }

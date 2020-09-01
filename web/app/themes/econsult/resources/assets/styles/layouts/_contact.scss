@@ -19,6 +19,7 @@
 }
 
 .person-grid {
+	grid-column: col-start 1 / span 12;
 	display: grid;
 	grid-template: auto / 1fr 1fr;
 	grid-gap: 3rem;
@@ -107,4 +108,5 @@
 
 .section--staff {
 	background-color: $sand;
+	@extend %grid;
 }

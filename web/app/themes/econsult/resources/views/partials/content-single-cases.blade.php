@@ -1,7 +1,9 @@
-
+@php
+	$summary = get_field('case_summary');
+@endphp
 
 <article @php post_class('section--content article__content page') @endphp>
-	<div class="container">
+	<div class="cases__header">
 		@if ( function_exists('yoast_breadcrumb') )
 			@php  yoast_breadcrumb( '<div class="breadcrumbs">','</div>' ); @endphp
 		@endif
@@ -10,9 +12,15 @@
 			the_title();
 			@endphp
 		</h1>
+		@if ($summary)
+			<div class="case__summary">
+				{!! $summary !!}
+			</div>
+		@endif
+
 	</div>
 
-
+@include('partials.hero')
 
 
 	@if( have_rows('content') )
@@ -25,13 +33,13 @@
 
 
 	@if( get_row_layout() == 'brodtekst' )
-	@php
-	$content = get_sub_field('brodtekst');
-	$fact = get_sub_field('faktaboks');
-	$image = get_sub_field('billede');
-	@endphp
-	<div class="container">
-		<div class="page__content">
+		@php
+		$content = get_sub_field('brodtekst');
+		$fact = get_sub_field('faktaboks');
+		$image = get_sub_field('billede');
+		@endphp
+
+		<div class="cases__content">
 			<div class="grid__item">
 				{!! $content !!}
 
@@ -43,7 +51,8 @@
 		</div>
 
 		@if ($image)
-		<div class="page__content fw ">
+		<div class="cases__content--wide mb-2">
+
 			<aside class="fact">
 
 				<figure class="post-figure fadeUp">
@@ -55,23 +64,22 @@
 
 
 			</aside>
-		</div>
-		@endif
+
 	</div>
+		@endif
+
 
 	@elseif( get_row_layout() == 'billede' )
 
-	@php
-	$image = get_sub_field('billede');
-	$imgSize = "case-lg";
-	@endphp
-	<div class="container">
-		<div class="page__content fadeUp">
-			<div class="grid__item fw">
-				{!! wp_get_attachment_image( $image, $imgSize, "", array( "class" => "cases-gallery__img" )) !!}
+			@php
+			$image = get_sub_field('billede');
+			$imgSize = "case-lg";
+			@endphp
+			<div class="cases__content fadeUp">
+
+					{!! wp_get_attachment_image( $image, $imgSize, "", array( "class" => "cases-gallery__img" )) !!}
+
 			</div>
-		</div>
-	</div>
 
 	@endif
 
@@ -81,12 +89,13 @@
 
 	@else
 
+
 	@endif
 
 
 	@if( have_rows('repeater_images') )
-	<div class="container">
-		<div class="page__content">
+
+		<div class="cases__content">
 	<div class="cases-gallery fadeUp">
 		<h4 class="cases-gallery__title">
 			Galleri
@@ -105,7 +114,7 @@
 		@endwhile
 	</div>
 </div>
-</div>
+
 	@endif
 
 </div>

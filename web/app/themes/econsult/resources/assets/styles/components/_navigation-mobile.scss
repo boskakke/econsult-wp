@@ -12,7 +12,7 @@ $padding-mobile: 5%;
 	flex-direction: column;
 	z-index: 100;
 	transform: translateX(100%);
-	@include md-up {
+	@include lg-up {
 		display: none !important;
 	}
 	&__curtain {
@@ -24,7 +24,7 @@ $padding-mobile: 5%;
 		height: 100%;
 		z-index: 99;
 		transform: translateX(100%);
-		@include md-up {
+		@include lg-up {
 			display: none;
 		}
 	}
@@ -35,7 +35,7 @@ $padding-mobile: 5%;
 		padding: 0 $padding-mobile;
 	}
 	&__svg {
-		width: 50vw;
+		width: 200px;
 	}
 	&__top {
 		padding: 1rem $padding-mobile;

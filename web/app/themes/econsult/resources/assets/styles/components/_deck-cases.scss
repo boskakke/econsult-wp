@@ -1,9 +1,48 @@
 .deck-cases {
+	@include md-up {
+		--grid-gap: 0 1rem;
+	}
+
 	margin: 0 auto;
-	max-width: 1920px;
-	display: grid;
+	@extend %grid;
 	grid-template: auto auto / 1fr;
 	@extend %section-margin;
+
+	&__nav {
+		display: flex;
+		color: #fff;
+		grid-column: main-start / span 1;
+		@include md-up {
+			grid-column: col-start / span 12;
+		}
+		&--content {
+			padding-left: 4%;
+			height: 100px;
+			display: flex;
+			flex: 0 0 100%;
+			align-items: center;
+			background-color: $primary;
+			@include md-up {
+				flex: 0 0 50%;
+			}
+		}
+	}
+
+	&__left {
+		background-color: $primary;
+		display: flex;
+		align-items: flex-start;
+		order: 2;
+		grid-row: 1;
+		flex: 0 0 50%;
+	}
+	&__right {
+		position: relative;
+		height: 100%;
+		min-width: 0px;
+		flex: 0 0 50%;
+	}
+
 	&__item {
 		display: grid !important;
 		grid-template: auto auto / 1fr;
@@ -13,46 +52,37 @@
 			grid-template: auto / 1fr 1fr;
 		}
 	}
-	&__left {
-		background-color: $primary;
-		display: flex;
-		align-items: flex-end;
-		order: 2;
-		@include md-up {
-			order: initial;
-		}
-	}
-	&__right {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		min-width: 0px;
-		background-color: $primary;
-	}
+
 	&__slider {
 		width: 100%;
 		min-width: 0px;
 		outline: 0;
+		grid-column: main-start 1 / span 1;
+		grid-row: 2;
+		display: flex;
+		background-color: $primary;
+		@include md-up {
+			grid-column: col-start 1 / span 12;
+		}
 	}
 	&__content {
-		padding: 2rem;
-		@include md-up {
-			padding: 16%;
-		}
+		padding: 4rem 2rem 2rem;
+		transform: translateY(-20px);
+		transition: transform .5s ease .2s, opacity .2s ease;
+		opacity: 0;
 		position: relative;
+		.slick-active & {
+			transition-delay: .2s;
+			transform: translateY(0);
+			opacity: 1;
+		}
+		@include md-up {
+			padding: 8%;
+		}
 	}
-	&__nav {
-		padding-left: 8%;
-		background-color: $primary;
-		width: 50%;
-		height: 100px;
-		display: flex;
-		align-items: center;
-		color: #fff;
-	}
+
 	&__title {
 		@extend %deck-title;
-
 		color: #fff;
 		mark {
 			color: $secondary;
@@ -61,7 +91,6 @@
 	}
 	&__figure {
 		position: relative;
-
 		padding-top: 100%;
 	}
 	&__image {
@@ -75,7 +104,7 @@
 }
 
 .cases-arrow {
-	width: 3rem;
+	width: 2rem;
 	margin-right: 2rem;
 	cursor: pointer;
 }
@@ -86,6 +115,7 @@
 .slick-slide {
 	outline: 0;
 }
+
 
 .slider__counter {
 	position: absolute;

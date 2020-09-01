@@ -1,20 +1,19 @@
 .deck-about {
 
 	@extend %section-margin;
-	display: grid;
+	@extend %grid;
 	grid-gap: 0;
-	max-width: 1920px;
-	grid-template: auto / 1fr;
-	@include md-up {
-		grid-template: auto / [col1] 1fr [col2] 100px [col3] 1fr [col4];
-	}
+	max-width: $site-width;
+
+
+
 	&__left {
-		grid-row: 1;
 		border-top: 100px solid transparent;
 		z-index: 2;
 		position: relative;
+		grid-column: main-start 1 / span 1;
 		@include md-up {
-			grid-column: col1 / col3;
+			grid-column: col-start 1 / span 6;
 		}
 
 		&:before {
@@ -28,19 +27,18 @@
 			z-index: 0;
 		}
 	}
+
 	&__right {
-		grid-row: 1;
 		position: relative;
+		grid-column: main-start 1 / span 1;
+		background-color: red;
 		@include md-up {
-			grid-column: col2 / col4;
+			grid-column: col-start 7 / span 6;
 		}
 	}
 	&__content {
-		padding: 16% 2rem;
+		padding: 4rem 8%;
 		position: relative;
-		@include md-up {
-			padding: 16%;
-		}
 	}
 	&__image {
 		position: absolute;
@@ -56,6 +54,9 @@
 		}
 	}
 	&__text {
-		font-size: $font-5;
+		font-size: $font-4;
+		@include lg-up {
+			font-size: $font-5;
+		}
 	}
 }
