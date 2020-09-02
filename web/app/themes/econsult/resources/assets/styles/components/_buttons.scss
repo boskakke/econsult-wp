@@ -126,6 +126,8 @@ $btn-size: 32px;
 	border-radius: 2px;
 	color: $primary;
 	&:hover {
+		background-color: $primary;
+		color: #fff;
 		border: 1px solid $primary;
 	}
 }
