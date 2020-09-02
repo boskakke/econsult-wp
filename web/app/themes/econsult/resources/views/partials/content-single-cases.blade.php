@@ -62,6 +62,21 @@
 	</div>
 		@endif
 
+		@if( get_row_layout() == 'faktaboks' )
+			@php
+			$fact = get_sub_field('faktaboks');
+			@endphp
+
+
+		@if ($fact)
+			<div class="cases__fact">
+				<div class="grid__item">
+					{!! $fact !!}
+				</div>
+			</div>
+		@endif
+
+
 
 	@elseif( get_row_layout() == 'billede' )
 
