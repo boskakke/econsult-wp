@@ -69,6 +69,7 @@
 		margin-bottom: 2rem;
 		&--wide {
 			grid-column: main-start 1 / span 1;
+			margin-bottom: 2rem;
 			@include md-up {
 				grid-column: col-start 1 / span 12;
 			}
