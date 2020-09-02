@@ -91,7 +91,7 @@
 			$image = get_sub_field('billede');
 			$imgSize = "case-lg";
 			@endphp
-			<div class="cases__content fadeUp">
+			<div class="cases__content--wide fadeUp">
 
 					{!! wp_get_attachment_image( $image, $imgSize, "", array( "class" => "cases-gallery__img" )) !!}
 
