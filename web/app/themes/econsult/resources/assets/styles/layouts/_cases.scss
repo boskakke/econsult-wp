@@ -98,7 +98,10 @@
 		}
 
 		.grid__item {
-			padding: 2rem 2rem;
+			padding: 1rem;
+			@include md-up {
+				padding: 2rem 2rem;
+			}
 			h3 {
 				margin-top: 0;
 				font-size: $font-5;
