@@ -457,6 +457,9 @@ p {
 	text-align: center;
 	color: rgba(0,0,0,.7);
 }
+.wpcf7-response-output {
+	color: #fff;
+}
 div.wpcf7-mail-sent-ok {
 	@extend %cf7;
 	background-color: #ccdb96;
