@@ -7,7 +7,7 @@ $title = get_field( 'rotator_title' );
 
 
 @include('partials.header')
-<div class="article__content">
+<div class="article__content" style="--grid-gap: 0">
 	<div class="article__header">
 		<h1 class="article__title">
 			{!! $title !!}
