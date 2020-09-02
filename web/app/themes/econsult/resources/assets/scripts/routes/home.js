@@ -77,10 +77,11 @@ export default {
 
 		tl
 		.fromTo(tl_headerElements, {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: .5, stagger: .02})
-		.fromTo('.hero-fp__figure', {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 1, ease: 'elastic.out(1, 0.75)'} , '<.2')
-		.fromTo('.hero-fp__logo', {scale: 0}, {scale: 1, duration: 1, ease: 'elastic.out(1, 0.75)'}, '<.2' )
+
 		.fromTo(tl_title, {y: -30, opacity: 0}, {opacity: 1, y: 0, duration: 1,  ease: 'power4.out'}, '<.2')
-		.fromTo(words, { opacity: 0, y: -30 }, {opacity: 1, y: 0, duration: 1, stagger: .2, ease: 'elastic.out(1.75, 0.5)'}, '<.2')
+		.fromTo(words, { opacity: 0, y: -30 }, {opacity: 1, y: 0, duration: 1, stagger: .2, ease: 'power4.out'}, '<.2')
+		.fromTo('.hero-fp__figure', {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: 1, ease: 'power4.out'} , '<.2')
+		.fromTo('.hero-fp__figure--2', {y:-20, opacity: 0}, {y: 0, opacity: 1, duration: 1, ease: 'elastic.out(1, 0.75)'} , '<.2')
 		.fromTo('.hero-fp__curtain', {scaleY: 1.1}, {scaleY: 1, duration: 2, ease: 'power4.out'},'<-1' )
 
 

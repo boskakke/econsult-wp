@@ -17,13 +17,16 @@
 		}
 		&--content {
 			padding-left: 4%;
-			height: 100px;
+			height: 5rem;
 			display: flex;
 			flex: 0 0 100%;
 			align-items: center;
 			background-color: $primary;
 			@include md-up {
 				flex: 0 0 50%;
+			}
+			@include lg-up {
+				height: 6rem;
 			}
 		}
 	}

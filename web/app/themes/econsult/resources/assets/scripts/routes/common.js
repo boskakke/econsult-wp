@@ -1,4 +1,4 @@
-import '@fancyapps/fancybox/dist/jquery.fancybox.js'
+
 import gsap from 'gsap'
 
 export default {

@@ -54,14 +54,14 @@ $grid-gap: 2rem;
 	}
 }
 %page-title {
-	font-size: calc(24px + 24 * ((100vw - 375px) / 1180));
+	font-size: calc(24px + 36 * ((100vw - 375px) / 1180));
 	font-weight: 500;
 	line-height: 1.3;
 	@include xs-down {
 		font-size: $font-6;
 	}
 	@include xl-up {
-		font-size: $font-10;
+		font-size: $font-11;
 	}
 	mark {
 		background-color: transparent;
@@ -157,9 +157,9 @@ h5 {
 	font-family: $headings-font-family;
 	font-weight: 500;
 	line-height: 1.1;
-	color: $primary;
+	color: currentColor;
 	margin-top: 1em;
-	margin-bottom: .5em;
+	margin-bottom: 1em;
 
 }
 h1 {
@@ -183,7 +183,7 @@ h2 {
 }
 
 h3 {
-	font-size: $font-5;
+	font-size: $font-6;
 }
 
 .page-content li,
@@ -571,3 +571,13 @@ span.wpcf7-not-valid-tip {
 		}
 	}
 }
+
+
+.article__header {
+	@extend %hero-grid;
+}
+
+.article__title {
+	@extend %page-title;
+}
+

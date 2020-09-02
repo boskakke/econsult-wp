@@ -1,24 +1,22 @@
 @php
-	$summary = get_field('case_summary');
+	$summary = get_field( 'page_summary' );
 @endphp
 
 <article @php post_class('section--content article__content page') @endphp>
-	<div class="cases__header">
-		@if ( function_exists('yoast_breadcrumb') )
-			@php  yoast_breadcrumb( '<div class="breadcrumbs">','</div>' ); @endphp
-		@endif
-		<h1 class="page-title">
-			@php
-			the_title();
-			@endphp
-		</h1>
-		@if ($summary)
-			<div class="case__summary">
-				{!! $summary !!}
-			</div>
-		@endif
 
+	<div class="article__header">
+			<h1 class="article__title">
+				@php
+				the_title();
+				@endphp
+			</h1>
+			@if ($summary)
+				<p class="article__summary">
+					{!! $summary !!}
+				</p>
+			@endif
 	</div>
+
 
 @include('partials.hero')
 
@@ -42,27 +40,23 @@
 		<div class="cases__content">
 			<div class="grid__item">
 				{!! $content !!}
-
 			</div>
-			<div class="page__sidebar">
-			</div>
-
-
 		</div>
+		@if ($fact)
+			<div class="cases__fact">
+				<div class="grid__item">
+					{!! $fact !!}
+				</div>
+			</div>
+		@endif
 
 		@if ($image)
 		<div class="cases__content--wide mb-2">
 
 			<aside class="fact">
-
 				<figure class="post-figure fadeUp">
 				{!! wp_get_attachment_image( $image, "case-lg", "", array( "class" => "cases-gallery__img" )) !!}
-				<figcaption class="post-figure__caption">
-					{!! $fact !!}
-				</figcaption>
 				</figure>
-
-
 			</aside>
 
 	</div>
@@ -81,6 +75,21 @@
 
 			</div>
 
+
+		@elseif( get_row_layout() == 'billeder' )
+			@php
+			$image1 = get_sub_field('billede_1');
+			$image2 = get_sub_field('billede_2');
+			$imgSize = "case-lg";
+			@endphp
+			<div class="cases__content--2col fadeUp">
+					{!! wp_get_attachment_image( $image1, $imgSize, "", array( "class" => "cases-gallery__img" )) !!}
+			</div>
+			<div class="cases__content--2col fadeUp">
+				{!! wp_get_attachment_image( $image2, $imgSize, "", array( "class" => "cases-gallery__img" )) !!}
+			</div>
+		</div>
+
 	@endif
 
 
@@ -93,29 +102,6 @@
 	@endif
 
 
-	@if( have_rows('repeater_images') )
-
-		<div class="cases__content">
-	<div class="cases-gallery fadeUp">
-		<h4 class="cases-gallery__title">
-			Galleri
-		</h4>
-		@while ( have_rows('repeater_images') ) @php the_row(); @endphp
-		@php
-		$image = get_sub_field( 'image' );
-		$large_image = wp_get_attachment_image_src(get_sub_field('image'), 'case-lg');
-		$size = 'case';
-		@endphp
-		<figure class="cases-gallery__item">
-			<a href="<?php echo $large_image[0]; ?>" data-fancybox="gallery">
-				{!! wp_get_attachment_image( $image, $size, "", array( "class" => "cases-gallery__img" )) !!}
-			</a>
-		</figure>
-		@endwhile
-	</div>
-</div>
-
-	@endif
 
 </div>
 

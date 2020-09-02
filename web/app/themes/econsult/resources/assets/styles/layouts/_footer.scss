@@ -21,8 +21,16 @@
 	&__col {
 		grid-column: main-start 1 / span 1;
 		margin-bottom: 3rem;
-		padding: 0 2rem;
 
+		@include md-up {
+			grid-column: span 6;
+			&:first-child {
+				grid-column: col-start 1 / span 6;
+			}
+			&:nth-child(3) {
+				grid-column: col-start 1 / span 6;
+			}
+		}
 		@include lg-up {
 			grid-column: span 3;
 			&:first-child {

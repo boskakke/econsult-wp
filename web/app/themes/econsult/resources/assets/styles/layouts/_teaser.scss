@@ -80,7 +80,6 @@
 			@include md-up {
 				justify-content: flex-end;
 			}
-
 		}
 	}
 }
@@ -142,7 +141,16 @@
 	.grid__item {
 		display: flex;
 		grid-column: main-start / span 1;
-		@include md-up {
+		@include md-only {
+			grid-column: span 4;
+			&:first-child {
+				grid-column: col-start / span 4;
+			}
+			&:nth-child(4n) {
+				grid-column: col-start 1 / span 4;
+			}
+		}
+		@include lg-up {
 			grid-column: span 3;
 			&:first-child {
 				grid-column: col-start / span 3;
@@ -154,13 +162,60 @@
 	}
 }
 
+.cases-flow {
+	padding: 4rem 0;
+	background-color: $sand;
+	grid-column: 1 / -1;
+	@extend %grid;
+	.grid__item {
+		grid-column: main-start / span 1;
+		@include sm-down {
+			.teaser-card {
+				display: grid;
+				grid-template: auto auto / 1fr;
+				gap: 1rem;
+			}
+		}
+		@include md-up {
+			grid-column: col-start 1 / span 12;
+			&:nth-child(even) {
+				.teaser-card__body {
+					grid-column: 1 / span 1;
+					grid-row: 1;
+				}
+				.teaser-card__figure {
+					grid-column: 2 / span 1;
+					grid-row: 1;
+				}
+			}
+		}
+	}
+	.teaser-card {
+		display: grid;
+		grid-template: auto / 1fr 1fr;
+		grid-gap: var(--grid-gap);
+		&__body {
+			display: flex;
+			justify-content: center;
+		}
+		&__header {
+			font-size: $font-7;
+			@include md-up {
+				font-size: $font-10;
+			}
+
+
+			margin: 0 0 1rem;
+		}
+	}
+}
+
 .teaser-card {
 	display: flex;
 	flex-direction: column;
 	flex: 0 0 100%;
 	height: 100%;
 	position: relative;
-	background: #fff;
 	margin-bottom: 2rem;
 	&:hover {
 		.teaser-card__readmore:after {
@@ -173,7 +228,6 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-
 	}
 	&__figure {
 		flex: 0 0 25%;
@@ -207,6 +261,12 @@
 			&:after {
 				transform: translateX(4px);
 			}
+		}
+	}
+	&__header {
+		mark {
+			background-color: transparent;
+			color: $secondary;
 		}
 	}
 	&__arrow {

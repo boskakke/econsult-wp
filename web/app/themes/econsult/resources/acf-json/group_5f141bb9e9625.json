@@ -3,25 +3,6 @@
     "title": "Cases",
     "fields": [
         {
-            "key": "field_5f4e584f92714",
-            "label": "Indledning",
-            "name": "case_summary",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
             "key": "field_5f141bbe9fb17",
             "label": "Indhold",
             "name": "content",
@@ -169,6 +150,64 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5f4f4f26abd65": {
+                    "key": "layout_5f4f4f26abd65",
+                    "name": "billeder",
+                    "label": "2 Billeder",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f4f4f26abd66",
+                            "label": "Billede",
+                            "name": "billede_1",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5f4f4f31abd68",
+                            "label": "Billede 2",
+                            "name": "billede_2",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Tilføj indholdselement",
@@ -193,5 +232,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1598970017
+    "modified": 1599033437
 }

@@ -1,6 +1,6 @@
 @php
 $hero_image = get_field('hero_image');
-$title = get_field( 'hero_summary' );
+$summary = get_field( 'page_summary' );
 
 @endphp
 
@@ -12,13 +12,12 @@ $title = get_field( 'hero_summary' );
 
 	<div class="hero-about__grid">
 		<div class="hero-about__left">
-
-			@if ( function_exists('yoast_breadcrumb') )
-			@php  yoast_breadcrumb( '<div class="breadcrumbs">','</div>' ); @endphp
+			@if ($summary)
+				<h1 class="hero-about__title">
+					{!! $summary !!}
+				</h1>
 			@endif
-			<h1 class="hero-about__title">
-				{!! $title !!}
-			</h1>
+
 		</div>
 
 		<figure class="hero-about__figure">
