@@ -24,9 +24,12 @@
 		}
 	}
 	&__sidebar {
-		margin-top: 2rem;
+		grid-column: main-start 1 / span 1;
+		@include sm-down {
+			order: 99;
+		}
 		@include md-up {
-			margin-top: 0;
+			grid-column: col-start 1 / span 4;
 		}
 	}
 }

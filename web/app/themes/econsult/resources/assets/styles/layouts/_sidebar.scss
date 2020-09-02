@@ -1,9 +1,5 @@
 .sidebar {
 	&__widget {
-		background: $sand;
-		padding: 1rem;
-		margin-bottom: 2rem;
-		border-radius: 3px;
 		.textwidget {
 			font-size: $font-2;
 		}
@@ -12,9 +8,13 @@
 		}
 	}
 	&__header {
-		margin: 0 0 1rem;
-		font-weight: 500;
-		font-size: $font-6;
+		display: none;
+	}
+	&__contact {
+		grid-column: main-start / span 1;
+		@include md-up {
+			grid-column: col-start / span 12;
+		}
 	}
 }
 
