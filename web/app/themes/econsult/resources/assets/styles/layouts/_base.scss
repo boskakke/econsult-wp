@@ -189,8 +189,11 @@ h3 {
 
 .page-content li,
 p {
-	font-size: $font-5;
+	font-size: $font-4;
 	margin: 0 0 2em;
+	@include md-up {
+		font-size: $font-5;
+	}
 }
 
 .page-title {
