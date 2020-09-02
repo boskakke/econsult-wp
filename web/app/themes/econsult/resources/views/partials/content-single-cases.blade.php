@@ -1,5 +1,6 @@
 @php
 	$summary = get_field( 'page_summary' );
+	$photo = get_field( 'photo' );
 @endphp
 
 <article @php post_class('section--content article__content page') @endphp>
@@ -14,6 +15,11 @@
 				<p class="article__summary">
 					{!! $summary !!}
 				</p>
+			@endif
+			@if ($photo)
+				<div class="photo-credit">
+					{{ $photo }}
+				</div>
 			@endif
 	</div>
 
