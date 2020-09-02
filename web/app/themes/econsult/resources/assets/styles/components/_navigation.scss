@@ -50,12 +50,29 @@
 	}
 	& > li {
 		position: relative;
-		margin-right: 1rem;
-		padding-right: 1rem;
+		margin-right: 2.5rem;
+
+		&:after {
+			content: '';
+			height: 1px;
+			background-color: $primary;
+			width: 100%;
+			transform: scaleX(0);
+			transform-origin: left center;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			transition: transform .2s ease;
+		}
+
+
 		&:last-child {
 			margin-right: 0;
 		}
 		&:hover {
+			&:after {
+				transform: scaleX(1);
+			}
 			& > .sub-menu {
 				@include md-up {
 					transform: none;
@@ -92,7 +109,7 @@
 		font-size: $font-4;
 		opacity: 0;
 		visibility: hidden;
-		transform: translateY(-20px);
+		transform: translateY(20px);
 		transition: all .2s ease;
 		position: absolute;
 		top: 100%;
