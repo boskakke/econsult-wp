@@ -44,7 +44,6 @@
 
 	&__right {
 		position: relative;
-		height: 100%;
 		min-width: 0px;
 		min-height: 0;
 		flex: 0 0 50%;
@@ -53,7 +52,6 @@
 	&__item {
 		display: grid !important;
 		grid-template: auto auto / 1fr;
-		height: 100%;
 		min-height: 0;
 		min-width: 0;
 		@include md-up {
