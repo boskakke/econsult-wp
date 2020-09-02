@@ -60,9 +60,9 @@ export default {
 
 
 
-		const tl_headerElements = document.querySelectorAll(' .header__logo, .top-menu')
-		const tl_title = document.querySelectorAll(' .hero-fp__trumpet')
-		const words = document.querySelectorAll(' .hero-fp__words span')
+
+		const tl_title = document.querySelectorAll('.article__title')
+
 
 		// const wordsTl = gsap.timeline({repeat: 0})
 		const tl = gsap.timeline()
@@ -76,13 +76,11 @@ export default {
 
 
 		tl
-		.fromTo(tl_headerElements, {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: .5, stagger: .02})
+
 
 		.fromTo(tl_title, {y: -30, opacity: 0}, {opacity: 1, y: 0, duration: 1,  ease: 'power4.out'}, '<.2')
-		.fromTo(words, { opacity: 0, y: -30 }, {opacity: 1, y: 0, duration: 1, stagger: .2, ease: 'power4.out'}, '<.2')
 		.fromTo('.hero-fp__figure', {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: 1, ease: 'power4.out'} , '<.2')
 		.fromTo('.hero-fp__figure--2', {y:-20, opacity: 0}, {y: 0, opacity: 1, duration: 1, ease: 'elastic.out(1, 0.75)'} , '<.2')
-		.fromTo('.hero-fp__curtain', {scaleY: 1.1}, {scaleY: 1, duration: 2, ease: 'power4.out'},'<-1' )
 
 
 
