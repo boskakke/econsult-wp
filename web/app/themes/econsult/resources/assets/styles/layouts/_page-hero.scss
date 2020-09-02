@@ -18,7 +18,11 @@
 
 
 .article__content {
-	--grid-gap: 0 1rem;
+	--grid-gap: 0;
+	@include md-up {
+		--grid-gap: 0 1rem;
+	}
+
 	@extend %grid;
 	margin-bottom: 6rem;
 }
