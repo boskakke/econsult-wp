@@ -567,9 +567,6 @@ span.wpcf7-not-valid-tip {
 .page-content {
 	@extend %section-margin;
 	grid-column: col-start 5 / span 7;
-	p:first-of-type {
-		font-size: $font-7;
-	}
 	ul {
 		padding-left: 1.5em;
 		li {
