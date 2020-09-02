@@ -58,23 +58,24 @@
 				{!! wp_get_attachment_image( $image, "case-lg", "", array( "class" => "cases-gallery__img" )) !!}
 				</figure>
 			</aside>
-
-	</div>
+		</div>
 		@endif
 
-		@if( get_row_layout() == 'faktaboks' )
+
+
+		@elseif( get_row_layout() == 'faktaboks' )
+
 			@php
-			$fact = get_sub_field('faktaboks');
+				$fact = get_sub_field('faktaboks');
 			@endphp
 
-
-		@if ($fact)
-			<div class="cases__fact">
-				<div class="grid__item">
-					{!! $fact !!}
+			@if ($fact)
+				<div class="cases__fact">
+					<div class="grid__item">
+						{!! $fact !!}
+					</div>
 				</div>
-			</div>
-		@endif
+			@endif
 
 
 
