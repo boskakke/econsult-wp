@@ -17,6 +17,7 @@
 
 
 .article__content {
+	--grid-gap: 0 2rem;
 	@extend %grid;
 	margin-bottom: 6rem;
 }
