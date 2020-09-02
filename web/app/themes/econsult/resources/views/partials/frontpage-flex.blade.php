@@ -113,8 +113,6 @@ $about_image = get_sub_field('image');
 @elseif( get_row_layout() == 'cases_slider' )
 
 
-
-
 @php
 $the_query = new WP_Query( array(
 	'post_type' => 'cases', 'posts_per_page' => 10
@@ -144,6 +142,7 @@ $the_query = new WP_Query( array(
 	</div>
 </div>
 </div>
+<div class="slick-container">
 <div class="deck-cases__slider">
 	@while ( $the_query->have_posts() )
 	@php
@@ -173,6 +172,7 @@ $the_query = new WP_Query( array(
 </div>
 
 @endwhile
+</div>
 </div>
 </div>
 

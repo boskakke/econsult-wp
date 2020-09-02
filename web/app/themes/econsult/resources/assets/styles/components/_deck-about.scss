@@ -1,11 +1,7 @@
 .deck-about {
-
 	@extend %section-margin;
 	@extend %grid;
 	grid-gap: 0;
-	max-width: $site-width;
-
-
 
 	&__left {
 		border-top: 100px solid transparent;

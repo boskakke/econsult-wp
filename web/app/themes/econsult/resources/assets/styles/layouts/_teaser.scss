@@ -163,8 +163,7 @@
 }
 
 .cases-flow {
-	padding: 4rem 0;
-	background-color: $sand;
+	padding: 2rem 0;
 	grid-column: 1 / -1;
 	@extend %grid;
 	.grid__item {
