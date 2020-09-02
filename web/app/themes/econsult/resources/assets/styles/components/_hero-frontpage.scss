@@ -58,55 +58,10 @@
 					grid-column: col-start 8  / span 5;
 				}
 			}
-
 		}
 	}
-	&__logo {
-		transform: scale(0);
-		position: absolute;
-		right: 0;
-		top: 0rem;
-		width: 20vw;
-		display: inline-block;
-		@include md-up {
-			width: 7rem;
-		}
-	}
-	&__svg {
-		animation: heroFloat 5s ease-in-out infinite forwards;
-	}
-
-	&__trumpet {
-		font-weight: normal;
-		color: $primary;
-		font-family: $headings-font-family;
-		font-size: $font-6;
-		margin-bottom: 1rem;
-	}
-	&__words {
-		@extend %font-header;
-		color: $primary;
-		margin: 0;
-		span {
-			white-space: nowrap;
-			transform-origin: center 100%;
-			display: block;
-			&:not(:last-child) {
-				margin-bottom: .5em;
-			}
-		}
-	}
-	&__check {
-		width: .75em;
-		margin-right: .5rem;
+	&__title {
+		font-size: $font-12;
 	}
 }
 
-@keyframes heroFloat {
-	0%, 100% {
-		transform: translateY(-10px);
-	}
-	50% {
-		transform: translateY(10px);
-	}
-}

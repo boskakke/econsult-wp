@@ -72,7 +72,7 @@ $grid-gap: 2rem;
 
 %deck-title {
 	margin-top: 0;
-	font-size: calc(22px + 30 * ((100vw - 375px) / 1180));
+	font-size: calc(30px + 18 * ((100vw - 375px) / 1180));
 	line-height: 1.2;
 	@include xs-down {
 		font-size: $font-6;
@@ -87,7 +87,7 @@ $grid-gap: 2rem;
 	margin-left: auto;
 	margin-right: auto;
 	@include lg-up {
-		margin-bottom: 10rem;
+		margin-bottom: 5rem;
 	}
 }
 img {

@@ -22,46 +22,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5dc15128776fe",
-            "label": "Roterende ord",
-            "name": "rotator_words",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "Tilføj ord",
-            "sub_fields": [
-                {
-                    "key": "field_5dc1513a776ff",
-                    "label": "Ord",
-                    "name": "word",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
-        },
-        {
             "key": "field_5ed6255700adc",
             "label": "Billede 1",
             "name": "image",
@@ -125,7 +85,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1598951454
+    "modified": 1599053230
 }
