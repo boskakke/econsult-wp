@@ -178,6 +178,7 @@ h1 {
 
 h2 {
 	font-size: $font-5;
+	line-height: 1.4;
 	@include md-up {
 		font-size: $font-6;
 	}
@@ -185,6 +186,7 @@ h2 {
 
 h3 {
 	font-size: $font-6;
+	line-height: 1.4;
 }
 
 .page-content li,
