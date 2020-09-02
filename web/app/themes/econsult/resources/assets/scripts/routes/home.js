@@ -38,7 +38,7 @@ export default {
 
 		$cases.slick({
 			draggable:false,
-			infinite: false,
+			infinite: true,
 			speed: 300,
 			slidesToShow: 1,
 			fade: true,
