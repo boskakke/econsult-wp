@@ -141,7 +141,7 @@
 	.grid__item {
 		display: flex;
 		grid-column: main-start / span 1;
-		@include md-only {
+		@include md-up {
 			grid-column: span 4;
 			&:first-child {
 				grid-column: col-start / span 4;
@@ -150,10 +150,13 @@
 				grid-column: col-start 1 / span 4;
 			}
 		}
-		@include lg-up {
+		@include xl-up {
 			grid-column: span 3;
 			&:first-child {
 				grid-column: col-start / span 3;
+			}
+			&:nth-child(4n) {
+				grid-column: span 3;
 			}
 			&:nth-child(5n) {
 				grid-column: col-start 1 / span 3;
@@ -200,7 +203,7 @@
 		&__header {
 			font-size: $font-7;
 			@include md-up {
-				font-size: $font-10;
+				font-size: $font-8;
 			}
 
 
@@ -264,6 +267,8 @@
 	}
 	&__header {
 		margin-bottom: .5rem;
+		line-height: 1.2;
+		font-size: $font-5;
 		mark {
 			background-color: transparent;
 			color: $secondary;
