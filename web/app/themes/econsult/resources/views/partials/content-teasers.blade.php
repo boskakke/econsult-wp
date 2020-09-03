@@ -24,7 +24,7 @@ $description = get_field( 'deck_description' );
 			@endif
 			<div class="teaser-card__body">
 				<h3 class="teaser-card__header">
-					{{ get_the_title($p->ID) }}
+					{!! get_the_title($p->ID) !!}
 				</h3>
 				<p>{{ get_the_excerpt($p->ID) }}</p>
 				<a href="{{ get_permalink($p->ID) }}" class="teaser-card__readmore">
