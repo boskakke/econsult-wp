@@ -257,3 +257,7 @@ function cc_mime_types($mimes) {
   return $mimes;
 }
 add_filter('upload_mimes', __NAMESPACE__ . '\\cc_mime_types');
+
+
+// add_filter('use_block_editor_for_post', __NAMESPACE__ . __return_false', 10);
+add_filter('use_block_editor_for_post', '__return_false', 10);
