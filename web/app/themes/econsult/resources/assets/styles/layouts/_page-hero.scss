@@ -24,7 +24,7 @@
 	}
 
 	@extend %grid;
-	margin-bottom: 6rem;
+	@extend %section-margin;
 }
 
 

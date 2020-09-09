@@ -303,16 +303,16 @@
         },
         {
             "name": "roots/soil",
-            "version": "4.0.1",
+            "version": "4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/soil.git",
-                "reference": "5036bf6a9b5fe212b0f10c76cb410a240f003a23"
+                "reference": "4451b0e524a6173c6cdc899dd2cd6207e02d5dd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/soil/zipball/5036bf6a9b5fe212b0f10c76cb410a240f003a23",
-                "reference": "5036bf6a9b5fe212b0f10c76cb410a240f003a23",
+                "url": "https://api.github.com/repos/roots/soil/zipball/4451b0e524a6173c6cdc899dd2cd6207e02d5dd5",
+                "reference": "4451b0e524a6173c6cdc899dd2cd6207e02d5dd5",
                 "shasum": ""
             },
             "require": {
@@ -361,7 +361,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2020-08-31T16:21:16+00:00"
+            "time": "2020-09-08T21:33:19+00:00"
         },
         {
             "name": "roots/wordpress",
@@ -829,12 +829,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "efe42531c4f320f794e8f7db82afdd32ac8b893e"
+                "reference": "697cfbd44fa43ebb5cd9d5ce6d8fc0edcbce85b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/efe42531c4f320f794e8f7db82afdd32ac8b893e",
-                "reference": "efe42531c4f320f794e8f7db82afdd32ac8b893e",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/697cfbd44fa43ebb5cd9d5ce6d8fc0edcbce85b8",
+                "reference": "697cfbd44fa43ebb5cd9d5ce6d8fc0edcbce85b8",
                 "shasum": ""
             },
             "conflict": {
@@ -868,6 +868,7 @@
                 "contao/listing-bundle": ">=4,<4.4.8",
                 "datadog/dd-trace": ">=0.30,<0.30.2",
                 "david-garcia/phpwhois": "<=4.3.1",
+                "derhansen/sf_event_mgt": "<4.3.1|>=5,<5.1.1",
                 "doctrine/annotations": ">=1,<1.2.7",
                 "doctrine/cache": ">=1,<1.3.2|>=1.4,<1.4.2",
                 "doctrine/common": ">=2,<2.4.3|>=2.5,<2.5.1",
@@ -1108,7 +1109,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2020-09-02T09:37:47+00:00"
+            "time": "2020-09-02T19:02:24+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
