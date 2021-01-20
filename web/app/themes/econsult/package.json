@@ -76,7 +76,7 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
-    "gsap": "^3.3.0",
+    "gsap": "^3.6.0",
     "jquery": "^3.3.1",
     "slick-carousel": "^1.8.1",
     "vh-check": "^2.0.5"
