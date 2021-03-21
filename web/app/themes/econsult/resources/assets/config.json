@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/app/themes/econsult",
-  "devUrl": "http://jan.test",
+  "devUrl": "http://econsult.test",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [

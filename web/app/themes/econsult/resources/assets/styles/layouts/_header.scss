@@ -1,18 +1,26 @@
 
+
 .header {
-	margin: 0 auto 3rem;
-	padding: 2rem 0 0;
+	margin: 0;
+	padding: 0;
 	font-family: $headings-font-family;
 	flex-wrap: wrap;
 	z-index: 10;
-	position: relative;
-	align-items: flex-end;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	align-items: center;
+	height: var(--headerHeight, 6rem);
+	background: var(--color-1, #fff);
+	transition: all 1s ease;
+	transform-origin: top center;
 	@extend %grid;
 
 	&__col--svg {
-		width: 200px;
+		width: 140px;
 		@include lg-up {
-			width: 280px;
+			width: 200px;
 		}
 	}
 	&__col--logo {
@@ -27,6 +35,10 @@
 		@include lg-up {
 			grid-column: col-start 1 / span 4;
 		}
+		a {
+			color: var(--color-2, #{$primary});
+			transition: color .2s ease;
+		}
 	}
 
 	&__col--menu {
@@ -34,7 +46,8 @@
 
 		@include lg-up {
 			display: flex;
-			grid-column: col-start 5 / span 7;
+			grid-column: col-start 5 / span 8;
+			justify-content: flex-end;
 		}
 	}
 	&__col--hamburger {

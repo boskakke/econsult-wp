@@ -4,11 +4,52 @@ import gsap from 'gsap'
 export default {
 	init() {
 
+		
+		const scrollObserver = document.querySelector('.scrollObserver')
+		const body = document.querySelector('body')
+		let observer = new IntersectionObserver(observerCallback, options);
+
+		const options = {
+			threshold: 1,
+		};
+
+		function observerCallback(entries) {
+			entries.forEach((entry) => {
+				if (!entry.isIntersecting) {
+					body.classList.add('dark')
+				} else {
+					body.classList.remove('dark')
+				}
+			});
+		}
+
+		observer.observe(scrollObserver);
+		
+
+
+
+		const header = document.querySelector('.header');
+		const logo = header.querySelector('.header__col--logo')
+		const headerItems = header.querySelectorAll('.top-menu > .menu-item')
+		const pageTitle = document.querySelectorAll('.hero__title')
+		const images = document.querySelectorAll('.hero-fp__illu .grid__item')
+
+		const headerTL = gsap.timeline()
+		headerTL
+			.addLabel('start')
+			.fromTo(logo, {opacity: 0, y: -20}, {opacity: 1, y: 0})
+			.fromTo(headerItems, {opacity: 0, y: -20}, {opacity: 1, y: 0, stagger: .1}, 'start+=.1')
+			.fromTo(pageTitle, {opacity: 0, y: 40}, {opacity: 1, y: 0, duration: 2, ease: 'expo.out'}, '<.2')
+			.fromTo(images, {opacity: 0, y: 40}, {opacity: 1, y: 0, duration: 1.5, ease: 'expo.out', stagger: .1}, '<.2')
+
+		
+
 		const tl_nav = gsap.timeline({paused: true, ease: 'power4.out'})
 		const mobileNav =  document.querySelector('.mobile-nav')
 		const mobileNavCurtain =  document.querySelector('.mobile-nav__curtain')
-		const mobileNavLogo =  document.querySelector('.mobile-nav__logo')
+		const mobileNavLogo =  mobileNav.querySelector('.mobile-nav__logo')
 		const mobileNavLi = document.querySelectorAll('.mobile-nav li')
+
 
 		tl_nav
 		.set(mobileNav, {opacity: 1, pointerEvents: 'auto'})
@@ -17,8 +58,6 @@ export default {
 		.fromTo(mobileNavLogo, {opacity: 0}, {opacity: 1}, '<.2')
 		.fromTo(mobileNavLi, {opacity: 0,  x: 20}, {opacity: 1, stagger: .05, x: 0}, '<.2')
 
-
-		const body = document.querySelector('body')
 
 
 		const hamburger = document.querySelector('.hamburger')

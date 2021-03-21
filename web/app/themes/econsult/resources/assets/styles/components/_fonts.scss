@@ -43,3 +43,20 @@
 .icon-angle-down:before { content: '\e84d'; } /* '' */
 .icon-angle-up:before { content: '\e84e'; } /* '' */
 .icon-pinterest:before { content: '\f231'; } /* '' */
+
+
+@font-face {
+	font-family: 'Rubik';
+	font-weight: 200 900;
+	font-style: normal;
+	font-stretch: normal;
+	src: url('../fonts/Rubik-VariableFont_wght.woff2') format('woff2'), url('../fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Rubik';
+	font-weight: 200 900;
+	font-style: italic;
+	font-stretch: normal;
+	src: url('../fonts/Rubik-Italic-VariableFont_wght.woff2') format('woff2'), url('../fonts/Rubik-Italic-VariableFont_wght.ttf') format('truetype');
+}

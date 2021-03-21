@@ -12,8 +12,5 @@
 	<div class="mobile-nav__top">
 		@php dynamic_sidebar('sidebar-mobile-nav-top') @endphp
 	</div>
-	<div class="mobile-nav__bottom">
-		@php dynamic_sidebar('sidebar-mobile-nav-bottom') @endphp
-	</div>
 </div>
 

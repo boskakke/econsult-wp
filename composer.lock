@@ -11,7 +11,7 @@
             "version": "5.9.0",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}&t=5.9.0"
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}&t=5.9.0#v5.9.0"
             },
             "require": {
                 "composer/installers": "^1.4",

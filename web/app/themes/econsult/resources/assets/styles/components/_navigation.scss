@@ -1,188 +1,4 @@
-%menu-item-padding {
-	display: block;
-	padding: 10px 15px;
-	@include md-up {
-		padding: 10px 15px;
-	}
-	@include md-up {
-		padding: 0;
-	}
-}
 
-%has-children {
-	font-family: econsult-icons;
-	font-size: $font-0;
-	color: $secondary;
-	margin-left: 5px;
-	transition: all .2s ease;
-	.open > & {
-		transform: rotateX(180deg);
-	}
-}
-
-
-
-.top-menu {
-	font-size: $font-6;
-	font-weight: 400;
-	flex-direction: column;
-	display: none;
-
-	@include md-up {
-		display: flex;
-		font-size: $font-3;
-		flex-direction: row;
-		justify-content: flex-end;
-	}
-	@include lg-up {
-		font-size: $font-4;
-	}
-	a {
-		color: #fff;
-		@extend %menu-item-padding;
-		display: inline-flex;
-		align-items: center;
-		justify-content: space-between;
-		text-decoration: none;
-		@include md-up {
-			color: $primary;
-		}
-	}
-	& > li {
-		position: relative;
-		margin-right: 2.5rem;
-
-		&:after {
-			content: '';
-			height: 1px;
-			background-color: $primary;
-			width: 100%;
-			transform: scaleX(0);
-			transform-origin: left center;
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			transition: transform .2s ease;
-		}
-
-
-		&:last-child {
-			margin-right: 0;
-		}
-		&:hover {
-			&:after {
-				transform: scaleX(1);
-			}
-			& > .sub-menu {
-				@include md-up {
-					transform: none;
-					opacity: 1;
-					visibility: visible;
-				}
-			}
-		}
-		& > a {
-			overflow: hidden;
-
-			&.menu-item-has-children {
-				& > a:after {
-					@extend %has-children;
-					content: '\e84d'; // down
-					right: 0;
-				}
-			}
-		}
-	}
-}
-
-
-.sub-menu {
-	z-index: 10;
-	padding: 1rem 0;
-	max-height: 0;
-	overflow-y: hidden;
-	font-size: $font-2;
-	transition: max-height .2s ease;
-	@include md-up {
-		overflow-y: unset;
-		max-height: unset;
-		font-size: $font-4;
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(20px);
-		transition: all .2s ease;
-		position: absolute;
-		top: 100%;
-		left: -1rem;
-		background: #fff;
-		padding-top: 1rem !important;
-		min-width: 200px;
-	}
-
-	a {
-		color: #333;
-		padding: 0 0;
-
-		position: relative;
-		margin: .25rem 1rem;
-		&:after {
-			content: '';
-			height: 1px;
-			background-color: $primary;
-			width: 100%;
-			transform: scaleX(0);
-			transform-origin: left center;
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			transition: transform .2s ease;
-		}
-		&:hover {
-			color: $primary;
-			&:after {
-				transform: scaleX(1);
-			}
-		}
-	}
-	& > .menu-item-has-children {
-		position: relative;
-		& > a:after {
-			@extend %has-children;
-			right: 10px;
-			content: '\e84d'; // down
-			@include md-up {
-				content: '\e84c'; // right
-			}
-		}
-		.sub-menu {
-			@include md-up {
-				padding-top: .5rem;
-				position: absolute;
-				left: 100%;
-				top: 0;
-				transform: translateX(-20px);
-			}
-		}
-		&:hover {
-			& > .sub-menu {
-				opacity: 1;
-				visibility: visible;
-				transform: translateX(0);
-			}
-		}
-
-	}
-	.sub-menu a {
-		justify-content: flex-start;
-		&:before {
-			content: '-';
-			margin-right: 10px;
-			@include md-up {
-				all: unset;
-			}
-		}
-	}
-}
 
 /* open close SUBMENUS on mobile */
 .open > .sub-menu {
@@ -195,17 +11,19 @@
 	color: inherit;
 	text-transform: none;
 	background-color: transparent;
-	border: 0;
 	margin: 0 0 0 auto;
 	overflow: visible;
 	outline: 0;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	padding: .5rem;
+	padding: .25rem;
 	z-index: 40;
 	position: relative;
-	transition: transform .2s ease;
+	transition: all .2s ease;
+	border-radius: 50%;
+	appearance: none;
+	border: 2px solid var(--color-2, #{$primary});
 	@include lg-up {
 		display: none;
 	}
@@ -216,7 +34,7 @@
 	width: 22px;
 	height: 22px;
 	-webkit-perspective: 800px;
-	fill: $primary;
+	fill: var(--color-2, #{$primary});
 	transform-origin: center center;
 	text-align: center;
 	transition: fill .2s ease;
@@ -225,5 +43,52 @@
 	}
 	.is-active & {
 		fill: #fff;
+	}
+}
+
+
+
+
+.top-menu {
+	display: flex;
+	& > li {
+		position: relative;
+		&:hover {
+			.sub-menu {
+				transform: translateY(0);
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		& > a {
+			transition: color .2s ease;
+			color: var(--color-2, #fff);
+			display: inline-block;
+			padding: .5rem 1.5rem;
+			text-decoration: none;
+		}
+	}
+}
+
+
+.sub-menu {
+	display: flex;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	flex-direction: column;
+	width: 200px;
+	margin: .25rem 0 0 0;
+	transform: translateY(2rem);
+	transition: all .3s ease;
+	opacity: 0;
+	visibility: hidden;
+	& > li {
+		& > a {
+			display: block;
+			padding: .5rem 1.5rem;
+			transition: color .2s ease;
+			color: var(--color-2, #{$primary});
+		}
 	}
 }

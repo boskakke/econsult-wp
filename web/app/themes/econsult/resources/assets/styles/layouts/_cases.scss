@@ -24,12 +24,7 @@
 	height: 100%;
 	margin-bottom: 20px;
 	&__summary {
-		font-size: $font-5;
-		margin-bottom: 2rem;
-		font-weight: 400;
-		@include lg-up {
-			font-size: $font-6;
-		}
+		@extend %page-summary;
 	}
 	&__link {
 		position: relative;
@@ -62,11 +57,18 @@
 		grid-column: col-start 5 / span 8;
 	}
 }
-
+%spacing {
+	@include lg-up {
+		margin-right: 20%;
+	}
+}
 .cases {
 	&__content {
 		@extend %hero-grid;
 		margin-bottom: 2rem;
+		.grid__item {
+			@extend %spacing;
+		}
 		&--wide {
 			grid-column: main-start 1 / span 1;
 			margin-bottom: 2rem;
@@ -99,6 +101,7 @@
 		}
 
 		.grid__item {
+			@extend %spacing;
 			padding: 1rem;
 			@include md-up {
 				padding: 2rem 2rem;

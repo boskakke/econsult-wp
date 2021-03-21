@@ -7,22 +7,25 @@ $title = get_field( 'rotator_title' );
 
 
 @include('partials.header')
-<div class="article__content">
-	<div class="article__header">
-		<h1 class="article__title">
+
+<div class="hero">
+	<div class="scrollObserver"></div>
+	<div class="hero__content">
+		<h1 class="hero__title">
 			{!! $title !!}
 		</h1>
-		</div>
 	</div>
-	<div class="hero-fp__illu">
-		<div class="grid__item">
-			<figure class="hero-fp__figure">
-				{!! wp_get_attachment_image( $image, 'hero', false,  array('class' => 'hero-fp__image' )) !!}
-			</figure>
-		</div>
-		<div class="grid__item">
-			<figure class="hero-fp__figure--2">
-				{!! wp_get_attachment_image( $image_2, 'hero', false,  array('class' => 'hero-fp__image' )) !!}
-			</figure>
-		</div>
+</div>
+
+<div class="hero-fp__illu">
+	<div class="grid__item">
+		<figure class="hero-fp__figure">
+			{!! wp_get_attachment_image( $image, 'hero', false,  array('class' => 'hero-fp__image' )) !!}
+		</figure>
 	</div>
+	<div class="grid__item">
+		<figure class="hero-fp__figure--2">
+			{!! wp_get_attachment_image( $image_2, 'hero', false,  array('class' => 'hero-fp__image' )) !!}
+		</figure>
+	</div>
+</div>

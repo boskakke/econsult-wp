@@ -3,6 +3,7 @@
 	margin-bottom: 2rem;
 	@include md-up {
 		grid-column: col-start 1 / span 12;
+
 	}
 
 	&__figure {
@@ -19,6 +20,8 @@
 
 .article__content {
 	--grid-gap: 0;
+	padding-top: 6rem;
+
 	@include md-up {
 		--grid-gap: 0 1rem;
 	}
@@ -30,3 +33,23 @@
 
 
 
+.hero {
+	height: 600px;
+	margin-top: var(--headerHeight, 6rem);
+	position: relative;
+	@extend %grid;
+	&__content {
+		display: flex;
+		grid-column: col-start 5 / span 8;
+		align-items: center;
+		
+	}
+	&__title {
+		@extend %page-title;
+	}
+}
+.scrollObserver {
+	position: absolute;
+	top: 0;
+	left: 0;
+}

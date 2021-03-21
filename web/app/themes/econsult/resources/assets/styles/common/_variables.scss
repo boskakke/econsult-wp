@@ -28,13 +28,15 @@ $brand-primary:         #525ddc;
 /** Box Model  */
 $spacer:                2rem;
 
-$body-bg:       $white !default;
+$body-bg:       var(--color-1, #fff); // $white !default;
 $body-color:    $gray-700 !default;
 
 $primary: #002e68;
 $secondary: #99b82e;
 $primary-bg:  #dee4ec;
 $sand: #EFF0EA;
+
+
 
 $border-width: 1px !default;
 

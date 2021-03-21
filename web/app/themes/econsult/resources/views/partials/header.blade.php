@@ -18,7 +18,7 @@ if(is_front_page()) {
 		</a>
 		<div class="header__col--hamburger">
 			<button class="hamburger" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="false">
-				<svg id="burger" class="hamburgersvg" width="30" class="openmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+				<svg id="burger" class="hamburgersvg" width="30" class="openmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor">
 					<path class="top" d="M0 9h30v2H0z"/>
 					<path class="bot" d="M0 19h30v2H0z"/>
 				</svg>

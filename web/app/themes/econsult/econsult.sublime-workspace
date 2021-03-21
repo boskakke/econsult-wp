@@ -1,0 +1,876 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"shw",
+				"showArticleHeader"
+			],
+			[
+				"btn",
+				"btnReplay"
+			],
+			[
+				"end",
+				"endscreenOverlay"
+			],
+			[
+				"player",
+				"playerTitle"
+			],
+			[
+				"in",
+				"inputFields"
+			],
+			[
+				"full",
+				"fullscreenButton"
+			],
+			[
+				"quere",
+				"querySelector"
+			],
+			[
+				"play",
+				"playButton"
+			],
+			[
+				"time",
+				"timelinePos"
+			],
+			[
+				"cu",
+				"currentOverlay"
+			],
+			[
+				"qer",
+				"querySelectorAll"
+			],
+			[
+				"querySe",
+				"querySelector"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"overl",
+				"overlayFilters"
+			],
+			[
+				"over",
+				"overlayFilters"
+			],
+			[
+				"trans",
+				"transparent"
+			],
+			[
+				"btn-background",
+				"btn-background-color"
+			],
+			[
+				"objec",
+				"object-position"
+			],
+			[
+				"offcan",
+				"offcanvas"
+			],
+			[
+				"toggle",
+				"toggleUserMenu"
+			],
+			[
+				"preve",
+				"preventDefault"
+			],
+			[
+				"off",
+				"offcanvas"
+			],
+			[
+				"space-",
+				"space-5"
+			],
+			[
+				"al",
+				"align-items"
+			],
+			[
+				"teaser",
+				"teaserlistSlider"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"smooth",
+				"smoothscroll"
+			],
+			[
+				"box-shad",
+				"form-input-box-shadow"
+			],
+			[
+				"grid",
+				"grid-column"
+			],
+			[
+				"space",
+				"space-4"
+			],
+			[
+				"col",
+				"column"
+			],
+			[
+				"food",
+				"foodplanToggle"
+			],
+			[
+				"infobox",
+				"infobox-padding"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"qu",
+				"querySelector"
+			],
+			[
+				"spac",
+				"space-4"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"short",
+				"headersShort"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"spa",
+				"space-2"
+			],
+			[
+				"scroll",
+				"scrollDistance"
+			],
+			[
+				"scro",
+				"scrollDistance"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"html",
+				"htmlcontainer"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "resources/views/partials/mobile-nav.blade.php",
+			"settings":
+			{
+				"buffer_size": 431,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n.header {\n\tmargin: 0 auto 3rem;\n\tpadding: 2rem 0 0;\n\tfont-family: $headings-font-family;\n\tflex-wrap: wrap;\n\tz-index: 10;\n\tposition: relative;\n\talign-items: flex-end;\n\t@extend %grid;\n\n\t&__col--svg {\n\t\twidth: 200px;\n\t\t@include lg-up {\n\t\t\twidth: 200px;\n\t\t}\n\t}\n\t&__col--logo {\n\t\tcolor: red;\n\t\tdisplay: flex;\n\t\tgrid-column: main-start 1 / span 1;\n\t\tposition: relative;\n\t\twidth: 100%;\n\t\t@include md-up {\n\t\t\tgrid-column: col-start 1 / span 12;\n\t\t}\n\n\t\t@include lg-up {\n\t\t\tgrid-column: col-start 1 / span 4;\n\t\t}\n\t\ta {\n\t\t\tcolor: var(--color-2, #{$primary});\n\t\t}\n\t}\n\n\t&__col--menu {\n\t\tdisplay: none;\n\n\t\t@include lg-up {\n\t\t\tdisplay: flex;\n\t\t\tgrid-column: col-start 5 / span 8;\n\t\t\tjustify-content: flex-end;\n\t\t}\n\t}\n\t&__col--hamburger {\n\t\tz-index: 999;\n\t\tposition: absolute;\n\t\tright: 0;\n\t\ttop: 40%;\n\t\ttransform: translateY(-50%);\n\t\t@include lg-up {\n\t\t\tdisplay: none;\n\t\t}\n\t}\n\t&__col--contact {\n\t\tflex: 1 0 100%;\n\t\tdisplay: none;\n\t}\n}\n\n.contact__mobile {\n\t@include lg-up {\n\t\tdisplay: none;\n\t}\n}\n",
+			"file": "resources/assets/styles/layouts/_header.scss",
+			"file_size": 980,
+			"file_write_time": 132608167026851701,
+			"settings":
+			{
+				"buffer_size": 980,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/assets/styles/components/_navigation.scss",
+			"settings":
+			{
+				"buffer_size": 1258,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/assets/styles/common/_variables.scss",
+			"settings":
+			{
+				"buffer_size": 1931,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/assets/styles/layouts/_base.scss",
+			"settings":
+			{
+				"buffer_size": 8335,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"emmet",
+				"Preferences: Emmet Settings"
+			],
+			[
+				"package ",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"goto ma",
+				"Emmet: Go to Tag Pair"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reon",
+				"Set Syntax: Regular Expression"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"paca",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/images",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/scripts",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/scripts/routes",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/common",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials"
+	],
+	"file_history":
+	[
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_fonts.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/scripts/routes/common.js",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_navigation-mobile.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_base.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_page.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/header.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/images/sprite.svg",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_navigation.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/common/_variables.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_header.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/mobile-nav.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_cases.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/.env",
+		"/Users/bo/sites/vmgrid.test/webpack.mix.js",
+		"/Users/bo/sites/vmgrid.test/package.json",
+		"/Users/bo/Desktop/.env",
+		"/Users/bo/sites/vmgrid.test/src/includes/offcanvas-menu.php",
+		"/Users/bo/sites/vmgrid.test/src/create-profile.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/components/_forms.scss",
+		"/Users/bo/sites/vmgrid.test/src/login.php",
+		"/Users/bo/sites/vmgrid.test/src/tests.php",
+		"/Users/bo/sites/vmgrid.test/src/training-section.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/calculators/1.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/calculators/5.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/components/_buttons.scss",
+		"/Users/bo/sites/vmgrid.test/src/calculator.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/header.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/calculators/7.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/calculators/6.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/calculators/4.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/calculators/3.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/calculators/2.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_article.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/_config.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/components/_grid.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/widgets/_images.scss",
+		"/Users/bo/sites/vmgrid.test/src/index.php",
+		"/Users/bo/sites/vmgrid.test/src/foodplan.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/foodplan-wide.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/main.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/_variables.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/print.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/head.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/article/video-player.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/widgets/text-short.php",
+		"/Users/bo/sites/vmgrid.test/src/article.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/demo.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_player.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/scripts/main.js",
+		"/Users/bo/sites/vmgrid.test/src/includes/article/video-end.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/article/training-warmup.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_overlays.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_article-videotraining.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/components/_tools.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/training-article-footer.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/teaser.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_teaser.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/widgets/_infobox.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/calculators/0.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/images.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_login.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/images/sprite.svg",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/widgets/_hotspot.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/scripts/player.js",
+		"/Users/bo/sites/vmgrid.test/src/includes/newsletter-form.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_sections.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_overlay-filters.scss",
+		"/Users/bo/sites/vmgrid.test/src/my-favorites.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_article-meta.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/page-widgets/seo-text-content.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/page-widgets/teaser-list.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/widgets/_teaser-slider.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/widgets/_gallery-slider.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/widgets/gallery-slider.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/page-header.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/dummycontent/bannerexample-3.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/banner.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/article/bannerwidget.php",
+		"/Users/bo/sites/vmgrid.test/src/banner-example.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/dummycontent/bannerexample-4.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/dummycontent/bannerexample-5.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/dummycontent/bannerexample-6.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/dummycontent/bannerexample-2.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/dummycontent/bannerexample-1.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/widgets/_seo-widget.scss",
+		"/Users/bo/sites/vmgrid.test/src/article-footer.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/article-footer.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/page-widgets/newsletter.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_theme.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/demo/_banners.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/demo/_demo.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/widgets/_html.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_footer.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/widgets/image.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/components/_tags.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/widgets/paragraph-list.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/ctm.php",
+		"/Users/bo/sites/vmgrid.test/src/section.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/article/banner.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_navigation.scss",
+		"/Users/bo/Desktop/iform checkbox.html",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/components/_tabs.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_fav.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_searchresult.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_user-menu.scss",
+		"/Users/bo/sites/vmgrid.test/src/searchresult.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/searchform.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/offcanvas-user-menu.php",
+		"/Users/bo/sites/vmgrid.test/src/profile.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_user-list.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/../../includes/offcanvas-user-menu.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_header.scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/base.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/foodplan-tip.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/widgets/_newsletter.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/foodplan-principles.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_foodplan.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/page-widgets/teaser-list-slider.php",
+		"/Users/bo/sites/vmgrid.test/src/includes/page-widgets/teaser-list-background-image.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_deck.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/page-widgets/teaser-list-themes.php",
+		"/Users/bo/Desktop/old grids iform .scss",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/widgets/_file.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/widgets/file.php",
+		"/Users/bo/Desktop/untitled.css",
+		"/Users/bo/sites/vmgrid.test/src/includes/widgets/story-teasers.php",
+		"/Users/bo/sites/vmgrid.test/src/assets/styles/widgets/_story.scss",
+		"/Users/bo/sites/vmgrid.test/src/includes/widgets/story.php"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 114.0,
+		"where_history":
+		[
+			"*.scss",
+			"*.php",
+			"*.scss"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"--a-color",
+			"--text-color",
+			"--body-bg",
+			"mobile-nav",
+			"logo--front",
+			"summary",
+			"%page-title",
+			"summary",
+			"%page-title",
+			"summary",
+			"@include %spacing"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"--color-2",
+			"--color-1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "resources/views/partials/mobile-nav.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 431,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								422,
+								422
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/assets/styles/layouts/_header.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 980,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								664,
+								664
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sunrise Theme/Langs/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 104.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "resources/assets/styles/components/_navigation.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1258,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								505,
+								505
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sunrise Theme/Langs/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 311.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/assets/styles/common/_variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1931,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1886,
+								1886
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sunrise Theme/Langs/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 584.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "resources/assets/styles/layouts/_base.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sunrise Theme/Langs/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3480.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "econsult.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"main.js",
+				"src/assets/scripts/main.js"
+			],
+			[
+				"player",
+				"src/assets/styles/layouts/_player.scss"
+			],
+			[
+				"calcu",
+				"src/calculator.php"
+			],
+			[
+				"overla",
+				"src/assets/styles/layouts/_overlay-filters.scss"
+			],
+			[
+				"images",
+				"src/includes/images.php"
+			],
+			[
+				"train",
+				"src/training-section.php"
+			],
+			[
+				"gallery-s",
+				"src/assets/styles/widgets/_gallery-slider.scss"
+			],
+			[
+				"galler",
+				"src/includes/widgets/gallery-slider.php"
+			],
+			[
+				"image",
+				"src/includes/images.php"
+			],
+			[
+				"sections",
+				"src/assets/styles/layouts/_sections.scss"
+			],
+			[
+				"main",
+				"src/assets/scripts/main.js"
+			],
+			[
+				"_teaser",
+				"src/assets/styles/layouts/_teaser.scss"
+			],
+			[
+				"teaser",
+				"src/includes/teaser.php"
+			],
+			[
+				"bannerex",
+				"src/includes/dummycontent/bannerexample-3.php"
+			],
+			[
+				"bannere",
+				"src/includes/dummycontent/bannerexample-1.php"
+			],
+			[
+				"grid",
+				"src/assets/styles/components/_grid.scss"
+			],
+			[
+				"banners",
+				"src/assets/styles/demo/_banners.scss"
+			],
+			[
+				"html",
+				"src/assets/styles/widgets/_html.scss"
+			],
+			[
+				"sec",
+				"src/section.php"
+			],
+			[
+				"search",
+				"src/includes/searchform.php"
+			],
+			[
+				"profi",
+				"src/profile.php"
+			],
+			[
+				"buttons",
+				"src/assets/styles/components/_buttons.scss"
+			],
+			[
+				"searchre",
+				"src/searchresult.php"
+			],
+			[
+				"forms",
+				"src/assets/styles/components/_forms.scss"
+			],
+			[
+				"news",
+				"src/assets/styles/widgets/_newsletter.scss"
+			],
+			[
+				"food",
+				"src/assets/styles/layouts/_foodplan.scss"
+			],
+			[
+				"prin",
+				"src/includes/foodplan-principles.php"
+			],
+			[
+				"conf",
+				"src/assets/styles/_config.scss"
+			],
+			[
+				"teaser.s",
+				"src/assets/styles/layouts/_teaser.scss"
+			],
+			[
+				"sear",
+				"src/searchresult.php"
+			],
+			[
+				"in",
+				"src/index.php"
+			],
+			[
+				"teaser-li",
+				"src/includes/page-widgets/teaser-list.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ht",
+				"hasTerminal"
+			]
+		],
+		"width": 560.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 276.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

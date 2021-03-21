@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"path": "./",
+      "folder_exclude_patterns": [".cache-loader", "node_modules", "dist", "vendor"],
+      "follow_symlinks": true,
+      "file_exclude_patterns": ["package-lock.json"]
+		}
+	],
+	"settings":
+    {
+        "tab_size": 2
+    },
+}

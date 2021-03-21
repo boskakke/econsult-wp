@@ -1,4 +1,3 @@
-import gsap from 'gsap'
 import vhCheck from 'vh-check'
 import 'slick-carousel/slick/slick.min.js'
 // import 'swiper/swiper-bundle.css'
@@ -61,27 +60,7 @@ export default {
 
 
 
-		const tl_title = document.querySelectorAll('.article__title')
-
-
-		// const wordsTl = gsap.timeline({repeat: 0})
-		const tl = gsap.timeline()
-
-
-		// for (let i = 0; i < words.length; i++) {
-		// 	wordsTl.fromTo(words[i],
-		// 		{x: -100, opacity:0},
-		// 		{duration: .5, autoAlpha:1, x:0, stagger: .2, ease:'elastic.out(1.75, 0.5)'})
-		// }
-
-
-		tl
-
-
-		.fromTo(tl_title, {y: -30, opacity: 0}, {opacity: 1, y: 0, duration: 1,  ease: 'power4.out'}, '<.2')
-		.fromTo('.hero-fp__figure', {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: 1, ease: 'power4.out'} , '<.2')
-		.fromTo('.hero-fp__figure--2', {y:-20, opacity: 0}, {y: 0, opacity: 1, duration: 1, ease: 'elastic.out(1, 0.75)'} , '<.2')
-
+		
 
 
 
