@@ -82,15 +82,15 @@ $about_image = get_sub_field('image');
 				<div class="deck-about__text mb-2">
 					{!! the_sub_field('content') !!}
 				</div>
-				<a href="{!! the_sub_field('link') !!}" class="button button--primary-border">
+				<a href="{!! the_sub_field('link') !!}" class="button button--primary-border button--icon-right">
+				<span>
+					{!! the_sub_field('cta') !!}
+				</span>
 					<svg class="button__arrow"
 					viewBox="0 0 24 24"
 					xmlns="http://www.w3.org/2000/svg">
 					<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
 				</svg>
-				<span>
-					{!! the_sub_field('cta') !!}
-				</span>
 			</a>
 		</div>
 	</div>
@@ -121,60 +121,48 @@ $the_query = new WP_Query( array(
 
 @if ( $the_query->have_posts() )
 
-<div class="deck-cases">
-	<div class="deck-cases__nav">
-		<div class="deck-cases__nav--content">
-			<div class="cases-nav cases-nav--left">
-				<svg class="cases-arrow"
-				viewBox="0 0 24 24"
-				xmlns="http://www.w3.org/2000/svg">
-				<use xlink:href="@asset('images/sprite.svg')#arrow-left"></use>
-			</svg>
+<div class="deck">
+	
+	<div class="grid--1col">
+		<div class="grid__item">
+			<h2 class="deck__title">
+				Cases
+			</h2>
 		</div>
-		<div class="cases-nav cases-nav--right">
-			<svg class="cases-arrow"
-			viewBox="0 0 24 24"
-			xmlns="http://www.w3.org/2000/svg">
-			<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
-		</svg>
 	</div>
-	<div class="slide-counter">
-	</div>
-</div>
-</div>
-<div class="slick-container">
-<div class="deck-cases__slider">
-	@while ( $the_query->have_posts() )
-	@php
-	$the_query->the_post()
-	@endphp
-	<div class="deck-cases__item">
-		<div class="deck-cases__left">
-			<div class="deck-cases__content">
-				<h2 class="deck-cases__title">
-					{{ the_title() }}
-				</h2>
-				<a href="{{ the_permalink() }}" class="button button--white-border">
+
+	<div class="grid--3col">
+		@while ( $the_query->have_posts() )
+		@php
+		$the_query->the_post()
+		@endphp
+		<div class="grid__item">
+				<article class="teaser teaser--case">
+				<figure class="teaser__figure">
+					{{the_post_thumbnail( 'hero', array( 'class' => 'teaser__image' ) )}}
+				</figure>
+				<div class="teaser__body">
+					<h2 class="teaser__title">
+						{{ the_title() }}
+					</h2>
+
+					<a href="{{ the_permalink() }}" class="teaser__readmore">
+					<span>Læs case</span>
 					<svg class="button__arrow"
-					viewBox="0 0 24 24"
-					xmlns="http://www.w3.org/2000/svg">
-					<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
-				</svg>
-				<span>Læs case</span>
-			</a>
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg">
+						<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
+					</svg>
+					</a>
+				</div>
+			</article>
 		</div>
+
+	@endwhile
 	</div>
-	<div class="deck-cases__right">
-		<figure class="deck-cases__figure">
-			{{the_post_thumbnail( 'hero', array( 'class' => 'deck-cases__image' ) )}}
-		</figure>
-	</div>
+
 </div>
 
-@endwhile
-</div>
-</div>
-</div>
 
 @php
 wp_reset_postdata();

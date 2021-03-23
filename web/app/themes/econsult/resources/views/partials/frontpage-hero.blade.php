@@ -17,7 +17,7 @@ $title = get_field( 'rotator_title' );
 	</div>
 </div>
 
-<div class="hero-fp__illu">
+<div class="grid--hero-images">
 	<div class="grid__item">
 		<figure class="hero-fp__figure">
 			{!! wp_get_attachment_image( $image, 'hero', false,  array('class' => 'hero-fp__image' )) !!}

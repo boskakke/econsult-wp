@@ -10,17 +10,6 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:  #000 !default;
 
-$grays: (
-	100: $gray-100,
-	200: $gray-200,
-	300: $gray-300,
-	400: $gray-400,
-	500: $gray-500,
-	600: $gray-600,
-	700: $gray-700,
-	800: $gray-800,
-	900: $gray-900
-) !default;
 
 /** Colors */
 $brand-primary:         #525ddc;
@@ -51,7 +40,7 @@ $headings-font-family: "Rubik", sans-serif;
 $font-family-base: $headings-font-family;
 $font-size-base: 16px;
 $font-weight-base: 400;
-$line-height-base: 1.4;
+$line-height-base: 1.5;
 $border-color: darken(#f3f0f0, 10%);
 
 

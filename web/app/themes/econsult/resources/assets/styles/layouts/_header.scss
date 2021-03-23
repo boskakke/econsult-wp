@@ -12,15 +12,25 @@
 	width: 100%;
 	align-items: center;
 	height: var(--headerHeight, 6rem);
-	background: var(--color-1, #fff);
-	transition: all 1s ease;
+	background: $primary;
+	transition: all var(--transition-timing) var(--transition-type);
 	transform-origin: top center;
 	@extend %grid;
 
 	&__col--svg {
-		width: 140px;
+		width: 160px;
+		transform: scale(.8);
+		transition: transform .2s ease;
+		transform-origin: left center;
+		.dark & {
+			transform: scale(1);
+		}
 		@include lg-up {
 			width: 200px;
+			transform: scale(.8);
+			.dark & {
+				transform: scale(1);
+			}
 		}
 	}
 	&__col--logo {
@@ -28,35 +38,54 @@
 		grid-column: main-start 1 / span 1;
 		position: relative;
 		width: 100%;
-		@include md-up {
-			grid-column: col-start 1 / span 12;
-		}
+		align-items: center;
+		z-index: 15;
 
 		@include lg-up {
 			grid-column: col-start 1 / span 4;
 		}
 		a {
-			color: var(--color-2, #{$primary});
+			display: inline-flex;
+			align-items: center;
+			color: #fff;
 			transition: color .2s ease;
 		}
 	}
 
 	&__col--menu {
-		display: none;
+		
+		@include sm-down {
+			z-index: 5;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			opacity: 0;
+			visibility: hidden;
+			transition: all .2s ease;
+			background: $primary;
+			.show-menu & {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+			}
+		}
 
-		@include lg-up {
-			display: flex;
+		@include md-up {
 			grid-column: col-start 5 / span 8;
+			display: flex;
 			justify-content: flex-end;
 		}
 	}
 	&__col--hamburger {
-		z-index: 999;
+		z-index: 15;
 		position: absolute;
-		right: 0;
-		top: 40%;
+		top: 50%;
 		transform: translateY(-50%);
-		@include lg-up {
+		right: 0;
+		@include md-up {
 			display: none;
 		}
 	}
@@ -69,5 +98,22 @@
 .contact__mobile {
 	@include lg-up {
 		display: none;
+	}
+}
+
+.menu-topmenu-container {
+	display: flex;
+	align-items: flex-start;
+	background: $primary;
+	@include sm-down {
+		flex-direction: column;
+		padding: 1rem 2rem 10rem;
+		position: absolute;
+		top: 5rem;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
 	}
 }

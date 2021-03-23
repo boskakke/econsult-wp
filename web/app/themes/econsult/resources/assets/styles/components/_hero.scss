@@ -4,6 +4,27 @@ $menu-height-md: 60px;
 	position: relative;
 }
 .hero {
+	padding: 0 0 4rem;
+	margin-top: 7rem;
+	position: relative;
+	@extend %grid;
+	&__content {
+		display: flex;
+		align-items: center;
+		grid-column: main-start / main-end;
+		
+		@include md-up {
+			padding: 0;
+			grid-column: col-start 1 / span 10;
+			height: 600px;
+		}
+		@include lg-up {
+			grid-column: col-start 1 / span 8;
+		}
+	}
+	&__title {
+		@extend %page-title;
+	}
 	&__figure {
 		min-height: 250px;
 		position: relative;
@@ -20,4 +41,25 @@ $menu-height-md: 60px;
 		top: 0;
 		left: 0;
 	}
+}
+
+.grid--hero-images {
+	--grid-gap: 2rem 1rem;
+	@extend %grid;
+	
+	.grid__item {
+		grid-column: main-start / main-end;
+		@include md-up {
+			grid-column: span 5;
+			&:first-of-type {
+				grid-column: col-start 1 / span 7;
+			}
+		}
+	}
+}
+
+.scrollObserver {
+	position: absolute;
+	top: 15rem;
+	left: 0;
 }

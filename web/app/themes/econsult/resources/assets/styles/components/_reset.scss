@@ -16,6 +16,7 @@ body {
 	color: $body-color;
 	background-color: $body-bg; // 2
 	overflow-x: hidden;
+	transition: background-color .5s ease;
 }
 
 *,

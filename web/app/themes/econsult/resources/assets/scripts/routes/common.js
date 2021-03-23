@@ -1,10 +1,12 @@
 
 import gsap from 'gsap'
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default {
 	init() {
 
-		
+		// gsap.registerPlugin(ScrollTrigger);
+
 		const scrollObserver = document.querySelector('.scrollObserver')
 		const body = document.querySelector('body')
 		let observer = new IntersectionObserver(observerCallback, options);
@@ -15,7 +17,7 @@ export default {
 
 		function observerCallback(entries) {
 			entries.forEach((entry) => {
-				if (!entry.isIntersecting) {
+				if (entry.isIntersecting) {
 					body.classList.add('dark')
 				} else {
 					body.classList.remove('dark')
@@ -44,44 +46,12 @@ export default {
 
 		
 
-		const tl_nav = gsap.timeline({paused: true, ease: 'power4.out'})
-		const mobileNav =  document.querySelector('.mobile-nav')
-		const mobileNavCurtain =  document.querySelector('.mobile-nav__curtain')
-		const mobileNavLogo =  mobileNav.querySelector('.mobile-nav__logo')
-		const mobileNavLi = document.querySelectorAll('.mobile-nav li')
-
-
-		tl_nav
-		.set(mobileNav, {opacity: 1, pointerEvents: 'auto'})
-		.fromTo(mobileNavCurtain, {x: '100%'}, {x: 0, duration: .5, ease: 'power3.out'})
-		.fromTo(mobileNav, {x: '100%'}, {x: 0, duration: .5, ease: 'power3.out'}, '<.2')
-		.fromTo(mobileNavLogo, {opacity: 0}, {opacity: 1}, '<.2')
-		.fromTo(mobileNavLi, {opacity: 0,  x: 20}, {opacity: 1, stagger: .05, x: 0}, '<.2')
+		
 
 
 
-		const hamburger = document.querySelector('.hamburger')
-		if(hamburger) {
-			hamburger.addEventListener('click', function(e) {
-				e.preventDefault();
-				let aria = this.getAttribute('aria-expanded')
-				this.classList.toggle('is-active');
-				if(aria === 'false') {
-					this.setAttribute('aria-expanded', 'true')
-				tl_nav.timeScale(1)
-				tl_nav.play(0)
-			body.classList.add('show-menu')
-		} else {
-			this.setAttribute('aria-expanded', 'false')
-				tl_nav.timeScale(2)
-				tl_nav.reverse()
-			body.classList.remove('show-menu')
-		}
-	});
-
-	// hamburger
-	const controlit = document.querySelector('.hamburgersvg');
 	const menuToggle = gsap.timeline({paused:true, reversed:true});
+	const hamburger = document.querySelector('.hamburger')
 
 	menuToggle
 	.to(' .top', .2, {y:'-9px', transformOrigin: '50% 50%'}, 'burg')
@@ -92,11 +62,30 @@ export default {
 	.to(' .top', .2, {rotationZ:45, transformOrigin: '50% 50%'}, 'rotate')
 	.to(' .bot', .2, {rotationZ:-45, transformOrigin: '50% 50%'}, 'rotate')
 
-	controlit.addEventListener('click', (e) => {
-		e.preventDefault()
+	function openNav(e) {
+		e.preventDefault();
+		let aria = this.getAttribute('aria-expanded')
+		
 		menuToggle.reversed() ? menuToggle.restart() : menuToggle.reverse();
-	});
-}
+		if(aria === 'false') {
+			this.setAttribute('aria-expanded', 'true')
+			body.classList.add('show-menu')
+		} else {
+			this.setAttribute('aria-expanded', 'false')
+			body.classList.remove('show-menu')
+		}
+	}
+
+	
+	if(hamburger !== null) {
+		hamburger.addEventListener('click', openNav)
+	}
+
+	// hamburger
+	
+	
+
+	
 
 
 $('.top-link').click(function(e){

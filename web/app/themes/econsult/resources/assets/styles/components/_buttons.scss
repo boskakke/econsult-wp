@@ -23,8 +23,7 @@ $btn-size: 32px;
 
 .button {
 	display: inline-flex;
-	font-weight: 500;
-	line-height: 1;
+	font-weight: 700;
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
@@ -34,13 +33,16 @@ $btn-size: 32px;
 	transition: all .2s ease;
 	cursor: pointer;
 	font-size: $font-3;
-	height: 3.2rem;
+	line-height: 3.2rem;
 	padding: 0 1.5rem;
 	align-items: center;
 	-webkit-appearance: none;
 
 	&:hover {
 		text-decoration: none;
+		svg {
+			transform: translateX(15%);
+		}
 	}
 	&:focus {
 		outline: 0;
@@ -54,7 +56,12 @@ $btn-size: 32px;
 	}
 	&__arrow {
 		width: 1.4rem;
-		margin-right: .5rem;
+		transition: transform .2s ease;
+	}
+	&--icon-right {
+		align-items: center;
+		display: inline-grid;
+		grid-gap: .5rem;
 	}
 }
 
@@ -92,6 +99,7 @@ $btn-size: 32px;
 				transition-delay: .2s;
 			}
 		}
+
 	}
 }
 
@@ -123,7 +131,6 @@ $btn-size: 32px;
 .button--primary-border {
 	background-color: transparent;
 	border: 1px solid $primary;
-	border-radius: 2px;
 	color: $primary;
 	&:hover {
 		background-color: $primary;
@@ -134,7 +141,6 @@ $btn-size: 32px;
 .button--white-border {
 	background-color: transparent;
 	border: 1px solid #fff;
-	border-radius: 2px;
 	color: #fff;
 	&:hover {
 		background-color: #fff;

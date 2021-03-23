@@ -25,4 +25,3 @@ $link = get_field( 'link' );
 		</div>
 	</article>
 </div>
-HEST SLUIT

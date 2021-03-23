@@ -1,0 +1,6 @@
+.deck {
+	margin-top: 3rem;
+	&__title {
+		@extend %deck-title;
+	}
+}

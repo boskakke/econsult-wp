@@ -120,14 +120,6 @@ add_action('widgets_init', function () {
     'before_title'  => '<h3 class="section__header">',
     'after_title'   => '</h3>']);
 
-   register_sidebar([
-    'name'          => __('MobileNavTop', 'sage'),
-    'id'            => 'sidebar-mobile-nav-top'
-    ] + $configMobileNav);
-   register_sidebar([
-    'name'          => __('MobileNavBottom', 'sage'),
-    'id'            => 'sidebar-mobile-nav-bottom'
-    ] + $configMobileNav);
 });
 
 /**

@@ -22,10 +22,6 @@
 	--grid-gap: 0;
 	padding-top: 6rem;
 
-	@include md-up {
-		--grid-gap: 0 1rem;
-	}
-
 	@extend %grid;
 	@extend %section-margin;
 }
@@ -33,23 +29,3 @@
 
 
 
-.hero {
-	height: 600px;
-	margin-top: var(--headerHeight, 6rem);
-	position: relative;
-	@extend %grid;
-	&__content {
-		display: flex;
-		grid-column: col-start 5 / span 8;
-		align-items: center;
-		
-	}
-	&__title {
-		@extend %page-title;
-	}
-}
-.scrollObserver {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
