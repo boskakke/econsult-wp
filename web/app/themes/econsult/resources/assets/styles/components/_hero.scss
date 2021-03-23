@@ -1,12 +1,16 @@
-$menu-height: 45px;
-$menu-height-md: 60px;
 .section__hero {
 	position: relative;
 }
 .hero {
+	--header-color: #{$primary};
+	.dark & {
+		--header-color: #fff;
+	}
+
 	padding: 0 0 4rem;
 	margin-top: 7rem;
 	position: relative;
+
 	@extend %grid;
 	&__content {
 		display: flex;
@@ -23,7 +27,8 @@ $menu-height-md: 60px;
 		}
 	}
 	&__title {
-		@extend %page-title;
+		@extend %header-xl;
+
 	}
 	&__figure {
 		min-height: 250px;
@@ -46,7 +51,10 @@ $menu-height-md: 60px;
 .grid--hero-images {
 	--grid-gap: 2rem 1rem;
 	@extend %grid;
-	
+	@include md-up {
+		--padding: 0 0 4rem;
+		--grid-gap: 2rem;
+	}
 	.grid__item {
 		grid-column: main-start / main-end;
 		@include md-up {

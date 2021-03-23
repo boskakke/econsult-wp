@@ -8,11 +8,17 @@
 		text-decoration: none;
 	}
 }
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: var(--flex-direction, column);
+}
 .green {
 	color: $secondary;
 }
 .mt-5 {
-	margin-top: $spacer;
+	margin-top: 5rem;
 }
 .mb-5 {
 	margin-bottom: $spacer;
@@ -22,6 +28,15 @@
 }
 .flex-0 {
 	flex-grow: 0 1 auto;
+}
+.mt-1 {
+	margin-top: 1rem;
+}
+.mt-2 {
+	margin-top: 2rem;
+}
+.mt-3 {
+	margin-top: 3rem;
 }
 .mb-0 {
 	margin-bottom: 0;

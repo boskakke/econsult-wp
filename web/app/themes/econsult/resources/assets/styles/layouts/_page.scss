@@ -7,7 +7,7 @@
 
 	}
 	&__title {
-		@extend %page-title;
+		@extend %header-xl;
 		grid-column: main-start / span 1;
 		font-weight: 500;
 		margin: 0;
@@ -77,12 +77,6 @@
 			padding: 1rem;
 			background-color: $sand;
 		}
-	}
-}
-
-.grid__item {
-	p:last-child {
-		margin-bottom: 0;
 	}
 }
 

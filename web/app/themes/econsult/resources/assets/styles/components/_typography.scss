@@ -1,0 +1,128 @@
+:root {
+	--header-line-height: 1.3;
+	--header-font-weight: 500;
+}
+
+// Headers
+%header-xl {
+	font-size: var(--header-font-size, #{$font-7});
+	line-height: var(--header-line-height);
+	font-weight: var(--header-font-weight);
+	margin: var(--header-margin);
+	color: var(--header-color, #{$primary});
+	mark {
+		color: $secondary;
+	}
+	@include md-up {
+		--header-font-size: #{$font-8};
+	}
+	@include lg-up {
+		--header-font-size: #{$font-9};
+	}
+	@include xl-up {
+		--header-font-size: #{$font-10};
+	}
+}
+
+%header-lg {
+	font-size: var(--header-font-size, #{$font-6});
+	line-height: var(--header-line-height);
+	font-weight: var(--header-font-weight);
+	color: var(--color, #{$primary});
+	margin: var(--header-margin);
+	@include xs-down {
+		--header-font-size: #{$font-6};
+	}
+	@include md-up {
+		--header-font-size: #{$font-7};
+	}
+	@include lg-up {
+		--header-font-size: #{$font-8};
+	}
+	@include xl-up {
+		--header-font-size: #{$font-9};
+	}
+}
+%header-md {
+	font-size: var(--header-font-size, #{$font-5});
+	line-height: var(--header-line-height);
+	font-weight: var(--header-font-weight);
+	color: var(--color, #{$primary});
+	margin: var(--header-margin);
+	@include xs-down {
+		--header-font-size: #{$font-5};
+	}
+	@include md-up {
+		--header-font-size: #{$font-6};
+	}
+	@include lg-up {
+		--header-font-size: #{$font-7};
+	}
+	@include xl-up {
+		--header-font-size: #{$font-8};
+	}
+}
+
+%header-sm {
+	font-size: var(--header-font-size, #{$font-4});
+	line-height: var(--header-line-height);
+	font-weight: var(--header-font-weight);
+	color: var(--color, #{$primary});
+	margin: var(--header-margin);
+	@include xs-down {
+		--header-font-size: #{$font-4};
+	}
+	@include md-up {
+		--header-font-size: #{$font-5};
+	}
+	@include lg-up {
+		--header-font-size: #{$font-5};
+	}
+	@include xl-up {
+		--header-font-size: #{$font-5};
+	}
+}
+
+%header-xs {
+	font-size: var(--header-font-size, #{$font-4});
+	line-height: var(--header-line-height);
+	font-weight: var(--header-font-weight);
+	color: var(--color, #{$primary});
+	margin: var(--header-margin);
+	@include xs-down {
+		--header-font-size: #{$font-4};
+	}
+	@include md-up {
+		--header-font-size: #{$font-5};
+	}
+	@include lg-up {
+		--header-font-size: #{$font-5};
+	}
+	@include xl-up {
+		--header-font-size: #{$font-5};
+	}
+}
+
+
+// Smaller Fonts, summaries descriptions etc.
+%font-lg {
+	font-size: var(--font-size #{$font-4});
+	color: var(--font-color, #{$gray-700});
+}
+
+%font-md {
+	font-size: var(--font-size, #{$font-3});
+	color: var(--font-color, #{$gray-700});
+}
+
+%font-sm {
+	font-size: var(--font-size, #{$font-3});
+	color: var(--font-color, #{$gray-700});	
+}
+
+%page-summary {
+	font-size: $font-5;
+	margin-bottom: 2rem;
+	color: $gray-600;
+}
+

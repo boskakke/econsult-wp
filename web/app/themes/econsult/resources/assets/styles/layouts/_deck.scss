@@ -1,6 +1,44 @@
 .deck {
-	margin-top: 3rem;
+	padding: var(--deck-padding, 3rem 0);
 	&__title {
-		@extend %deck-title;
+		--header-margin: 2rem 0;
+		@extend %header-lg;
+
+	}
+	&__description {
+		--color: #{$gray-700};
+		@extend %font-lg;
+		margin: -1.5rem 0 3rem;
+		max-width: 750px;
+	}
+	&--sand {
+		background: $sand;
+	}
+	&--overlap {
+		@include md-up {
+			padding-top: 9rem;
+			margin-top: -9rem;
+		}
+	}
+}
+
+.module {
+	&__body {
+		@include md-up {
+			padding-right: var(--module-body-padding, 15%);
+		}
+	}
+	&__title {
+		--color: #{$primary};
+		@extend %header-lg;
+		line-height: 1.2;
+		mark {
+			color: var(--mark-color, #{$secondary});
+		}
+		
+	}
+	&__summary {
+		@extend %font-md;
+		margin-top: 1rem;
 	}
 }
