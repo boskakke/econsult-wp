@@ -7,7 +7,7 @@
 				</h2>		
 		</div>
 	</div>
-	<div class="grid--4col">
+	<div class="grid--4-2col">
 	
 		@while( have_rows('person') )
 		<div class="grid__item">

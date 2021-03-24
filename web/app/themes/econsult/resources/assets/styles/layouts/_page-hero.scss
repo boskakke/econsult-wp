@@ -19,7 +19,10 @@
 
 
 .article__content {
-	padding-top: 7rem;
+	
+	@include md-up {
+		padding-top: 7rem;
+	}
 	@extend %grid;
 	@extend %section-margin;
 }

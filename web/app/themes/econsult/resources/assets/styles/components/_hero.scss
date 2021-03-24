@@ -7,10 +7,12 @@
 		--header-color: #fff;
 	}
 
-	padding: 0 0 4rem;
+	padding: 0 0 2rem;
 	margin-top: 7rem;
 	position: relative;
-
+	@include md-up {
+		padding: 0 0 4rem;
+	}
 	@extend %grid;
 	&__content {
 		display: flex;

@@ -6,7 +6,7 @@
 	--grid-gap: 0;
 	--transition-timing: .15s;
 	--transition-type: ease;
-	--headerHeight: 4rem;
+	--headerHeight: 3.5rem;
 	--grid-gap: 0 1rem;
 
 	@include md-up {
@@ -124,6 +124,37 @@
 			grid-column: span 3;
 			&:nth-child(4n + 1) {
 				grid-column: col-start 1 / span 3;
+			}
+		}
+	}
+}
+
+
+.grid--4-2col {
+	@include sm-down {
+		--grid-gap: 2rem 1rem;
+	}
+	display: grid;
+	grid-gap: var(--grid-gap);
+	grid-template: auto/[full-start] 1rem [main-start] repeat(4,[col-start] minmax(10px,var(--column-max-width))) [main-end] 1rem [full-end];
+
+	@include md-up {
+		grid-template: auto/[full-start] minmax(1rem,1fr) [main-start] repeat(12,[col-start] minmax(10px,var(--column-max-width))) [main-end] minmax(1rem,1fr) [full-end];
+	}
+
+	.grid__item {
+		@include sm-down {
+			grid-column: span 2;
+			&:nth-child(2n + 1) {
+				grid-column: col-start 1 / span 2;
+			}
+		}
+
+		@include md-up {
+			grid-column: span 3;
+			&:nth-child(4n + 1) {
+				grid-column: col-start 1 / span 3;
+
 			}
 		}
 	}
