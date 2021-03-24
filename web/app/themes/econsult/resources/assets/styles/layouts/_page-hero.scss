@@ -19,9 +19,7 @@
 
 
 .article__content {
-	--grid-gap: 0;
-	padding-top: 6rem;
-
+	padding-top: 7rem;
 	@extend %grid;
 	@extend %section-margin;
 }

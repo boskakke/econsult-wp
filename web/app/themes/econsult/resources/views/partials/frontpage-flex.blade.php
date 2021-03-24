@@ -6,50 +6,48 @@ the_row()
 @if( get_row_layout() == 'section_bullets' )
 
 <div class="deck">
-	<div class="grid--2col">
-		<div class="grid__item flex-center">
-
-			<h2 class="module__title">
-				{{ the_sub_field('deck_title')}}
-			</h2>
-			<div class="two-cols">
-				<div class="col">
-					@if( have_rows('repeater_bullets_left'))
-					<ul class="list list-bullets ">
-						@while ( have_rows('repeater_bullets_left') )
-						@php
-						the_row()
-						@endphp
-						<li class="list-bullets__item">
-							<h3 class="list-bullets__header">
-								{{ the_sub_field('txt_header') }}
-							</h3>
-							<p>{{ the_sub_field('txt_summary') }}</p>
-						</li>
-						@endwhile
-					</ul>
-					@endif
+	<div class="grid--75col">
+		<div class="grid__item module">
+			<div class="module__body">
+				<h2 class="module__title">
+					{{ the_sub_field('deck_title')}}
+				</h2>
+				<div class="two-cols">
+					<div class="col">
+						@if( have_rows('repeater_bullets_left'))
+						<ul class="list list-bullets ">
+							@while ( have_rows('repeater_bullets_left') )
+							@php
+							the_row()
+							@endphp
+							<li class="list-bullets__item">
+								<h3 class="list-bullets__header">
+									{{ the_sub_field('txt_header') }}
+								</h3>
+								<p>{{ the_sub_field('txt_summary') }}</p>
+							</li>
+							@endwhile
+						</ul>
+						@endif
+					</div>
+					<div class="col">
+						@if( have_rows('repeater_bullets_right') )
+						<ul class="list list-bullets">
+							@while ( have_rows('repeater_bullets_right') )
+							@php
+							the_row()
+							@endphp
+							<li class="list-bullets__item">
+								<h3 class="list-bullets__header">
+									{{ the_sub_field('txt_header') }}
+								</h3>
+								<p>{{ the_sub_field('txt_summary') }}</p>
+							</li>
+							@endwhile
+						</ul>
+						@endif
+					</div>
 				</div>
-				<div class="col">
-					@if( have_rows('repeater_bullets_right') )
-					<ul class="list list-bullets">
-						@while ( have_rows('repeater_bullets_right') )
-						@php
-						the_row()
-						@endphp
-						<li class="list-bullets__item">
-							<h3 class="list-bullets__header">
-								{{ the_sub_field('txt_header') }}
-							</h3>
-							<p>{{ the_sub_field('txt_summary') }}</p>
-						</li>
-						@endwhile
-					</ul>
-					@endif
-				</div>
-				
-				
-
 			</div>
 		</div>
 		<div class="grid__item">
@@ -70,7 +68,7 @@ the_row()
 @elseif( get_row_layout() == 'avout_e-consult' )
 
 @php
-	$about_image = get_sub_field('image');
+$about_image = get_sub_field('image');
 @endphp
 
 <div class="deck">
@@ -96,16 +94,16 @@ the_row()
 						xmlns="http://www.w3.org/2000/svg">
 						<use xlink:href="@asset('images/sprite.svg')#arrow-right"></use>
 					</svg>
-					</a>
-				</div>
+				</a>
 			</div>
 		</div>
-
-		<div class="grid__item">
-			{!! wp_get_attachment_image( $about_image, 'hero', "", array( 'class' => 'deck-about__image' )) !!}
-		</div>
-
 	</div>
+
+	<div class="grid__item">
+		{!! wp_get_attachment_image( $about_image, 'hero', "", array( 'class' => 'deck-about__image' )) !!}
+	</div>
+
+</div>
 </div>
 
 

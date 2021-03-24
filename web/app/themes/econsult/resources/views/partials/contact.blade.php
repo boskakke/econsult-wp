@@ -2,18 +2,25 @@
 	$contact_header = get_field( 'contact_title', 'options' );
 	$contact_description = get_field( 'contact_summary', 'options' );
 @endphp
-<section class="section section--contact mb-0">
-
+<section class="deck deck--primary mb-0">
 	@if ($contact_header)
-	<h2 class="section__header section__header--fff">
-			{{ $contact_header }}
-	</h2>
+	<div class="grid--1col">
+		<div class="grid__item">
+			<h2 class="deck__title">
+				{{ $contact_header }}
+			</h2>
+			@if ($contact_description)
+			<p class="deck__description">
+				{!! $contact_description !!}
+			</p>
+			@endif
+		</div>
+	</div>
 	@endif
-	@if ($contact_description)
-	<p class="section__description section__description--fff">
-		{!! $contact_description !!}
-	</p>
-	@endif
+
+	
 	@php dynamic_sidebar('contact') @endphp
+	
+
 
 </section>

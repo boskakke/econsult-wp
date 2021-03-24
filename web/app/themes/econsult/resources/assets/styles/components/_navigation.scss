@@ -57,6 +57,7 @@
 	display: flex;
 	margin: 0;
 	padding: 0;
+
 	
 	@include sm-down {
 		flex-direction: column;
@@ -72,19 +73,20 @@
 		}
 	}
 	@include md-up {
+		height: 100%;
 		align-items: center;
 
 		& > li {
+			height: 100%;
 			position: relative;
 			font-weight: 600;
 			display: inline-flex;
-			font-size: $font-3;
-			padding: 1rem 1.5rem;
-			@include md-up {
-				padding: 1rem .5rem;
-			}
+			align-items: center;
+			padding: 1rem 1rem;
+			font-size: $font-2;
 			@include lg-up {
 				padding: 1rem 1.5rem;
+				font-size: $font-3;
 			}
 
 			&.menu-item-has-children {
@@ -212,17 +214,16 @@
 .btn--contact > a {
 	@include md-up {
 		display: inline-block;
-		padding: 0 1rem !important;
 		background-color: $secondary;
 		color: $primary;
-		line-height: 45px;
 		border-radius: 30em;
 		transition: all .2s ease;
-		@include md-up {
-			padding: 0 1rem !important;
-		}
+		padding: 0 1rem !important;
+		line-height: 40px;
+		
 		@include lg-up {
 			padding: 0 1.5rem !important;
+			line-height: 45px;
 		}
 		&:hover {
 			color: #fff !important;

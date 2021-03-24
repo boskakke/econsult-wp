@@ -74,8 +74,10 @@
 		}
 
 		@include md-up {
+			height: 100%;
 			grid-column: col-start 5 / span 8;
 			display: flex;
+			align-items: center;
 			justify-content: flex-end;
 		}
 	}
@@ -103,7 +105,7 @@
 
 .menu-topmenu-container {
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	background: $primary;
 	@include sm-down {
 		flex-direction: column;

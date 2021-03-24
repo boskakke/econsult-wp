@@ -7,7 +7,6 @@
 @include('partials.header')
 
 <div class="hero ">
-	<div class="scrollObserver"></div>
 	<div class="hero__content">
 		<h1 class="hero__title">
 			{!! $title !!}

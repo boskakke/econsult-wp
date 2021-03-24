@@ -19,9 +19,13 @@
 		--deck-padding: 5rem 0;
 	}
 	.dark {
-		--color-1: #{$primary};
-		--color-2: #fff;
 		--headerHeight: 5rem;
+		
+		&.template-frontpage {
+			--color-1: #{$primary};
+			--color-2: #fff;
+		}
+		
 		@include md-up {
 			--headerHeight: 7rem;
 		}
@@ -52,12 +56,30 @@
 		grid-template: auto/[full-start] minmax(1rem,1fr) [main-start] repeat(12,[col-start] minmax(10px,var(--column-max-width))) [main-end] minmax(1rem,1fr) [full-end];
 	}
 }
+
+%hero-grid {
+	grid-column: main-start / main-end;
+	@include md-up {
+		grid-column: col-start 2 / span 10;
+	}
+	@include lg-up {
+		grid-column: col-start 4 / span 6;
+	}
+}
+%spacing {
+	@include lg-up {
+		margin-right: 20%;
+	}
+}
+
+
 .grid--1col {
 	@extend %grid;
 	.grid__item {
 		grid-column: main-start / main-end;
 	}
 }
+
 .grid--2col {
 	--grid-gap: 2rem 1rem;
 	@extend %grid;
@@ -107,6 +129,25 @@
 	}
 }
 
+
+.grid--75col {
+	--grid-gap: 2rem 1rem;
+	@extend %grid;
+	@include md-up {
+		--grid-gap: 2rem;
+	}
+	.grid__item {
+		grid-column: main-start / main-end;
+		@include md-up {
+			&:nth-child(1) {
+				grid-column: col-start 1 / span 7;
+			}
+			&:nth-child(2) {
+				grid-column: span 5;
+			}
+		}
+	}
+}
 
 
 
@@ -290,7 +331,10 @@ p {
 
 
 .sidebar__contact {
-	grid-column: col-start 1 / span 12;
+	@extend %grid;
+	& > .textwidget {
+		grid-column: main-start / main-end;
+	}
 }
 
 
@@ -507,13 +551,24 @@ span.wpcf7-not-valid-tip {
 
 .article {
 	&__header {
-		@extend %hero-grid;
+		grid-column: main-start / main-end;
+		@include md-up {
+			grid-column: col-start 2 / span 10;
+		}
+		@include lg-up {
+			grid-column: col-start 3 / span 8;
+		}
+		margin-top: 4rem;
+
 	}
 	&__title {
+		--header-margin: 2rem 0;
 		@extend %header-xl;
+
 	}
 	&__summary {
 		@extend %page-summary;
+		max-width: 750px;
 	}
 }
 

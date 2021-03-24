@@ -31,8 +31,6 @@ if(is_front_page()) {
 		{!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'top-menu']) !!}
 		@endif
 	</div>
-
-	
-
 </div>
+<div class="scrollObserver"></div>
 
