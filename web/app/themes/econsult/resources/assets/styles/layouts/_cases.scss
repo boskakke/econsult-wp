@@ -88,7 +88,7 @@
 			grid-column: col-start 2 / span 10;
 		}
 		@include lg-up {
-			grid-column: col-start 3 / span 8;
+			grid-column: col-start 3 / span 7;
 		}
 
 		.grid__item {
@@ -114,4 +114,5 @@
 .cases-flow {
 	@extend %grid;
 	@extend .grid--3col;
+	margin-bottom: 4rem;
 }

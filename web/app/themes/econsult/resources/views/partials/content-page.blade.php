@@ -18,11 +18,6 @@ $summary = get_field( 'page_summary' );
 	</div>
 
 	@include('partials.hero')
-		<div class="page__sidebar">
-				@php
-				dynamic_sidebar('sidebar-other')
-				@endphp
-		</div>
 		<div class="page__content">
 			<div class="grid__item">
 				@php the_content() @endphp

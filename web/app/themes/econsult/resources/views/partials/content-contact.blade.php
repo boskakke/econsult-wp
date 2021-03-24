@@ -4,19 +4,24 @@ $phone = get_field( 'phone' );
 $address = get_field( 'address' );
 @endphp
 <main class="main">
+	
 	@include('partials.header')
-	@include('partials.hero')
-	<div class="page-grid">
-		<div class="page-content">
+	<div class="article__content">
+		<div class="article__header">
+			<h1 class="article__title">
+				@php
+				the_title();
+				@endphp
+
+			</h1>
+		</div>
+	
+	
+		<div class="page-content mb-0">
 
 			<div class="grid__item">
 
-				<h1 class="page-title">
-					@php
-					the_title();
-					@endphp
-
-				</h1>
+				
 				@php
 				$page_summary = get_field( 'page_summary' );
 				@endphp

@@ -27,3 +27,4 @@
 		</figure>
 	</div>	
 </div>
+</div>

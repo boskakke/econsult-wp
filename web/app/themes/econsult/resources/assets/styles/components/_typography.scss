@@ -64,7 +64,7 @@
 	}
 }
 %header-md {
-	font-size: var(--header-font-size, #{$font-5});
+	font-size: var(--header-font-size, #{$font-6});
 	line-height: var(--header-line-height);
 	font-weight: var(--header-font-weight);
 	color: var(--color, #{$primary});
@@ -146,3 +146,70 @@
 	color: $gray-600;
 }
 
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: $headings-font-family;
+	font-weight: 500;
+	color: $primary;
+	
+
+}
+h1 {
+	font-size: $font-6;
+	@include xs-down {
+		font-size: $font-5;
+	}
+	@include md-up {
+		font-size: $font-7;
+	}
+	@include md-up {
+		font-size: $font-8;
+	}
+}
+
+h2 {
+	font-size: $font-5;
+	line-height: 1.4;
+	@include md-up {
+		font-size: $font-6;
+	}
+}
+
+h3 {
+	font-size: $font-6;
+	line-height: 1.4;
+}
+
+.page-content li,
+p {
+	font-size: $font-3;
+	margin: 0 0 1.5em;
+	@include md-up {
+		font-size: $font-4;
+	}
+}
+
+.page-content {
+	ul {
+		li {
+			padding-left: 1.5rem;
+
+			&:before {
+				content: '';
+				width: .5rem;
+				height: .5rem;
+				margin-top: .4em;
+				border-radius: 50%;
+				background: $secondary;
+				vertical-align: middle;
+				float: left;
+				margin-left: -1.5rem;
+			}
+		}
+	}
+}

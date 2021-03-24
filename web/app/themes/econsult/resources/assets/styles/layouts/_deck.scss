@@ -20,10 +20,13 @@
 		background: $primary;
 	}
 	&--overlap {
-		@include md-up {
+		@include lg-up {
 			padding-top: 9rem;
 			margin-top: -9rem;
 		}
+	}
+	&--pb-0 {
+		--deck-padding: 3rem 0 0;
 	}
 }
 

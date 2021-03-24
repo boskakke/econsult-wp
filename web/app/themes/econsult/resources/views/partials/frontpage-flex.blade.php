@@ -5,7 +5,7 @@ the_row()
 @endphp
 @if( get_row_layout() == 'section_bullets' )
 
-<div class="deck">
+<div class="deck deck--pb-0">
 	<div class="grid--75col">
 		<div class="grid__item module">
 			<div class="module__body">

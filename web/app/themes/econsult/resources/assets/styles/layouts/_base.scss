@@ -63,7 +63,7 @@
 		grid-column: col-start 2 / span 10;
 	}
 	@include lg-up {
-		grid-column: col-start 4 / span 6;
+		grid-column: col-start 3 / span 7;
 	}
 }
 %spacing {
@@ -219,53 +219,7 @@ figure {
 	}
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-	font-family: $headings-font-family;
-	font-weight: 500;
-	line-height: 1.1;
-	color: currentColor;
-	margin-top: 1em;
-	margin-bottom: 2rem;
 
-}
-h1 {
-	font-size: $font-6;
-	@include xs-down {
-		font-size: $font-5;
-	}
-	@include md-up {
-		font-size: $font-7;
-	}
-	@include md-up {
-		font-size: $font-8;
-	}
-}
-
-h2 {
-	font-size: $font-5;
-	line-height: 1.4;
-	@include md-up {
-		font-size: $font-6;
-	}
-}
-
-h3 {
-	font-size: $font-6;
-	line-height: 1.4;
-}
-
-.page-content li,
-p {
-	font-size: $font-3;
-	margin: 0 0 1.5em;
-	@include md-up {
-		font-size: $font-4;
-	}
-}
 
 .page-title {
 	@extend %header-xl;
@@ -524,7 +478,7 @@ span.wpcf7-not-valid-tip {
 
 .two-cols {
 	display: grid;
-	grid-gap: 1rem;
+	grid-gap: 0 1rem;
 	@include md-up {
 		grid-template: auto / 1fr 1fr;
 	}
@@ -539,7 +493,7 @@ span.wpcf7-not-valid-tip {
 	@extend %section-margin;
 	grid-column: main-start 1 / span 1;
 	@include md-up {
-		grid-column: col-start 5 / span 7;
+		grid-column: col-start 3 / span 7;
 	}
 	ul {
 		padding-left: 1.5em;
