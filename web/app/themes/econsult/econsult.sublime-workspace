@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"pso",
+				"pos-r\tposition: relative;"
+			],
+			[
 				"shw",
 				"showArticleHeader"
 			],
@@ -195,52 +199,7 @@
 			"file": "resources/assets/styles/layouts/_header.scss",
 			"settings":
 			{
-				"buffer_size": 1195,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/assets/styles/layouts/_page-hero.scss",
-			"settings":
-			{
-				"buffer_size": 694,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/assets/styles/components/_navigation.scss",
-			"settings":
-			{
-				"buffer_size": 2768,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/assets/images/sprite.svg",
-			"settings":
-			{
-				"buffer_size": 17697,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/assets/styles/layouts/_base.scss",
-			"settings":
-			{
-				"buffer_size": 8701,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/assets/styles/components/_deck-about.scss",
-			"settings":
-			{
-				"buffer_size": 952,
-				"encoding": "UTF-8",
+				"buffer_size": 2027,
 				"line_ending": "Unix"
 			}
 		}
@@ -257,12 +216,20 @@
 		"selected_items":
 		[
 			[
-				"packa",
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reon",
+				"Set Syntax: Regular Expression"
+			],
+			[
+				"in",
 				"Package Control: Install Package"
 			],
 			[
-				"rein",
-				"Indentation: Reindent Lines"
+				"packa",
+				"Package Control: Install Package"
 			],
 			[
 				"emmet",
@@ -291,10 +258,6 @@
 			[
 				"rei",
 				"Indentation: Reindent Lines"
-			],
-			[
-				"reon",
-				"Set Syntax: Regular Expression"
 			],
 			[
 				"insta",
@@ -326,6 +289,7 @@
 	"expanded_folders":
 	[
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/app",
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources",
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets",
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/images",
@@ -336,28 +300,55 @@
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components",
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts",
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/layouts",
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials"
 	],
 	"file_history":
 	[
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/scripts/routes/home.js",
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/mobile-nav.blade.php",
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_header.scss",
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/common/_variables.scss",
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_base.scss",
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_navigation.scss",
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_reset.scss",
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/frontpage-hero.blade.php",
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/scripts/routes/common.js",
+		"/Users/bo/Desktop/arrow-right (1).svg",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_cases.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_hero.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/common/_mixins.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/content-contact.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/contact-staff.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_contact.scss",
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_page-hero.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_hero-about.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_page.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_deck.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_typography.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/content-page.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_base.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/layouts/frontpage.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_teaser.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/content.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/content-frontpage.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/frontpage-flex.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/frontpage-hero.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_navigation.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/contact.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/common/_global.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/main.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_header.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/header.blade.php",
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_hero-frontpage.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/frontpage-content.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/template-frontpage.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_reset.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/content-teasers.blade.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/scripts/routes/common.js",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/app/setup.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/app/filters.php",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/images/sprite.svg",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/common/_variables.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_deck-cases.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_deck-about.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/scripts/routes/home.js",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_buttons.scss",
+		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/mobile-nav.blade.php",
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/econsult.sublime-project",
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_fonts.scss",
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/components/_navigation-mobile.scss",
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_page.scss",
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/views/partials/header.blade.php",
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/images/sprite.svg",
-		"/Users/bo/sites/econsult.test/web/app/themes/econsult/resources/assets/styles/layouts/_cases.scss",
 		"/Users/bo/sites/econsult.test/web/app/themes/econsult/.env",
 		"/Users/bo/sites/vmgrid.test/webpack.mix.js",
 		"/Users/bo/sites/vmgrid.test/package.json",
@@ -441,43 +432,35 @@
 		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_footer.scss",
 		"/Users/bo/sites/vmgrid.test/src/includes/widgets/image.php",
 		"/Users/bo/sites/vmgrid.test/src/assets/styles/components/_tags.scss",
-		"/Users/bo/sites/vmgrid.test/src/includes/widgets/paragraph-list.php",
-		"/Users/bo/sites/vmgrid.test/src/includes/ctm.php",
-		"/Users/bo/sites/vmgrid.test/src/section.php",
-		"/Users/bo/sites/vmgrid.test/src/includes/article/banner.php",
-		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_navigation.scss",
-		"/Users/bo/Desktop/iform checkbox.html",
-		"/Users/bo/sites/vmgrid.test/src/assets/styles/components/_tabs.scss",
-		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_fav.scss",
-		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_searchresult.scss",
-		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_user-menu.scss",
-		"/Users/bo/sites/vmgrid.test/src/searchresult.php",
-		"/Users/bo/sites/vmgrid.test/src/includes/searchform.php",
-		"/Users/bo/sites/vmgrid.test/src/includes/offcanvas-user-menu.php",
-		"/Users/bo/sites/vmgrid.test/src/profile.php",
-		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_user-list.scss",
-		"/Users/bo/sites/vmgrid.test/src/assets/styles/../../includes/offcanvas-user-menu.php",
-		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_header.scss",
-		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/base.scss",
-		"/Users/bo/sites/vmgrid.test/src/includes/foodplan-tip.php",
-		"/Users/bo/sites/vmgrid.test/src/assets/styles/widgets/_newsletter.scss",
-		"/Users/bo/sites/vmgrid.test/src/includes/foodplan-principles.php",
-		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_foodplan.scss",
-		"/Users/bo/sites/vmgrid.test/src/includes/page-widgets/teaser-list-slider.php",
-		"/Users/bo/sites/vmgrid.test/src/includes/page-widgets/teaser-list-background-image.php",
-		"/Users/bo/sites/vmgrid.test/src/assets/styles/layouts/_deck.scss",
-		"/Users/bo/sites/vmgrid.test/src/includes/page-widgets/teaser-list-themes.php",
-		"/Users/bo/Desktop/old grids iform .scss"
+		"/Users/bo/sites/vmgrid.test/src/includes/widgets/paragraph-list.php"
 	],
 	"find":
 	{
-		"height": 42.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
 		"height": 114.0,
 		"where_history":
 		[
+			"*.scss",
+			"*.php",
+			"*.scss",
+			"*.php",
+			"*.scss",
+			"*.php",
+			"*.scss",
+			"*.php",
+			"*.scss",
+			"*.php",
+			"*.scss",
+			"*.php",
+			"*.scss",
+			"*.php",
+			"*.scss",
+			"*.php",
+			"*.scss",
+			"*.php",
 			"*.scss",
 			"*.php",
 			"*.scss"
@@ -488,6 +471,75 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".hero",
+			".page",
+			"section-contact",
+			"page-content",
+			"cases-flow",
+			"fact",
+			"%hero-grid",
+			"cases",
+			".teaser",
+			"page-content",
+			"hero-about",
+			"two-cols",
+			"overlap",
+			"hero-about",
+			"teaser-card",
+			"cases-flow",
+			"%hero-grid",
+			".sidebar",
+			"ntn",
+			"sand",
+			"module",
+			"sub-menu",
+			"module",
+			"teaser-main",
+			"%section-header",
+			".section",
+			"%section-header",
+			"%font-header",
+			"--header-font-size: $font",
+			"@extend %font-",
+			"background-color: transparent;",
+			"%page-title",
+			"%deck-title",
+			"section__hero",
+			"$menu-height",
+			"module",
+			"modul",
+			"list-bulle",
+			"teaser-flow",
+			"list-bullets",
+			"teaser-card",
+			"las-chi",
+			"excerpt",
+			"deck-about",
+			"pink",
+			";\n",
+			"--grid-gap",
+			"700",
+			".deck",
+			"deck-title",
+			"grid--2col",
+			"hero-fp__",
+			"column-max-wi",
+			"--grid-gap",
+			".deck",
+			"hero-illu",
+			"hero__image",
+			"hero__figure",
+			"15px",
+			"%deck-title",
+			"fony",
+			"list-bullets",
+			"section__de",
+			"deck-about",
+			"active-slide",
+			"slick",
+			"deck-cases__",
+			"deck-cases--",
+			"menu-wrapper",
 			"var(",
 			"--",
 			"--color-",
@@ -514,6 +566,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"@extend %header-",
+			"%font-xl",
+			"%font-lg",
 			"--color-2",
 			"--color-1"
 		],
@@ -526,7 +581,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -535,15 +590,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1195,
+						"buffer_size": 2027,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1003,
-								1003
+								2020,
+								2020
 							]
 						],
 						"settings":
@@ -552,155 +607,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 131.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/assets/styles/layouts/_page-hero.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 694,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								693,
-								693
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sunrise Theme/Langs/SCSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "resources/assets/styles/components/_navigation.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2768,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2765,
-								2765
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sunrise Theme/Langs/SCSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1671.0,
+						"translation.y": 1111.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "resources/assets/images/sprite.svg",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 17697,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/zzz A File Icon zzz/aliases/XML (SVG).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3171.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "resources/assets/styles/layouts/_base.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8701,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								143,
-								143
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sunrise Theme/Langs/SCSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 582.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "resources/assets/styles/components/_deck-about.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 952,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								829,
-								829
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sunrise Theme/Langs/SCSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -755,8 +665,108 @@
 		"selected_items":
 		[
 			[
+				"_header",
+				"resources/assets/styles/layouts/_header.scss"
+			],
+			[
+				"mix",
+				"resources/assets/styles/common/_mixins.scss"
+			],
+			[
+				"cases",
+				"resources/assets/styles/layouts/_cases.scss"
+			],
+			[
+				"base",
+				"resources/assets/styles/layouts/_base.scss"
+			],
+			[
+				"hero",
+				"resources/assets/styles/components/_hero.scss"
+			],
+			[
+				"hero-about",
+				"resources/assets/styles/components/_hero-about.scss"
+			],
+			[
+				"page-her",
+				"resources/assets/styles/layouts/_page-hero.scss"
+			],
+			[
+				"typo",
+				"resources/assets/styles/components/_typography.scss"
+			],
+			[
+				"deck",
+				"resources/assets/styles/layouts/_deck.scss"
+			],
+			[
+				"page",
+				"resources/assets/styles/layouts/_page.scss"
+			],
+			[
+				"typ",
+				"resources/assets/styles/components/_typography.scss"
+			],
+			[
+				"front",
+				"resources/views/partials/frontpage-flex.blade.php"
+			],
+			[
+				"dec",
+				"resources/assets/styles/layouts/_deck.scss"
+			],
+			[
+				"naviga",
+				"resources/assets/styles/components/_navigation.scss"
+			],
+			[
+				"_hero",
+				"resources/assets/styles/components/_hero.scss"
+			],
+			[
+				"navi",
+				"resources/assets/styles/components/_navigation.scss"
+			],
+			[
+				"header",
+				"resources/assets/styles/layouts/_header.scss"
+			],
+			[
+				"main",
+				"resources/assets/styles/main.scss"
+			],
+			[
+				"teaser",
+				"resources/assets/styles/layouts/_teaser.scss"
+			],
+			[
 				"reset",
 				"resources/assets/styles/components/_reset.scss"
+			],
+			[
+				"frontpage",
+				"resources/views/partials/frontpage-hero.blade.php"
+			],
+			[
+				"content",
+				"resources/views/partials/content-frontpage.blade.php"
+			],
+			[
+				"gloc",
+				"resources/assets/styles/common/_global.scss"
+			],
+			[
+				"page.",
+				"resources/assets/styles/layouts/_page.scss"
+			],
+			[
+				"varia",
+				"resources/assets/styles/common/_variables.scss"
+			],
+			[
+				"about",
+				"resources/assets/styles/components/_deck-about.scss"
 			],
 			[
 				"main.js",
@@ -799,16 +809,8 @@
 				"src/assets/styles/layouts/_sections.scss"
 			],
 			[
-				"main",
-				"src/assets/scripts/main.js"
-			],
-			[
 				"_teaser",
 				"src/assets/styles/layouts/_teaser.scss"
-			],
-			[
-				"teaser",
-				"src/includes/teaser.php"
 			],
 			[
 				"bannerex",
