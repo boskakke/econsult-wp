@@ -16,10 +16,6 @@ export default {
 			document.documentElement.style.setProperty('--vh-offset', vheight.vh + 'px');
 		})
 
-
-
-
-
 		const header = document.querySelector('.header');
 		const logo = header.querySelector('.header__col--logo')
 		const headerItems = header.querySelectorAll('.top-menu > .menu-item')
@@ -33,14 +29,6 @@ export default {
 			.fromTo(headerItems, {opacity: 0, y: -20}, {opacity: 1, y: 0, stagger: .1}, 'start+=.1')
 			.fromTo(pageTitle, {opacity: 0, y: 40}, {opacity: 1, y: 0, duration: 2, ease: 'expo.out'}, '<.2')
 			.fromTo(images, {opacity: 0, y: 40}, {opacity: 1, y: 0, duration: 2, ease: 'expo.out', stagger: .2}, '<.2')
-
-		
-
-		
-		
-
-
-
 
 	},
 	finalize() {

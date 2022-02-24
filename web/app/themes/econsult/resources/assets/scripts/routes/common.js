@@ -26,10 +26,6 @@ export default {
 		}
 
 		observer.observe(scrollObserver);
-		
-
-
-
 
 
 	const menuToggle = gsap.timeline({paused:true, reversed:true});
