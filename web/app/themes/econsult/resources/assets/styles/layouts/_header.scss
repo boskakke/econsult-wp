@@ -9,7 +9,7 @@
 	left: 0;
 	width: 100%;
 	align-items: center;
-	height: var(--headerHeight, 6rem);
+	// height: var(--headerHeight);
 	background: $primary;
 	// transition: all var(--transition-timing) var(--transition-type);
 	transform-origin: top center;
@@ -17,18 +17,11 @@
 
 	&__col--svg {
 		width: 160px;
-		transform: scale(.8);
 		transition: transform .2s ease;
 		transform-origin: left center;
-		.dark & {
-			transform: scale(1);
-		}
+		
 		@include lg-up {
 			width: 200px;
-			transform: scale(.8);
-			.dark & {
-				transform: scale(1);
-			}
 		}
 	}
 	&__col--logo {
