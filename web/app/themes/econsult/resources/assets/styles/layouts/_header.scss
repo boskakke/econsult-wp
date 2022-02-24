@@ -1,5 +1,3 @@
-
-
 .header {
 	margin: 0;
 	padding: 0;
@@ -13,7 +11,7 @@
 	align-items: center;
 	height: var(--headerHeight, 6rem);
 	background: $primary;
-	transition: all var(--transition-timing) var(--transition-type);
+	// transition: all var(--transition-timing) var(--transition-type);
 	transform-origin: top center;
 	@extend %grid;
 
