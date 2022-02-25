@@ -21,7 +21,6 @@ export default {
 		scrollTrigger: {
 			trigger: '.grid--hero-images',
 			scrub: 1,
-			markers: true,
 			start: 'top bottom',
 			end: 'bottom center',
 		}})
