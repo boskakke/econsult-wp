@@ -8,25 +8,7 @@ export default {
 
 		// gsap.registerPlugin(ScrollTrigger);
 
-		const scrollObserver = document.querySelector('.scrollObserver')
-		const body = document.querySelector('body')
-		let observer = new IntersectionObserver(observerCallback, options);
-
-		const options = {
-			threshold: 1,
-		};
-
-		function observerCallback(entries) {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					body.classList.add('dark')
-				} else {
-					body.classList.remove('dark')
-				}
-			});
-		}
-
-		observer.observe(scrollObserver);
+	const body = document.querySelector('body')
 
 
 	const menuToggle = gsap.timeline({paused:true, reversed:true});

@@ -64,12 +64,23 @@
 		--grid-gap: 2rem;
 	}
 	.grid__item {
+
 		grid-column: main-start / main-end;
 		@include md-up {
 			grid-column: span 5;
 			&:first-of-type {
 				grid-column: col-start 1 / span 7;
 			}
+		}
+		@include lg-up {
+			&:nth-of-type(1) {
+				transform: translateY(var(--img1));	
+			}
+			&:nth-of-type(2) {
+				transform: translateY(var(--img2));	
+			}
+			
+
 		}
 	}
 }
