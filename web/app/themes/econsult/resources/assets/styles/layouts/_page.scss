@@ -22,6 +22,15 @@
 		@include md-up {
 			grid-column: col-start 3 / span 7;
 		}
+		a {
+			color: $primary;
+			border-bottom: 1px solid $secondary;
+			&:hover {
+				color: $primary;
+				border-bottom: 1px solid $primary;
+				text-decoration: none;
+			}
+		}
 		h2 {
 			margin-bottom: .5rem;
 			color: $primary;
